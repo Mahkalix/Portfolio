@@ -1,0 +1,43 @@
+.error {
+  height: 780px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.error-content {
+  margin: 0 40px;
+  text-align: center;
+}
+
+.error-number {
+  font-size: 96px;
+  font-weight: 700;
+  margin: 0;
+  font-family: "Anton", sans-serif;
+}
+
+.error-text {
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0;
+  margin-top: 10px;
+}
+
+.error-link {
+  font-size: 14px;
+  font-weight: 500;
+  margin-top: 133px;
+  border-bottom: 1px solid var(--black);
+}
+
+.error-link:hover {
+  font-weight: 550;
+}
+
+@media screen and (max-width: 950px) {
+  .error {
+    text-align: center;
+  }
+}
