@@ -29,11 +29,7 @@
   font-size: 14px;
   font-weight: 500;
   margin-top: 133px;
-  border-bottom: 1px solid var(--black);
-}
-
-.error-link:hover {
-  font-weight: 550;
+  border-bottom: 1px solid;
 }
 
 @media screen and (max-width: 950px) {

@@ -1,19 +1,15 @@
 import Routes from "../src/router/routes";
-import "../src/style/App.css";
 import Header from "../src/components/Header";
-import { Provider } from "react-redux";
-import store from "../src/app/store.js";
-import ThemeSwitch from "../src/components/ThemeSwitch";
+import { useTheme } from "../src/components/ThemeSwitch";
 
 function App() {
+  const { theme } = useTheme();
+
   return (
-    <>
-      <Provider store={store}>
-        <ThemeSwitch>
-          <Header /> <Routes />
-        </ThemeSwitch>
-      </Provider>
-    </>
+    <div className={`app ${theme === "light" ? "light" : "dark"}`}>
+      <Header />
+      <Routes />
+    </div>
   );
 }
 

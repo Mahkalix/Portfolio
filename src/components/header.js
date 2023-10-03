@@ -1,22 +1,24 @@
 import React from "react";
-import "../style/header.css";
 import Logol from "../assets/svg/logol.svg";
 import Logod from "../assets/svg/logod.svg";
 import Nav from "./nav";
 import Switch from "./Switch";
-import { useSelector } from "react-redux";
+import { Link, useLocation } from "react-router-dom";
+import Menu from "../components/menu.js";
+import { useTheme } from "./ThemeSwitch.js";
 
 const Header = () => {
-  const theme = useSelector((state) => state.theme.themeColor);
+  const { theme } = useTheme();
+  const location = useLocation();
   return (
     <header>
       <div className="logo">
-        <img
-          src={theme === "dark" ? Logod : Logol}
-          alt="Logo"
-          className={theme}
-        />
+        <Link to="/" className={location.pathname === "/" ? "" : ""}>
+          <img src={theme === "light" ? Logol : Logod} alt="Logo" />
+        </Link>
       </div>
+
+      <Menu />
       <Nav />
       <Switch />
     </header>

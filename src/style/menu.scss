@@ -1,0 +1,118 @@
+.menu-hamburger {
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+.hamburger-react {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  cursor: pointer;
+  z-index: 101;
+}
+
+#menu-body {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  height: 100%;
+  padding-top: 150px;
+  border-radius: 4px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0s 0.3s;
+  z-index: 99;
+}
+
+#menu-body.open {
+  animation: slidein 1s ease;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.5s ease, visibility 0s ease;
+  display: block;
+}
+
+#menu-body.close {
+  animation: slideout 1s ease;
+  visibility: hidden;
+  transition: opacity 1s ease, visibility 1s ease, display 0s 1s;
+}
+
+#menu-body li {
+  display: flex;
+  justify-content: center;
+  font-size: 25px;
+  font-weight: 400;
+  line-height: 100px;
+  padding: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+a {
+  font-weight: 400;
+}
+#menu-body li:hover {
+  cursor: pointer;
+  font-weight: 400;
+  padding-left: 25px;
+}
+
+
+@keyframes none {
+  from {
+    display: none;
+    transition-delay: 10s;
+  }
+  to {
+    display: none;
+    transition-delay: 10s;
+  }
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+  }
+
+  to {
+    margin-left: 0%;
+  }
+}
+
+@keyframes slideout {
+  from {
+    margin-left: 0%;
+  }
+
+  to {
+    margin-left: 100%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .menu-hamburger {
+    display: none;
+  }
+
+  #menu-body li {
+    width: 30%;
+  }
+  #menu-body li {
+    width: 100%;
+  }
+
+  #menu-body {
+    padding-top: 120px;
+  }
+}

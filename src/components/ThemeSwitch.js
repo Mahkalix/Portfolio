@@ -1,10 +1,26 @@
-import React from "react";
-import { useSelector } from "react-redux";
+// ThemeSwitch.js
+import React, { createContext, useContext, useState } from "react";
 
-function ThemeSwitch({ children }) {
-  const themeColor = useSelector((state) => state.theme.themeColor);
+const ThemeContext = createContext();
 
-  return <div className={`theme-Switch ${themeColor}`}>{children}</div>;
-}
+export const ThemeProvider = ({ children }) => {
+  const [theme, setTheme] = useState("light");
 
-export default ThemeSwitch;
+  const toggleTheme = () => {
+    setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
+  };
+
+  return (
+    <ThemeContext.Provider value={{ theme, toggleTheme }}>
+      {children}
+    </ThemeContext.Provider>
+  );
+};
+
+export const useTheme = () => {
+  const context = useContext(ThemeContext);
+  if (!context) {
+    throw new Error("useTheme must be used within a ThemeProvider");
+  }
+  return context;
+};

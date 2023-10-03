@@ -5,8 +5,7 @@
   position: absolute;
   height: 100%;
   top: 0;
-  right: 118px;
-  border-right: 1px solid;
+  right: 100px;
 }
 
 .menu li {
@@ -15,9 +14,10 @@
   margin-right: 20px;
 }
 
-.nav-link:hover {
-  border-bottom: 1px solid;
-}
-.active {
-  border-bottom: 1px solid;
+
+
+@media (max-width: 768px) {
+  .menu {
+    display: none;
+  }
 }

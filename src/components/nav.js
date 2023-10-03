@@ -1,11 +1,10 @@
 import React from "react";
-import "../style/nav.css";
+import { useTheme } from "./ThemeSwitch.js";
 import { Link, useLocation } from "react-router-dom";
-import { useSelector } from "react-redux";
 
 const Nav = () => {
+  const { theme } = useTheme();
   const location = useLocation();
-  const theme = useSelector((state) => state.theme.themeColor);
 
   return (
     <nav>
@@ -13,8 +12,9 @@ const Nav = () => {
         <li>
           <Link
             to="/"
-            className={`nav-link ${location.pathname === "/" ? "active" : ""} 
-             ${theme === "dark" ? "dark" : "light"}`}
+            className={`nav-link ${location.pathname === "/" ? "active" : ""} ${
+              theme === "light" ? "light" : "dark"
+            }`}
           >
             Home
           </Link>
@@ -22,24 +22,20 @@ const Nav = () => {
         <li>
           <Link
             to="#About"
-            className={`nav-link ${
-              location.pathname === "#About" ? "active" : ""
-            } 
-             ${theme === "dark" ? "dark" : "light"}`}
+            className={`nav-link ${location.pathname === "#" ? "active" : ""} ${
+              theme === "light" ? "light" : "dark"
+            }`}
           >
-            {" "}
             About
           </Link>
         </li>
         <li>
           <Link
             to="#Projects"
-            className={`nav-link ${
-              location.pathname === "#Projects" ? "active" : ""
-            } 
-             ${theme === "dark" ? "dark" : "light"}`}
+            className={`nav-link ${location.pathname === "#" ? "active" : ""} ${
+              theme === "light" ? "light" : "dark"
+            }`}
           >
-            {" "}
             Projects
           </Link>
         </li>
@@ -48,10 +44,8 @@ const Nav = () => {
             to="/contact"
             className={`nav-link ${
               location.pathname === "/contact" ? "active" : ""
-            } 
-             ${theme === "dark" ? "dark" : "light"}`}
+            } ${theme === "light" ? "light" : "dark"}`}
           >
-            {" "}
             Contact
           </Link>
         </li>
