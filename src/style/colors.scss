@@ -2,21 +2,20 @@
 $cream: #fff7f0;
 $black: #262523;
 $white: #fff;
+$yellow: rgb(221, 199, 0);
 
 
 .light {
     background-color: $cream;
     color: $black;
     border: $black;
-    .nav-link:hover {
-        border-bottom: 1px solid $black;
-        color: $black;
-      }
+    background: $cream;
   }
   
   .dark {
     background-color: $black;
     color: $cream;
     border: $cream;
+    background: $black;
   }
   

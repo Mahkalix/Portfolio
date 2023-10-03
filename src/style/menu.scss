@@ -51,8 +51,8 @@
 #menu-body li {
   display: flex;
   justify-content: center;
-  font-size: 25px;
-  font-weight: 400;
+  font-size: 40px;
+  font-weight: 500;
   line-height: 100px;
   padding: 20px;
   cursor: pointer;
@@ -100,6 +100,79 @@ a {
   }
 }
 
+// ANIMATION MENU 
+
+// === Variables =====
+$perspective:     60rem;
+$font-size:       4.25rem;
+$split-position:  50%;
+$split-thickness: 3px;
+$split-color:     rgb(0, 0, 0);
+
+
+#menu-body {
+
+  text-transform: uppercase;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.invisible{
+  color: transparent;
+}
+.menu-item {
+  position: relative;
+  cursor: pointer;
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: $split-position;
+    left: 25%;
+    right: 25%;
+    height: $split-thickness;
+    border-radius: $split-thickness;
+    margin-top: calc($split-thickness / 12);
+    background: $yellow;
+    transform: scale(0);
+    transition: transform .8s cubic-bezier(.16,1.08,.38,.98);
+    z-index: 1;
+  }
+}
+
+.Mask {
+  display: block;
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  height: $split-position;
+  transition: all .8s cubic-bezier(.16,1.08,.38,.98);
+  span { display: block; }
+
+}
+.Top{
+  top: $split-position - 50;
+  height: 100 - $split-position + 0.1;
+  span { transform: translateY(20%); }
+}
+
+.Mask + .Mask {
+  top: $split-position - 0;
+  height: 100 - $split-position + 0.1;
+  span { transform: translateY(-$split-position); }
+}
+
+// === Where the fun stuff happens =====
+.menu-item:hover,
+.menu-item:active {
+  .Mask { transform: skewX(6deg) translateX(0px); }
+  .Mask + .Mask { transform: skewX(6deg) translateX(0px); }
+  &::before { transform: scale(1); }
+}
+
 @media screen and (min-width: 768px) {
   .menu-hamburger {
     display: none;
@@ -116,3 +189,17 @@ a {
     padding-top: 120px;
   }
 }
+
+@media screen and (max-width: 425px) {
+  .menu-item {
+    &::before {
+      position: absolute;
+      left: 10%;
+      right: 10%;
+    }
+  }
+}
+
+
+
+

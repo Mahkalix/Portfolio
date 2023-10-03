@@ -32,9 +32,9 @@ const Menu = () => {
         id="menu-body"
         className={`${menuOpen ? "open" : "close"} ${
           theme === "light" ? "light" : "dark"
-        }`}
+        } menu`}
       >
-        <li>
+        <li className="menu-item">
           <Link
             to="/"
             onClick={closeMenu}
@@ -42,10 +42,18 @@ const Menu = () => {
               theme === "light" ? "light" : "dark"
             }`}
           >
-            Accueil
+            <div className="invisible"> HOME</div>
+
+            <span class="Mask Top">
+              <span>Home</span>
+            </span>
+            <span class="Mask">
+              <span>Home</span>
+            </span>
           </Link>
         </li>
-        <li>
+
+        <li className="menu-item">
           <Link
             to="*"
             onClick={closeMenu}
@@ -53,10 +61,18 @@ const Menu = () => {
               theme === "light" ? "light" : "dark"
             }`}
           >
-            Qui suis-je ?
+            <div className="invisible"> ABOUT</div>
+
+            <span class="Mask Top">
+              <span>ABOUT</span>
+            </span>
+            <span class="Mask">
+              <span>ABOUT</span>
+            </span>
           </Link>
         </li>
-        <li>
+
+        <li className="menu-item">
           <Link
             to="*"
             onClick={closeMenu}
@@ -64,10 +80,17 @@ const Menu = () => {
               theme === "light" ? "light" : "dark"
             }`}
           >
-            Infos et Tarifs
+            <div className="invisible"> PROJECTS</div>
+
+            <span class="Mask Top">
+              <span>PROJECTS</span>
+            </span>
+            <span class="Mask">
+              <span>PROJECTS</span>
+            </span>
           </Link>
         </li>
-        <li>
+        <li className="menu-item">
           <Link
             to="/contact"
             onClick={closeMenu}
@@ -75,7 +98,14 @@ const Menu = () => {
               theme === "light" ? "light" : "dark"
             }`}
           >
-            Contact
+            <div className="invisible"> CONTACT</div>
+
+            <span class="Mask Top">
+              <span>CONTACT</span>
+            </span>
+            <span class="Mask">
+              <span>CONTACT</span>
+            </span>
           </Link>
         </li>
       </ul>

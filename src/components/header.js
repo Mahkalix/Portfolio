@@ -14,7 +14,7 @@ const Header = () => {
     <header>
       <div className="logo">
         <Link to="/" className={location.pathname === "/" ? "" : ""}>
-          <img src={theme === "light" ? Logol : Logod} alt="Logo" />
+          <img src={theme === "light" ? Logod : Logol} alt="Logo" />
         </Link>
       </div>
 
