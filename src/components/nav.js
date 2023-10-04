@@ -1,9 +1,7 @@
 import React from "react";
-import { useTheme } from "./ThemeSwitch.js";
 import { Link, useLocation } from "react-router-dom";
 
 const Nav = () => {
-  const { theme } = useTheme();
   const location = useLocation();
 
   return (
@@ -12,9 +10,7 @@ const Nav = () => {
         <li>
           <Link
             to="/"
-            className={`nav-link ${location.pathname === "/" ? "active" : ""} ${
-              theme === "light" ? "light" : "dark"
-            }`}
+            className={`nav-link ${location.pathname === "/" ? "active" : ""}`}
           >
             Home
           </Link>
@@ -22,9 +18,7 @@ const Nav = () => {
         <li>
           <Link
             to="#About"
-            className={`nav-link ${location.pathname === "#" ? "active" : ""} ${
-              theme === "light" ? "light" : "dark"
-            }`}
+            className={`nav-link ${location.pathname === "#" ? "active" : ""}`}
           >
             About
           </Link>
@@ -32,21 +26,17 @@ const Nav = () => {
         <li>
           <Link
             to="#Projects"
-            className={`nav-link ${location.pathname === "#" ? "active" : ""} ${
-              theme === "light" ? "light" : "dark"
-            }`}
+            className={`nav-link ${location.pathname === "#" ? "active" : ""}`}
           >
             Projects
           </Link>
         </li>
         <li>
           <Link
-            to="/contact"
-            className={`nav-link ${
-              location.pathname === "/contact" ? "active" : ""
-            } ${theme === "light" ? "light" : "dark"}`}
+            to="#GetInTouch"
+            className={`nav-link ${location.pathname === "#" ? "active" : ""}`}
           >
-            Contact
+            Get In Touch
           </Link>
         </li>
       </ul>

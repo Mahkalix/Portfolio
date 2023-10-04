@@ -1,11 +1,11 @@
 import React from "react";
 import Logol from "../assets/svg/logol.svg";
 import Logod from "../assets/svg/logod.svg";
-import Nav from "./nav";
+import Nav from "./Nav";
 import Switch from "./Switch";
 import { Link, useLocation } from "react-router-dom";
-import Menu from "../components/menu.js";
-import { useTheme } from "./ThemeSwitch.js";
+import Menu from "./Menu";
+import { useTheme } from "./ThemeSwitch";
 
 const Header = () => {
   const { theme } = useTheme();
@@ -19,8 +19,10 @@ const Header = () => {
       </div>
 
       <Menu />
-      <Nav />
-      <Switch />
+      <div className="selectArea">
+        <Switch />
+        <Nav />
+      </div>
     </header>
   );
 };

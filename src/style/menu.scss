@@ -136,7 +136,7 @@ $split-color:     rgb(0, 0, 0);
     height: $split-thickness;
     border-radius: $split-thickness;
     margin-top: calc($split-thickness / 12);
-    background: $yellow;
+    background: $brick;
     transform: scale(0);
     transition: transform .8s cubic-bezier(.16,1.08,.38,.98);
     z-index: 1;
@@ -173,7 +173,7 @@ $split-color:     rgb(0, 0, 0);
   &::before { transform: scale(1); }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   .menu-hamburger {
     display: none;
   }
@@ -197,6 +197,13 @@ $split-color:     rgb(0, 0, 0);
       left: 10%;
       right: 10%;
     }
+  }
+  .hamburger-react {
+    position: absolute;
+    right: 20px;
+    top: 1px;
+    cursor: pointer;
+    z-index: 101;
   }
 }
 

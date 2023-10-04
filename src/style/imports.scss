@@ -4,18 +4,32 @@
 @import "./home.scss";
 @import "./menu.scss";
 @import "./nav.scss";
+@import "./switch.scss";
+@import "./scrolltext.scss";
+
+/* Masquer la barre de défilement */
+body {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer et Edge */
+}
+
+/* Pour les navigateurs WebKit (Chrome et Safari) */
+body::-webkit-scrollbar {
+  width: 0;
+  display: none;
+}
 
 
 body {
-  overflow-y: hidden;
-    max-width: 1920px;
-    width: 100%;
-    height: 100%;
+  min-width: 320px;
+    width: 100vw;
+    height: 100vh;
     margin: auto;
     padding: 0;
     font-family: "Roboto", "Anton", sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    font-size: 2vw;
   }
   
   *,
@@ -25,7 +39,6 @@ body {
     padding: 0;
     border: 0;
     box-sizing: border-box;
-    font-size: 1em;
     font-style: normal;
     text-decoration: none;
     list-style-type: none;

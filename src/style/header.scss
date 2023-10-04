@@ -5,7 +5,6 @@ header {
   height: 70px;
   width: 100%;
   border-bottom: 1px solid;
-
 }
 
 .logo {
@@ -15,69 +14,36 @@ header {
 }
 .logo img {
   cursor: pointer;
-  width: 100px;
+  width: 80px;
   height: 60px;
 }
 
-.switch {
-  border-left: 1px solid;
-  padding-left: 20px;
+.selectArea{
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  align-items: center;
   height: 100%;
-  position: absolute;
-  right: 2%;
-  top: 0;
-}
-input[type="checkbox"] {
-  height: 0;
-  width: 0;
-  visibility: hidden;
+  width: 100%;
 }
 
-label {
-  cursor: pointer;
-  text-indent: -9999px;
-  width: 50px;
-  height: 30px;
-  background: transparent;
-  border: 1px solid $black;
-  display: block;
-  border-radius: 100px;
-  position: relative;
-}
 
-label:after {
-  content: "";
-  position: absolute;
-  top: 4px;
-  left: 3px;
-  width: 20px;
-  height: 20px;
-  border: 1px solid $black;
-  background: $black;
-  border-radius: 100%;
-  transition: 0.3s;
-}
+@media (max-width: 425px) {
+  header {
+    height: 50px;
+    width: 100%;
+    border-bottom: 1px solid;
+ 
+  .logo {
+    padding: 5px 10px 20px 10px;
 
-input:checked + label {
-  background: $black;
-  border: 1px solid $cream;
-}
-
-input:checked + label:after {
-  left: calc(100% - 4px);
-  transform: translateX(-100%);
-  background-color: $cream;
-}
-
-label:active:after {
-  background-color: $cream;
-}
-
-@media (max-width: 768px) {
-  .switch {
-    padding-right: 20px;
-    margin-right: 90px;
-    border-right: solid 1px;
-    right: 0;
+    }
+  
+  .logo img {
+    cursor: pointer;
+    width: 60px;
+    height: 40px;
   }
+}
+  
 }

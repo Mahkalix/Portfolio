@@ -1,5 +1,5 @@
 import React from "react";
-import { useTheme } from "./ThemeSwitch.js";
+import { useTheme } from "./ThemeSwitch";
 
 const Switch = () => {
   const { toggleTheme } = useTheme();

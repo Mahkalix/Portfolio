@@ -2,7 +2,7 @@
 $cream: #fff7f0;
 $black: #262523;
 $white: #fff;
-$yellow: rgb(221, 199, 0);
+$brick: #B22222;
 
 
 .light {
@@ -19,3 +19,20 @@ $yellow: rgb(221, 199, 0);
     background: $black;
   }
   
+
+  .light a {
+    color: $black;
+  }
+  
+  .dark a{
+    color: $cream;
+  }
+  
+
+  .light ul {
+    background-color: $cream;
+  }
+
+  .dark ul{
+    background-color: $black;
+  }
