@@ -136,7 +136,7 @@ $split-color:     rgb(0, 0, 0);
     height: $split-thickness;
     border-radius: $split-thickness;
     margin-top: calc($split-thickness / 12);
-    background: $brick;
+    background: $thirdly;
     transform: scale(0);
     transition: transform .8s cubic-bezier(.16,1.08,.38,.98);
     z-index: 1;

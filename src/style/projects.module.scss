@@ -1,0 +1,30 @@
+.projects{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    .container-img{
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+    article{
+      display: flex;
+      flex-direction: column;
+      border-left:2px solid;
+      border-bottom:2px solid;
+      width: 50%;
+      // height: 500px;
+      img{
+        padding: 1.6667vw;
+
+      }
+      .title{
+        font-family: "Anton";
+        letter-spacing: 0.4167vw;
+        padding: 0 1.6667vw 1.6667vw 0;
+        text-align: right;
+      }
+    }
+  }
+  

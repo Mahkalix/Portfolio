@@ -1,13 +1,18 @@
-@import "./colors.scss";
-@import "./error.scss";
-@import "./header.scss";
-@import "./home.scss";
-@import "./menu.scss";
-@import "./nav.scss";
-@import "./switch.scss";
-@import "./scrolltext.scss";
+@import "./colors.module.scss";
+@import "./error.module.scss";
+@import "./header.module.scss";
+@import "./home.module.scss";
+@import "./menu.module.scss";
+@import "./nav.module.scss";
+@import "./switch.module.scss";
+@import "./scrolltext.module.scss";
+@import "./hero.module.scss";
+@import "./about.module.scss";
+@import "./projects.module.scss";
+@import "./horizontalscroll.scss";
 
-/* Masquer la barre de défilement */
+
+
 body {
   scrollbar-width: none; /* Firefox */
   -ms-overflow-style: none; /* Internet Explorer et Edge */
