@@ -14,6 +14,15 @@ const Menu = () => {
     setMenuOpen(false);
   };
 
+  const scrollToSection = (sectionId) => {
+    const section = document.querySelector(sectionId);
+
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+      closeMenu(); // Fermer le menu après le défilement
+    }
+  };
+
   useEffect(() => {
     if (menuOpen) {
       document.body.classList.add("no-scroll");
@@ -45,10 +54,10 @@ const Menu = () => {
         </li>
 
         <li className="menu-item">
-          <Link
-            to="*"
-            onClick={closeMenu}
-            className={`${location.pathname === "*" ? "active" : ""}`}
+          <a
+            href="#about"
+            onClick={() => scrollToSection("#about")}
+            className={`${location.pathname === "#about" ? "active" : ""}`}
           >
             <div className="invisible"> ABOUT</div>
 
@@ -58,14 +67,14 @@ const Menu = () => {
             <span className="Mask">
               <span>ABOUT</span>
             </span>
-          </Link>
+          </a>
         </li>
 
         <li className="menu-item">
-          <Link
-            to="*"
-            onClick={closeMenu}
-            className={`${location.pathname === "*" ? "active" : ""} `}
+          <a
+            href="#projects"
+            onClick={() => scrollToSection("#projects")}
+            className={`${location.pathname === "#projects" ? "active" : ""} `}
           >
             <div className="invisible"> PROJECTS</div>
 
@@ -75,13 +84,13 @@ const Menu = () => {
             <span className="Mask">
               <span>PROJECTS</span>
             </span>
-          </Link>
+          </a>
         </li>
         <li className="menu-item">
-          <Link
-            to="*"
-            onClick={closeMenu}
-            className={`${location.pathname === "*" ? "active" : ""}`}
+          <a
+            href="#Contact"
+            onClick={() => scrollToSection("#Contact")}
+            className={`${location.pathname === "#Contact" ? "active" : ""}`}
           >
             <div className="invisible"> Contact</div>
 
@@ -91,7 +100,7 @@ const Menu = () => {
             <span className="Mask">
               <span>Contact</span>
             </span>
-          </Link>
+          </a>
         </li>
       </ul>
     </section>

@@ -1,85 +1,57 @@
-
-.about{
+.about-header {
   display: flex;
   flex-direction: column;
-  align-items:flex-start;
+  align-items: flex-start;
   justify-content: center;
-  padding-top: 6.944vw;
-  padding-bottom: 6.944vw;
+  padding-top: 6.944vw; /* Convertir de 6.944em en vw */
+  padding-bottom: 6.944vw; /* Convertir de 6.944em en vw */
   width: 100%;
-  padding-left: 1.389vw;
+  padding-left: 1.389vw; /* Convertir de 1.389em en vw */
+  background: url("../assets/images/banner.jpg") no-repeat fixed center;
+  background-size: cover;
+  padding: 5vw 2vw; /* Convertir de 5em et 2em en vw */
+  text-align: center;
 
-  h1{
-    font-size: 5.556vw;
-    font-family: Anton;
+  h1 {
+    background: transparent;
+    text-align: left;
+    font-size: 5.722vw; 
+    font-family: "Anton";
     font-weight: 400;
-    line-height: 6.944vw;
-    word-wrap: break-word
-    }
-
-    .lol{
-display: flex;
-    
-.text{
-  width: 50%;
-  display: flex;
-  flex-direction: column;
-
-
-}
-  .description{
-    margin-top: 20px;
-    p{
-      margin-bottom: 2.083vw;
-      font-size: 1.5vw;
-      font-family: "Roboto", sans-serif;
-      font-weight: 400;
-      line-height: 2.0833vw;
-      word-wrap: break-word;
-          .number{
-            font-family: "Anton", sans-serif;
-            color: $thirdly;
-        }
-      }
+    line-height: 10.056vw; 
+    word-wrap: break-word;
   }
-  .image{
-    width: 50%;
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    img{
-      width: 45vw;
-      height: 45vw;
-    }
-  }
- }}
-
-
-
- @media (max-width: 425px) {
-  .about{
-
-    .lol{
-      display: flex;
-      flex-direction: column;
-      .text{
-       width: 100%;
-     }
-           .image{
-             width: 100%;
-             margin-top: 3.389vw;
-           }
-       }
-  }
-
-          
-
 }
 
+.introduction {
+  padding: 5vw;
+  margin-top: 20px;
+  
+  h2 {
+    font-size: 3.083vw; 
+    margin-bottom: 2.7778vw;
+
+  }
+  
+  p {
+    margin-bottom: 2.083vw; 
+    font-size: 2.604vw; 
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    line-height: 2.708vw; 
     
-  
+    .number {
+      font-family: "Anton", sans-serif;
+      color: $thirdly;
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  /* Styles spécifiques pour les écrans de largeur maximale 425px */
+}
 
 
 
-  
+
 

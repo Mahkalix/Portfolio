@@ -1,11 +1,13 @@
 import React from "react";
 import argentbank from "../assets/images/argentbank.png";
 import { Link } from "react-router-dom";
+import ScrollText from "../components/ScrollText";
 
 const Projects = () => {
   return (
     <>
-      <section className="projects">
+      <section id="projects">
+        <ScrollText text="PROJECTs - PROJECTs - PROJECTs - PROJECTs - PROJECTs - PROJECTs - PROJECTs - PROJECTs - PROJECTS - PROJ" />
         <article>
           <Link className="container-img" to="/error">
             <img src={argentbank} alt="argentbank" />
