@@ -83,13 +83,13 @@ const Menu = () => {
             onClick={closeMenu}
             className={`${location.pathname === "*" ? "active" : ""}`}
           >
-            <div className="invisible"> Get in touch</div>
+            <div className="invisible"> Contact</div>
 
             <span className="Mask Top">
-              <span>Get in touch</span>
+              <span>Contact</span>
             </span>
             <span className="Mask">
-              <span>Get in touch</span>
+              <span>Contact</span>
             </span>
           </Link>
         </li>

@@ -1,0 +1,36 @@
+
+$primary: #fff7f0;
+$secondary: #262523;
+$thirdly: #B22222;
+$white: #ffff;
+
+
+.light {
+    background-color: $primary;
+    color: $secondary;
+    border: $secondary;
+    background: $primary;
+    a{
+      color:$secondary;
+    }
+    ul{
+      background-color: $primary;
+    }
+  }
+  
+  .dark {
+    background-color: $secondary;
+    color: $primary;
+    border: $primary;
+    background: $secondary;
+    a{
+      color: $primary;
+    }
+    ul{
+      background-color: $secondary;
+    }
+  }
+  
+ 
+
+
