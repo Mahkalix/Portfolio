@@ -1,30 +1,88 @@
-#projects{
+/* SECTION */
+#projects {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  .container-img {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    width: 100%;
 
-    .container-img{
-      display: flex;
-      flex-direction: column;
+  }
+
+  article {
+    display: flex;
+    flex-direction: column;
+    border-right: 2px solid;
+    border-bottom: 2px solid;
+    width: 100%;
+    padding-left: 1.6667vw; 
+    padding-right: 1.6667vw; 
+    padding-top: 1.6667vw; 
+
+    img {
       width: 100%;
     }
-    article{
+
+    .title {
+      text-transform: uppercase;
+      padding-top: 1vw; 
+      font-family: "Anton";
+      letter-spacing: 0.0167vw; 
+      padding: 0 1.6667vw 1.6667vw 0;
+      text-align: right;
+    }
+  }
+}
+
+/* PAGE */
+.projects {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 5vw; 
+
+  img {
+    display: flex;
+    width: 60vw;
+  }
+
+  .title {
+    width: 60vw;
+    font-family: "Anton";
+    font-size: 3vw; 
+    font-weight: 500;
+    margin-top: 4vh; 
+  }
+
+  .description {
+    width: 60vw;
+    font-size: 2vw; 
+    margin-top: 4vh; 
+  }
+
+  .project-tools {
+    width: 60vw;
+    display: flex;
+    flex-direction: row;
+    align-items: left;
+    justify-content: flex-start;
+
+    li {
+      margin-top: 4vh;
+      margin-right: 2vw; 
       display: flex;
       flex-direction: column;
-      border-left:2px solid;
-      border-bottom:2px solid;
-      width: 50%;
-      // height: 500px;
-      img{
-        padding: 1.6667vw;
-
-      }
-      .title{
-        font-family: "Anton";
-        letter-spacing: 0.4167vw;
-        padding: 0 1.6667vw 1.6667vw 0;
-        text-align: right;
+      align-items: center;
+      justify-content: center;
+      font-size: 2vw;
+      img {
+        width: 6vw; 
+        height: 6vw; 
       }
     }
   }
-  
+}

@@ -17,7 +17,7 @@ const About = () => {
         </div>
 
         <div className="introduction">
-          <h2>Introduction</h2>
+          <h2>Who am I ?</h2>
           <p>
             <span className="number">01-</span> I'm Max, a 22-year-old web
             wizard from the cozy town of Saint Martin D'Uriage near Grenoble.

@@ -1,0 +1,47 @@
+[
+	{
+	  "id": "argentbank",
+	  "title": "Argent Bank",
+	  "cover": "/images/argentbankhome.png",
+	  "description": "Votre maison loin de chez vous. Que vous veniez de l'autre bout du monde, ou juste de quelques stations de RER, vous vous sentirez chez vous dans notre appartement.",
+	  "tools": {
+		"React": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+		"Sass": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg", 
+		"Figma": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-plain.svg"
+	  }
+	},
+	{
+	  "id": "dimension",
+	  "title": "Dimension",
+	  "cover": "/images/dimensionhome.png", 
+	  "description": "Profitez du charme de la vie parisienne dans un magnifique appartement. À 3 minutes à pied du Canal Saint Martin, vous serez proche des transports, mais également de nombreux commerces. L'appartement est tout équipé, et possède également un parking pour ceux qui souhaitent se déplacer en voiture.",
+	  "tools": {
+		"React": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+		"Sass": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg",
+		"Figma": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-plain.svg"
+	  }
+	},
+	{
+	  "id": "kasa",
+	  "title": "Kasa",
+	  "cover": "/images/kasahome.png", 
+	  "description": "À seulement deux pas des Buttes Chaumont, venez découvrir Paris dans ce studio tout équipé. Entièrement équipé pour votre confort et élégamment décoré, il vous permettra de vivre comme un Parisien le temps de votre séjour.",
+	  "tools": {
+		"React": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+		"Sass": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg", 
+		"Figma": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-plain.svg"
+	  }
+	},
+	{
+		"id": "ohmyfood",
+		"title": "Oh My Food",
+		"cover": "/images/ohmyfoodhome.png", 
+		"description": "À seulement deux pas des Buttes Chaumont, venez découvrir Paris dans ce studio tout équipé. Entièrement équipé pour votre confort et élégamment décoré, il vous permettra de vivre comme un Parisien le temps de votre séjour.",
+		"tools": {
+		  "React": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+		  "Sass": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg", 
+		  "Figma": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-plain.svg"
+		}
+	  }
+  ]
+  
