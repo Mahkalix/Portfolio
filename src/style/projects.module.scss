@@ -4,12 +4,13 @@
   flex-direction: row;
   flex-wrap: wrap;
 
-  .container-img {
+  .container-card {
     display: flex;
     flex-direction: row;
     width: 100%;
 
   }
+ 
 
   article {
     display: flex;
@@ -32,6 +33,9 @@
       letter-spacing: 0.0167vw; 
       padding: 0 1.6667vw 1.6667vw 0;
       text-align: right;
+      .number-style{
+        font-size: 1vw;
+      }
     }
   }
 }
