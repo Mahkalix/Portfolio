@@ -1,16 +1,13 @@
 import React from "react";
-import { useTheme } from "../components/ThemeSwitch";
 import ScrollText from "../components/ScrollText";
 
 const About = () => {
-  const { theme } = useTheme();
-
   return (
     <>
       <section id="about">
         <ScrollText text="ABOUT - ABOUT - ABOUT - ABOUT - ABOUT - ABOUT - ABOUT - ABOUT - ABOUT - ABOUT - ABOUT - ABOUT - ABOUT - ABOUT -" />
         <div className="about-header">
-          <h1 className={theme === "light" ? "dark" : " light"}>
+          <h1>
             GOOD TO SEE YOU ! <br />
             LET ME TELL YOU A BIT MORE ABOUT ME :
           </h1>

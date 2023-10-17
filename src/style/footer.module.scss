@@ -1,10 +1,10 @@
 footer {
+  border-top:solid 1px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    height: 22vw; 
-    padding: 10vw;
+    height: 9vw; 
     
     .social-media {
       width: 100%;
@@ -12,7 +12,7 @@ footer {
       justify-content: center;
       
       img {
-        width: 8vw; 
+        width: 3vw; 
         margin-left: 1.5vw; 
         margin-right: 1.5vw; 
       }
@@ -23,8 +23,8 @@ footer {
       justify-content: center;
       align-self: center;
       width: 100%;
-      margin-top: 5vw; 
-      font-size: 1vw; 
+      margin-top: 1vw; 
+      font-size: 0.8vw; 
       font-family: Roboto;
       font-weight: 400;
       word-wrap: break-word;

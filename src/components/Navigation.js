@@ -1,5 +1,6 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
+import AnimatedButton from "./AnimatedButton";
 
 const Navigation = () => {
   const location = useLocation();
@@ -23,7 +24,9 @@ const Navigation = () => {
               }`}
               to="/"
             >
-              Home
+              <div class="animation-container">
+                <AnimatedButton text="Home" />
+              </div>
             </Link>
           </li>
           <li>
@@ -34,7 +37,9 @@ const Navigation = () => {
                 location.pathname === "#about" ? "active" : ""
               }`}
             >
-              About
+              <div class="animation-container">
+                <AnimatedButton text="About" />
+              </div>
             </Link>
           </li>
           <li>
@@ -45,7 +50,9 @@ const Navigation = () => {
                 location.pathname === "#projects" ? "active" : ""
               }`}
             >
-              Projects
+              <div class="animation-container">
+                <AnimatedButton text="Projects" />
+              </div>
             </Link>
           </li>
           <li>
@@ -56,7 +63,9 @@ const Navigation = () => {
                 location.pathname === "#Contact" ? "active" : ""
               }`}
             >
-              Contact
+              <div class="animation-container">
+                <AnimatedButton text="Contact" />
+              </div>
             </Link>
           </li>
         </ul>
