@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import dataProjects from "../data/projects.json";
+import ScrollText from "../components/ScrollText";
 
 const Projects = () => {
   const params = useParams();
@@ -19,18 +20,41 @@ const Projects = () => {
   return (
     <>
       <div className="projects">
-        <img src={data.cover} alt={data.title} />
-        <div className="title">{data.title}</div>
-        <div className="description">{data.description}</div>
+        <div className="container-projects-description">
+          <div className="title">{data.title}</div>
+          <div className="description">{data.description}</div>
 
-        <ul className="project-tools">
-          {Object.entries(data.tools).map(([tool, icon], index) => (
-            <li key={index}>
-              <img src={icon} alt={tool} />
-              {tool}
-            </li>
-          ))}
-        </ul>
+          <div className="infos">
+            <div className="year">
+              <p>YEAR</p> <br />
+              {data.year}
+            </div>
+            <div className="use">
+              <p>USE</p> <br />
+              {data.use}
+            </div>
+          </div>
+          <ul className="project-tools">
+            {Object.entries(data.tools).map(([tool, icon], index) => (
+              <li key={index}>
+                <img src={icon} alt={tool} />
+                {tool}
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div className="container-projects-img">
+          <img src={data.cover} alt={data.title} />
+        </div>
+      </div>
+      <ScrollText text="PREVIEW - PREVIEW - PREVIEW - PREVIEW - PREVIEW - PREVIEW - PREVIEW - PREVIEW - PREVIEW - PREVIEW - PREVIEW - PREVIEW - PREVIEW - PREVIEW -" />
+      <div className="preview">
+        <div className="visit">
+          <p className="view-visit">Visit site</p>
+        </div>
+        <div className="view">
+          <p className="view-visit">View code</p>
+        </div>
       </div>
     </>
   );

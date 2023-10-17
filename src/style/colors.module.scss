@@ -16,9 +16,14 @@ $white: #ffff;
     ul{
       background-color: $primary;
     }
+    .view-visit{
+      -webkit-text-stroke: 2px $secondary;
+    }
   }
   
   .dark {
+
+    stroke: $primary;
     background-color: $secondary;
     color: $primary;
     border: $primary;
@@ -28,6 +33,9 @@ $white: #ffff;
     }
     ul{
       background-color: $secondary;
+    }
+    .view-visit{
+      -webkit-text-stroke: 2px $primary;
     }
   }
   

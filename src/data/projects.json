@@ -9,19 +9,23 @@
 		"React": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
 		"Sass": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg", 
 		"Figma": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-plain.svg"
-	  }
+	  },
+	  "year": 2023,
+	  "use": "Bank"
 	},
 	{
 	  "id": "dimension",
 	  "number": "02/",
 	  "title": "Dimension",
 	  "cover": "/images/dimensionhome.png", 
-	  "description": "Profitez du charme de la vie parisienne dans un magnifique appartement. À 3 minutes à pied du Canal Saint Martin, vous serez proche des transports, mais également de nombreux commerces. L'appartement est tout équipé, et possède également un parking pour ceux qui souhaitent se déplacer en voiture.",
+	  "description": "'DIMENSION' is an online gallery for digital art.We will be exhibiting various projects in the future. TI created a 3D world view and created the pleasure of watching the work.",
 	  "tools": {
 		"React": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
 		"Sass": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg",
 		"Figma": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-plain.svg"
-	  }
+	  },
+	  "year": "2023",
+	  "use": "Music"
 	},
 	{
 	  "id": "kasa",
@@ -33,7 +37,8 @@
 		"React": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
 		"Sass": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg", 
 		"Figma": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-plain.svg"
-	  }
+	  },  "year": "year 2023",
+	  "use": "Accomodation"
 	},
 	{
 		"id": "ohmyfood",
@@ -45,7 +50,8 @@
 		  "React": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
 		  "Sass": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg", 
 		  "Figma": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-plain.svg"
-		}
+		},   "year": "2023",
+		"use": "Food"
 	  }
   ]
   

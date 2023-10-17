@@ -1,68 +1,71 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef, useCallback } from "react";
 
-const AnimatedButton = ({ text }) => {
+const AnimatedButton = ({ text, isImageHovered }) => {
   const [originalText, setOriginalText] = useState(text);
   const [buttonText, setButtonText] = useState(originalText);
   const [isAnimating, setIsAnimating] = useState(false);
   const animationDuration = 1000;
-  let interval;
-  let startTime;
+  const intervalRef = useRef(null);
+  const startTimeRef = useRef(null);
 
-  const scrambleText = (text) => {
+  const getRandomLetter = useCallback(() => {
+    return originalText.charAt(Math.floor(Math.random() * originalText.length));
+  }, [originalText]);
+
+  const scrambleText = useCallback(() => {
     let scrambledText = "";
-
-    for (let i = 0; i < text.length; i++) {
+    for (let i = 0; i < originalText.length; i++) {
       if (Math.random() < 0.5) {
-        scrambledText += text[i];
+        scrambledText += originalText[i];
       } else {
         scrambledText += getRandomLetter();
       }
     }
-
     return scrambledText;
-  };
+  }, [getRandomLetter, originalText]);
 
-  const getRandomLetter = () => {
-    return originalText.charAt(Math.floor(Math.random() * originalText.length));
-  };
-
-  const myTimer = () => {
-    const elapsedTime = Date.now() - startTime;
-
+  const myTimer = useCallback(() => {
+    const elapsedTime = Date.now() - startTimeRef.current;
     if (elapsedTime >= animationDuration) {
-      clearInterval(interval);
+      clearInterval(intervalRef.current);
       setIsAnimating(false);
       setButtonText(originalText);
     } else {
       setButtonText(scrambleText(originalText));
     }
-  };
+  }, [originalText, scrambleText]);
 
-  const handleMouseEnter = () => {
-    if (interval) {
-      clearInterval(interval);
+  const handleMouseEnter = useCallback(() => {
+    if (intervalRef.current) {
+      clearInterval(intervalRef.current);
     }
     setIsAnimating(true);
-    startTime = Date.now();
-    interval = setInterval(myTimer, 100);
-  };
+    startTimeRef.current = Date.now();
+    intervalRef.current = setInterval(myTimer, 100);
+  }, [myTimer]);
 
-  const handleMouseLeave = () => {
-    clearInterval(interval);
+  const handleMouseLeave = useCallback(() => {
+    clearInterval(intervalRef.current);
     setIsAnimating(false);
     setButtonText(originalText);
-  };
+  }, [originalText]);
 
   useEffect(() => {
-    setOriginalText(text); // Utilisez la valeur de la prop 'text'
+    setOriginalText(text);
     setButtonText(text);
   }, [text]);
 
+  useEffect(() => {
+    if (isImageHovered) {
+      handleMouseEnter();
+    } else {
+      handleMouseLeave();
+    }
+  }, [isImageHovered, handleMouseEnter, handleMouseLeave]);
+
   return (
     <div
-      className={`btn text-code-hover-feel ${
-        isAnimating ? "animation-start" : ""
-      }`}
+      className={`btn ${isAnimating ? "animation-start" : ""}`}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >

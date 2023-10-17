@@ -1,14 +1,24 @@
-import React from "react";
+// Projects.js
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import ScrollText from "../components/ScrollText";
 import projectsData from "../data/projects.json";
+import AnimatedButton from "./AnimatedButton";
 
 const Projects = () => {
   const middleIndex = Math.floor(projectsData.length / 2);
-
-  // Séparez le tableau en deux parties, avant et après le milieu
   const firstHalf = projectsData.slice(0, middleIndex);
   const secondHalf = projectsData.slice(middleIndex);
+
+  const [hoveredProject, setHoveredProject] = useState(null);
+
+  const handleMouseEnter = (project) => {
+    setHoveredProject(project);
+  };
+
+  const handleMouseLeave = () => {
+    setHoveredProject(null);
+  };
 
   return (
     <>
@@ -18,11 +28,19 @@ const Projects = () => {
           {firstHalf.map((project, index) => (
             <article key={index}>
               <Link to={`/projects/${project.id}`}>
-                <img src={project.cover} alt={project.title} />
+                <img
+                  src={project.cover}
+                  alt={project.title}
+                  onMouseEnter={() => handleMouseEnter(project)}
+                  onMouseLeave={handleMouseLeave}
+                />
               </Link>
               <div className="title">
                 <span className="number-style">{project.number}</span>
-                {project.title}
+                <AnimatedButton
+                  text={project.title}
+                  isImageHovered={hoveredProject === project}
+                />
               </div>
             </article>
           ))}
@@ -31,11 +49,19 @@ const Projects = () => {
           {secondHalf.map((project, index) => (
             <article key={index}>
               <Link to={`/projects/${project.id}`}>
-                <img src={project.cover} alt={project.title} />
+                <img
+                  src={project.cover}
+                  alt={project.title}
+                  onMouseEnter={() => handleMouseEnter(project)}
+                  onMouseLeave={handleMouseLeave}
+                />
               </Link>
               <div className="title">
                 <span className="number-style">{project.number}</span>
-                {project.title}
+                <AnimatedButton
+                  text={project.title}
+                  isImageHovered={hoveredProject === project}
+                />
               </div>
             </article>
           ))}

@@ -14,63 +14,57 @@ const Navigation = () => {
   };
 
   return (
-    <>
-      <nav>
-        <ul className="menu">
-          <li>
-            <Link
-              className={`nav-link ${
-                location.pathname === "/" ? "active" : ""
-              }`}
-              to="/"
-            >
-              <div class="animation-container">
-                <AnimatedButton text="Home" />
-              </div>
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="/"
-              onClick={() => scrollToSection("#about")}
-              className={`nav-link ${
-                location.pathname === "#about" ? "active" : ""
-              }`}
-            >
-              <div class="animation-container">
-                <AnimatedButton text="About" />
-              </div>
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="/"
-              onClick={() => scrollToSection("#projects")}
-              className={`nav-link ${
-                location.pathname === "#projects" ? "active" : ""
-              }`}
-            >
-              <div class="animation-container">
-                <AnimatedButton text="Projects" />
-              </div>
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="/"
-              onClick={() => scrollToSection("#Contact")}
-              className={`nav-link ${
-                location.pathname === "#Contact" ? "active" : ""
-              }`}
-            >
-              <div class="animation-container">
-                <AnimatedButton text="Contact" />
-              </div>
-            </Link>
-          </li>
-        </ul>
-      </nav>
-    </>
+    <nav>
+      <ul className="menu">
+        <li>
+          <Link
+            className={`nav-link ${location.pathname === "/" ? "active" : ""}`}
+            to="/"
+          >
+            <div className="animation-container">
+              <AnimatedButton text="Home" />
+            </div>
+          </Link>
+        </li>
+        <li>
+          <Link
+            to="/"
+            onClick={() => scrollToSection("#about")}
+            className={`nav-link ${location.hash === "#about" ? "active" : ""}`}
+          >
+            <div className="animation-container">
+              <AnimatedButton text="About" />
+            </div>
+          </Link>
+        </li>
+        <li>
+          <Link
+            to="/"
+            onClick={() => scrollToSection("#projects")}
+            className={`nav-link ${
+              location.hash === "#projects" ? "active" : ""
+            }`}
+          >
+            <div className="animation-container">
+              <AnimatedButton text="Projects" />
+            </div>
+          </Link>
+        </li>
+        <li>
+          <Link
+            to="/"
+            onClick={() => scrollToSection("#Contact")}
+            className={`nav-link ${
+              location.hash === "#Contact" ? "active" : ""
+            }`}
+          >
+            <div className="animation-container">
+              <AnimatedButton text="Contact" />
+            </div>
+          </Link>
+        </li>
+      </ul>
+    </nav>
   );
 };
 
