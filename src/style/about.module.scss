@@ -3,13 +3,14 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  padding-top: 6.944vw; /* Convertir de 6.944em en vw */
-  padding-bottom: 6.944vw; /* Convertir de 6.944em en vw */
+  padding-top: 6.944vw; 
+  padding-bottom: 6.944vw; 
   width: 100%;
-  padding-left: 1.389vw; /* Convertir de 1.389em en vw */
-  background: url("../assets/images/banner.jpg") no-repeat fixed center;
+  padding-left: 1.389vw; 
+  background: url("../assets/images/banner.jpg") no-repeat fixed center ;
+  filter: blur(1px);
   background-size: cover;
-  padding: 5vw 2vw; /* Convertir de 5em et 2em en vw */
+  padding: 5vw 2vw; 
   text-align: center;
 
   h1 {

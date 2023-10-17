@@ -17,7 +17,14 @@ const Navigation = () => {
       <nav>
         <ul className="menu">
           <li>
-            <Link to="/">Home</Link>
+            <Link
+              className={`nav-link ${
+                location.pathname === "/" ? "active" : ""
+              }`}
+              to="/"
+            >
+              Home
+            </Link>
           </li>
           <li>
             <Link
