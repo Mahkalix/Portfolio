@@ -1,16 +1,33 @@
 import React from "react";
+import me from "../assets/images/me.jpg";
+import normal from "../assets/images/normal.jpg";
+import chill from "../assets/images/chill.jpg";
 import ScrollText from "../components/ScrollText";
+import data from "../data/me.json";
 
 const About = () => {
+  if (data && Array.isArray(data)) {
+    console.log(data);
+  } else {
+    console.error(
+      "Les données du projet ne sont pas définies ou ne sont pas un tableau."
+    );
+  }
   return (
     <>
       <section id="about">
         <ScrollText text="ABOUT - ABOUT - ABOUT - ABOUT - ABOUT - ABOUT - ABOUT - ABOUT - ABOUT - ABOUT - ABOUT - ABOUT - ABOUT - ABOUT -" />
+
         <div className="about-header">
           <h1>
             GOOD TO SEE YOU ! <br />
             LET ME TELL YOU A BIT MORE ABOUT ME :
           </h1>
+        </div>
+        <div className="floating">
+          <img className="little" src={normal} alt="" />
+          <img className="normal" src={me} alt="" />
+          <img className="little" src={chill} alt="" />
         </div>
 
         <div className="introduction">
