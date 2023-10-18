@@ -1,7 +1,20 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Spiderman from "../assets/images/spiderman.png";
 
 const Hero = () => {
+  useEffect(() => {
+    const spidermanElement = document.querySelector(".spiderman");
+    const spidermanMovingDuration = 3000;
+
+    spidermanElement.addEventListener("mouseover", () => {
+      spidermanElement.style.animation =
+        "spidermanmoving 3s ease-in-out forwards";
+      setTimeout(() => {
+        spidermanElement.style.animation = "spiderman 5s ease-in-out forwards";
+      }, spidermanMovingDuration);
+    });
+  }, []);
+
   return (
     <>
       <section className="hero">

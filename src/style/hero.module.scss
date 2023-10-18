@@ -59,7 +59,7 @@
 
   .spiderman {
     position: absolute;
-    top: -15px;
+    top: -30px;
     right: 5vw;
     filter: grayscale(0.75);
     width: 20vw; /* Utilisation de vw pour la largeur */
@@ -68,6 +68,28 @@
     display: block;
     animation: spiderman 5s ease-in-out forwards;
     overflow: hidden;
+    &:hover{
+      cursor: pointer;
+    }
+  }
+
+  @keyframes spidermanmoving {
+    0% {
+      transform: translateY(0);
+   
+    }
+    30% {
+      transform: translateY(0) rotate(5deg);
+    }
+    50% {
+      transform: rotate(-5deg);
+    }
+    100% {
+      transform: translateY(-1000px); 
+      transform-origin: center;
+  
+    }
+
   }
   
   @keyframes spiderman {
