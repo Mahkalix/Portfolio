@@ -17,7 +17,8 @@ const Hero = () => {
           </div>
           <div className="description">
             Hello 👋 <br />
-            I'm a front-end developer / web integrator's student <br />
+            I'm a front-end developer
+            <br />
             based in Grenoble, France.
           </div>
         </div>

@@ -28,15 +28,16 @@
       margin-top: -0.8vw; 
 
       .container-reverse {
-        margin-left: 3.6125vw; /* 51.4px en vw */
+        width: 50%;
+        margin-left: 1.500vw; /* 51.4px en vw */
         text-transform: uppercase;
     
         .item-one,
         .item-two {
-          font-size: 6.9845vw; 
+          font-size: 10.4vw; 
           font-family: "Anton";
           font-weight: 400;
-          line-height: 5.8vw; 
+          line-height: 8.5vw; 
           letter-spacing:  0.424375vw ; 
         }
         .item-two {
@@ -45,10 +46,11 @@
       }
 
       .description {
-        font-size: 2.6vw; /* 20px en vw */
+        width: 50%;
+        font-size: 3vw; /* 20px en vw */
         font-family: "Roboto", sans-serif;
         font-weight: 400;
-        line-height: 2.0833vw; /* 30px en vw */
+        line-height: 3.5833vw; /* 30px en vw */
         word-wrap: break-word;
       }
     }
@@ -59,7 +61,7 @@
     position: absolute;
     top: -15px;
     right: 5vw;
-    filter: grayscale(0.8);
+    filter: grayscale(0.75);
     width: 20vw; /* Utilisation de vw pour la largeur */
     height: auto;
     margin: 0 auto;
