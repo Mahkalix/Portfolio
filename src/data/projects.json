@@ -1,55 +1,70 @@
 [
 	{
 	  "id": "argentbank",
+	  "visit": "argentbank",
+	  "view": "https://github.com/Mahkalix/ArgentBank",
 	  "number": "01/",
 	  "title": "Argent Bank",
 	  "cover": "/images/argentbankhome.png",
 	  "description": "Votre maison loin de chez vous. Que vous veniez de l'autre bout du monde, ou juste de quelques stations de RER, vous vous sentirez chez vous dans notre appartement.",
 	  "tools": {
 		"React": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
-		"Sass": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg", 
-		"Figma": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-plain.svg"
+		"JavaScript": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg",
+		"HTML": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-plain.svg",
+		"CSS": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-plain.svg",
+		"Swagger": "https://upload.wikimedia.org/wikipedia/commons/a/ab/Swagger-logo.png"
 	  },
 	  "year": 2023,
 	  "use": "Bank"
 	},
 	{
 	  "id": "dimension",
+	  "visit": "https://dimensionmusic.netlify.app/",
+	  "view": "https://github.com/Mahkalix/Dimension",
 	  "number": "02/",
 	  "title": "Dimension",
 	  "cover": "/images/dimensionhome.png", 
 	  "description": "'DIMENSION' is an online gallery for digital art.We will be exhibiting various projects in the future. TI created a 3D world view and created the pleasure of watching the work.",
 	  "tools": {
 		"React": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
-		"Sass": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg",
-		"Figma": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-plain.svg"
+		"JavaScript": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg",
+		"HTML": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-plain.svg",
+		"CSS": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-plain.svg"
 	  },
 	  "year": "2023",
 	  "use": "Music"
 	},
 	{
 	  "id": "kasa",
+	  "visit": "https://kasahome.netlify.app/",
+	  "view": "https://github.com/Mahkalix/Kasa",
 	  "number": "03/",
 	  "title": "Kasa",
 	  "cover": "/images/kasahome.png", 
 	  "description": "À seulement deux pas des Buttes Chaumont, venez découvrir Paris dans ce studio tout équipé. Entièrement équipé pour votre confort et élégamment décoré, il vous permettra de vivre comme un Parisien le temps de votre séjour.",
 	  "tools": {
+	
 		"React": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
-		"Sass": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg", 
-		"Figma": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-plain.svg"
+		"JavaScript": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg",
+		"HTML": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-plain.svg",
+		"CSS": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-plain.svg",
+		"Swagger": "https://upload.wikimedia.org/wikipedia/commons/a/ab/Swagger-logo.png"
 	  },  "year": "year 2023",
 	  "use": "Accomodation"
 	},
 	{
 		"id": "ohmyfood",
+		"visit": "https://mahkalix.github.io/Ohmyfood/",
+		"view": "https://github.com/Mahkalix/Ohmyfood",
 		"number": "04/",
 		"title": "Oh My Food",
 		"cover": "/images/ohmyfoodhome.png", 
 		"description": "À seulement deux pas des Buttes Chaumont, venez découvrir Paris dans ce studio tout équipé. Entièrement équipé pour votre confort et élégamment décoré, il vous permettra de vivre comme un Parisien le temps de votre séjour.",
 		"tools": {
-		  "React": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
-		  "Sass": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg", 
-		  "Figma": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-plain.svg"
+			"React": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+			"JavaScript": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg",
+			"HTML": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-plain.svg",
+			"Sass": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg"
 		},   "year": "2023",
 		"use": "Food"
 	  }

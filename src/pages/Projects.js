@@ -38,7 +38,6 @@ const Projects = () => {
             {Object.entries(data.tools).map(([tool, icon], index) => (
               <li key={index}>
                 <img src={icon} alt={tool} />
-                {tool}
               </li>
             ))}
           </ul>
@@ -50,10 +49,24 @@ const Projects = () => {
       <ScrollText text="PREVIEW - PREVIEW - PREVIEW - PREVIEW - PREVIEW - PREVIEW - PREVIEW - PREVIEW - PREVIEW - PREVIEW - PREVIEW - PREVIEW - PREVIEW - PREVIEW -" />
       <div className="preview">
         <div className="visit">
-          <p className="view-visit">Visit site</p>
+          <a
+            href={data.visit}
+            target="_blank"
+            rel="noreferrer"
+            className="view-visit"
+          >
+            Visit site
+          </a>
         </div>
         <div className="view">
-          <p className="view-visit">View code</p>
+          <a
+            href={data.view}
+            target="_blank"
+            rel="noreferrer"
+            className="view-visit"
+          >
+            View code
+          </a>
         </div>
       </div>
     </>
