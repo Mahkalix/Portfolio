@@ -20,7 +20,7 @@ const Header = () => {
         </div>
 
         <Menu />
-        <div className="selectArea">
+        <div className={`selectArea ${theme === "light" ? "light" : "dark"}`}>
           <Switch />
           <Nav />
         </div>
