@@ -1,7 +1,75 @@
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+    box-shadow: 0px 0px 50px 0px
+  }
+  50% {
+    transform: translateY(10px);
+    box-shadow: 0px 15px 50px 0px
+  }
+  100% {
+    transform: translateY(0px);
+    box-shadow: 0px 0px 50px 0px
+  }
+}
+
+@keyframes floatreverse {
+  0% {
+    transform: translateY(10px);
+    box-shadow: 0px 15px 50px 0px
+  }
+  50% {
+    transform: translateY(0px);
+    box-shadow: 0px 0px 50px 0px
+  }
+  100% {
+    transform: translateY(10px);
+    box-shadow: 0px 15px 50px 0px
+  }
+}
+
+
 #about{
   display: flex;
+  align-items: center;
+  justify-content: center;
   flex-direction: row;
   flex-wrap: wrap;
+
+  .floating{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+<<<<<<< HEAD
+    // .little{
+    //   filter: blur(2px);
+    //   width: 5%;
+    //   animation: floatreverse 2s ease infinite
+    // }
+    .normal{
+      width: 50%;
+=======
+    .little{
+      filter: blur(2px);
+      width: 5%;
+      animation: floatreverse 2s ease infinite
+    }
+    .normal{
+      width: 20%;
+>>>>>>> b8e1f1576c6611fd5ddce65cfe594c19be39edbe
+      animation: float 2s ease infinite
+    }
+    img{
+      margin-left: 10px;
+      margin-right: 10px;
+      margin-top: 5vw;
+      border-radius: 100%;
+      background-clip: content-box;
+    }
+  
+  }
+
+  
 
   .about-header {
     position: relative;
