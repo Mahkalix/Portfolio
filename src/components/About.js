@@ -1,12 +1,7 @@
 import React from "react";
 import me from "../assets/images/me.jpg";
-<<<<<<< HEAD
 // import normal from "../assets/images/normal.jpg";
 // import chill from "../assets/images/chill.jpg";
-=======
-import normal from "../assets/images/normal.jpg";
-import chill from "../assets/images/chill.jpg";
->>>>>>> b8e1f1576c6611fd5ddce65cfe594c19be39edbe
 import ScrollText from "../components/ScrollText";
 import data from "../data/me.json";
 
@@ -30,15 +25,9 @@ const About = () => {
           </h1>
         </div>
         <div className="floating">
-<<<<<<< HEAD
           {/* <img className="little" src={normal} alt="" /> */}
           <img className="normal" src={me} alt="" />
           {/* <img className="little" src={chill} alt="" /> */}
-=======
-          <img className="little" src={normal} alt="" />
-          <img className="normal" src={me} alt="" />
-          <img className="little" src={chill} alt="" />
->>>>>>> b8e1f1576c6611fd5ddce65cfe594c19be39edbe
         </div>
 
         <div className="introduction">

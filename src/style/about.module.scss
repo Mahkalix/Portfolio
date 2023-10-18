@@ -40,7 +40,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-<<<<<<< HEAD
+
     // .little{
     //   filter: blur(2px);
     //   width: 5%;
@@ -48,17 +48,9 @@
     // }
     .normal{
       width: 50%;
-=======
-    .little{
-      filter: blur(2px);
-      width: 5%;
-      animation: floatreverse 2s ease infinite
-    }
-    .normal{
-      width: 20%;
->>>>>>> b8e1f1576c6611fd5ddce65cfe594c19be39edbe
       animation: float 2s ease infinite
     }
+  
     img{
       margin-left: 10px;
       margin-right: 10px;
