@@ -36,7 +36,7 @@ const Projects = () => {
                 />
               </Link>
               <div className="title">
-                <span className="number-style">{project.number}</span>
+                <div className="number-style">{project.number}</div>
                 <AnimatedButton
                   text={project.title}
                   isImageHovered={hoveredProject === project}
