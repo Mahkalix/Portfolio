@@ -59,9 +59,9 @@
 
   .spiderman {
     position: absolute;
-    top: -30px;
+    top: -5px;
     right: 5vw;
-    filter: grayscale(0.75);
+    filter: grayscale(0.85);
     width: 20vw; /* Utilisation de vw pour la largeur */
     height: auto;
     margin: 0 auto;
@@ -79,10 +79,10 @@
    
     }
     30% {
-      transform: translateY(0) rotate(5deg);
+      transform: translateY(0) ;
     }
     50% {
-      transform: rotate(-5deg);
+      transform: rotate(-2deg);
     }
     100% {
       transform: translateY(-1000px); 
@@ -97,13 +97,13 @@
       transform: translateY(-1000px);
     }
     30% {
-      transform: translateY(0) rotate(5deg);
+      transform: translateY(0) rotate(2deg);
     }
     50% {
-      transform: rotate(-5deg);
+      transform: rotate(-2deg);
     }
     75% {
-      transform: rotate(5deg);
+      transform: rotate(2deg);
     }
   }
   
@@ -140,7 +140,7 @@
     }
     
     .spiderman {
-      width: 25vw;
+      width: 35vw;
       right: 0vw;
     
     }

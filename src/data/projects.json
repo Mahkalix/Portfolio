@@ -1,7 +1,7 @@
 [
 	{
 	  "id": "argentbank",
-	  "visit": "argentbank",
+	  "visit": "https://bankargent.netlify.app",
 	  "view": "https://github.com/Mahkalix/ArgentBank",
 	  "number": "01/",
 	  "title": "Argent Bank",
