@@ -1,4 +1,5 @@
 import React from "react";
+import Spiderman from "../assets/images/spiderman.png";
 
 const Hero = () => {
   return (
@@ -8,6 +9,7 @@ const Hero = () => {
           Maxence <br />
           Badin-Léger
         </h1>
+
         <div className="subtitle">
           <div className="container-reverse">
             <div className="item-one">Portfolio</div>
@@ -19,6 +21,7 @@ const Hero = () => {
             based in Grenoble, France.
           </div>
         </div>
+        <img src={Spiderman} alt="img-spiderman" class="spiderman" />
       </section>
     </>
   );

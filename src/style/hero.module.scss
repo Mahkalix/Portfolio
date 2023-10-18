@@ -1,8 +1,9 @@
 .hero { 
+  position: relative;
     margin-left: 20px;
     display: flex;
     justify-content: flex-end;
-    height: 100vh;
+    height: 70vw;
     flex-direction: column;
     margin-bottom: 0.2vh;
 
@@ -53,10 +54,49 @@
     }
   }
 
-  @media screen and (max-width: 425px) {
+
+  .spiderman {
+    position: absolute;
+    top: -3px;
+    right: 10vw;
+    filter: grayscale(1);
+    width: 20vw; /* Utilisation de vw pour la largeur */
+    height: auto;
+    margin: 0 auto;
+    display: block;
+    animation: spiderman 5s ease-in-out forwards;
+    overflow: hidden;
+  }
+  
+  @keyframes spiderman {
+    0% {
+      transform: translateY(-1000px);
+    }
+    30% {
+      transform: translateY(0) rotate(5deg);
+    }
+    50% {
+      transform: rotate(-5deg);
+    }
+    75% {
+      transform: rotate(5deg);
+    }
+  }
+  
+
+  @media screen and (max-width: 768px) {
     main {
       .hero { 
         height: 50vh;
+        margin-left: 10px;
+      }
+    }
+  }
+  
+  @media screen and (max-width: 425px) {
+    main {
+      .hero { 
+        height: 25vh;
         margin-left: 10px;
       }
     }
