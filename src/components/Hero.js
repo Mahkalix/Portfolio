@@ -22,7 +22,7 @@ const Hero = () => {
             based in Grenoble, France.
           </div>
         </div>
-        <img src={Spiderman} alt="img-spiderman" class="spiderman" />
+        <img src={Spiderman} alt="img-spiderman" className="spiderman" />
       </section>
     </>
   );

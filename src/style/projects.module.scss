@@ -1,9 +1,10 @@
 /* SECTION */
 #projects {
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
+  flex-direction: column;
 
+ 
   .container-card {
     display: flex;
     flex-direction: row;
@@ -11,14 +12,14 @@
     height: 100%;
 
   }
-
+}
   article {
     display: flex;
     justify-content: center;
     align-items: flex-end;
     flex-direction: column;
-    border-right: 2px solid;
-    border-top: 2px solid;
+    border: 2px solid;
+   
     width: 100%;
     padding-left: 1.6667vw; 
     padding-right: 1.6667vw; 
@@ -47,7 +48,7 @@
       }
     }
   }
-}
+
 
 
 
@@ -55,6 +56,7 @@
   #projects{
     .container-card {
       flex-direction: column;
+      height: 25%;
       article {
         display: flex;
         justify-content: center;
@@ -63,9 +65,9 @@
         border-right: 2px solid;
         border-top: 2px solid;
         width: 100%;
-        padding-left: 1.6667vw; 
-        padding-right: 1.6667vw; 
-        padding-top: 1.6667vw; 
+        padding-left: 4.6667vw; 
+        padding-right: 4.6667vw; 
+        padding-top: 4.6667vw; 
     
         img {
           width: 100%;
@@ -90,7 +92,8 @@
           }
         }
       }
-    }    
+     
+  } 
   }
 }
 

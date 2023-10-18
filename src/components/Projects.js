@@ -24,6 +24,7 @@ const Projects = () => {
     <>
       <section id="projects">
         <ScrollText text="PROJECTs - PROJECTs - PROJECTs - PROJECTs - PROJECTs - PROJECTs - PROJECTs - PROJECTs - PROJECTS - PROJ" />
+
         <div className="container-card">
           {firstHalf.map((project, index) => (
             <article key={index}>
