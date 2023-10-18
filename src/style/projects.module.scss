@@ -3,7 +3,6 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-height: 100%;
 
   .container-card {
     display: flex;
@@ -30,22 +29,68 @@ height: 100%;
     }
   
     .title {
-      text-transform: uppercase;
-      padding-top: 1vw; 
-      font-family: "Anton";
-      letter-spacing: 0.0167vw; 
-      padding: 0 1.6667vw 1.6667vw 0;
-      text-align: right;
       display: flex;
-   
+      align-items: center;
       .number-style{
         display: flex;
         font-size: 1vw;
-        align-items: center;
         color: $thirdly;
+        font-family: "Anton";
+        margin-right: 0.2vw;
       }
-
+      .btn{
+        display: flex;
+        font-size: 2vw;
+        text-transform: uppercase;
+        font-family: "Anton";
+        letter-spacing: 0.0167vw; 
+      }
     }
+  }
+}
+
+
+
+@media (max-width: 768px) {
+  #projects{
+    .container-card {
+      flex-direction: column;
+      article {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        flex-direction: column;
+        border-right: 2px solid;
+        border-top: 2px solid;
+        width: 100%;
+        padding-left: 1.6667vw; 
+        padding-right: 1.6667vw; 
+        padding-top: 1.6667vw; 
+    
+        img {
+          width: 100%;
+        }
+      
+        .title {
+          display: flex;
+          align-items: center;
+          .number-style{
+            display: flex;
+            font-size: 2.5vw;
+            color: $thirdly;
+            font-family: "Anton";
+            margin-right: 0.2vw;
+          }
+          .btn{
+            display: flex;
+            font-size: 5vw;
+            text-transform: uppercase;
+            font-family: "Anton";
+            letter-spacing: 0.0167vw; 
+          }
+        }
+      }
+    }    
   }
 }
 
@@ -156,11 +201,4 @@ height: 100%;
     
   }
 
-}
-
-
-@media (max-width: 768px) {
-  #projects{
-  
-}
 }
