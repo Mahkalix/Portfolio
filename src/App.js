@@ -11,7 +11,6 @@ function App() {
   return (
     <div className={`app ${theme === "light" ? "light" : "dark"}`}>
       <Loader />
-
       <Header />
       <Routes />
       <Footer />
