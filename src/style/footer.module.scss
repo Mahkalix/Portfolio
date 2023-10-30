@@ -5,7 +5,7 @@ footer {
     align-items: center;
     flex-direction: column;
     width: 100%;
-    height: 20vw; 
+    height: 150px; 
     
     .social-media {
       width: 100%;
@@ -13,9 +13,9 @@ footer {
       justify-content: center;
       
       img {
-        width: 6vw; 
-        margin-left: 1.5vw; 
-        margin-right: 1.5vw; 
+        width: 40px; 
+        margin-left: 10px; 
+        margin-right: 10px; 
       }
     }
     
@@ -24,8 +24,8 @@ footer {
       justify-content: center;
       align-self: center;
       width: 100%;
-      margin-top: 1vw; 
-      font-size: 1.5vw; 
+      margin-top: 15px; 
+      font-size: 20px; 
       font-family: Roboto;
       font-weight: 400;
       word-wrap: break-word;
@@ -33,3 +33,12 @@ footer {
     }
   }
   
+  @media screen and (max-width: 768px) {
+    footer {
+      height: 120px; 
+    p {
+      // margin-top: 1vw; 
+      font-size: 10px; 
+    }
+  }
+  }

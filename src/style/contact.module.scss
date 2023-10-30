@@ -5,13 +5,13 @@
 }
 
 .contact h1 {
-  border-bottom: 1px solid;
-  padding-top:10px;
-  padding-bottom: 10px;
+  border-top: 1px  solid;
+  border-bottom: 1px  solid;
+  margin-top: 40px;
   width:100vw ;
   text-align: center;
   font-family: "Anton";
-  font-size: 11.87vw;
+  font-size: 9.87vw;
   font-weight: 500;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -107,7 +107,7 @@ transition: 0.8s;
   .modal-title {
     font-family: "Anton";
     letter-spacing: 2px;
-    font-size: 3.67vh;
+    font-size: 20px;
     font-weight: 500;
     display: flex;
     justify-content: center;
