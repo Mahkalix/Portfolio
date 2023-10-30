@@ -24,12 +24,12 @@
       flex-direction: row-reverse;
       justify-content: flex-end;
       align-items: center;
-      width: 100%;
+      width:100vw;
       margin-top: -0.8vw; 
 
       .container-reverse {
-        width: 50%;
-        margin-left: 2.21vw; 
+        width: 50vw;
+        margin-left: -1px;
         text-transform: uppercase;
     
         .item-one,
@@ -37,7 +37,7 @@
           font-size: 10.4vw; 
           font-family: "Anton";
           font-weight: 400;
-          line-height: 8.5vw; 
+          line-height: 8.7vw; 
           letter-spacing:  0.424375vw ; 
         }
         .item-two {
@@ -46,7 +46,7 @@
       }
 
       .description {
-        width: 50%;
+        width: 50vw;
         font-size: 3vw; /* 20px en vw */
         font-family: "Roboto", sans-serif;
         font-weight: 400;

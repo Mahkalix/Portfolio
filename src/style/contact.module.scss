@@ -1,0 +1,163 @@
+.contact {
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+}
+
+.contact h1 {
+  border-bottom: 1px solid;
+  padding-top:10px;
+  padding-bottom: 10px;
+  width:100vw ;
+  text-align: center;
+  font-family: "Anton";
+  font-size: 11.87vw;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+form {
+  padding-top: 5vh;
+  padding-bottom: 5vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50vw;
+}
+
+
+.other,
+textarea {
+  width: 100%;
+  border: 1px solid;
+}
+
+.labels {
+  font-size: 2.33vh;
+  font-weight: 600;
+  position: absolute;
+  padding: 1vh;
+  top: 20px;
+  left: 30px;
+  transition: background-color 0.3s;
+}
+.form div {
+  width: 90%;
+  position: relative;
+}
+.field-empty {
+  width: 90%;
+  margin-top: 5px;
+  font-size: 1.5vh;
+  color: $thirdly;
+}
+textarea {
+  margin-top: 40px;
+  padding: 20px;
+}
+.other[type="text"],
+.other[type="email"] {
+  margin-top: 40px;
+  height: 50px;
+  padding: 20px;
+}
+.other[type="submit"] {
+  border: solid 1px;
+  display: flex;
+  width: 150px;
+  font-weight: 400;
+  margin-top: 50px;
+  padding: 10px;
+  border-radius: 30px;
+  height: 50px;
+  width: 200px;
+  align-items: center;
+  justify-content: center;
+transition: 0.8s;
+
+}
+
+.other[type="submit"]:hover {
+  cursor: pointer;
+  color:$thirdly;
+}
+
+.overlay {
+  z-index: 200;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+.modal {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 40px;
+  .modal-title {
+    font-family: "Anton";
+    letter-spacing: 2px;
+    font-size: 3.67vh;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 25px;  transition: 0.8s;
+
+  }
+  p{
+    font-size: 1.67vh;
+  }
+
+  .modal-close-button:hover {
+    color:$thirdly;
+  }
+  
+  .modal-close-button {
+    transition: 0.5s;
+    display: flex;
+    width: 180px;
+    height: 40px;
+    margin-top: 50px;
+    border-radius: 50px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: 1px solid;
+    font-weight: 200;
+    margin-top: 40px;
+    padding: 10px;
+    font-size: 1.5vh;
+  }
+  
+}
+}
+
+
+
+
+
+
+@media screen and (max-width: 768px) {
+  form {
+    width: 80vw;
+  }
+  .labels {
+    font-size: 1.33vh;
+  }
+
+  .form h1 {
+    font-size: 2.67vh;
+  }
+}

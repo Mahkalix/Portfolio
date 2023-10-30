@@ -6,8 +6,13 @@ const Switch = () => {
 
   return (
     <div className="switch">
-      <input onChange={toggleTheme} type="checkbox" id="switch" />
-      <label htmlFor="switch"></label>
+      <input
+        className="input"
+        onChange={toggleTheme}
+        type="checkbox"
+        id="switch"
+      />
+      <label className="label" htmlFor="switch"></label>
     </div>
   );
 };

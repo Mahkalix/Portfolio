@@ -52,10 +52,10 @@ const Navigation = () => {
         </li>
         <li>
           <Link
-            to="/"
-            onClick={() => scrollToSection("#Contact")}
+            to="/contact"
+            onClick={() => scrollToSection("/contact")}
             className={`nav-link ${
-              location.hash === "#Contact" ? "active" : ""
+              location.hash === "/contact" ? "active" : ""
             }`}
           >
             <div className="animation-container">

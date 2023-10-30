@@ -88,9 +88,9 @@ const Menu = () => {
         </li>
         <li className="menu-item">
           <a
-            href="#Contact"
-            onClick={() => scrollToSection("#Contact")}
-            className={`${location.pathname === "#Contact" ? "active" : ""}`}
+            href="/contact"
+            onClick={() => scrollToSection("/contact")}
+            className={`${location.pathname === "/contact" ? "active" : ""}`}
           >
             <div className="invisible"> Contact</div>
 
