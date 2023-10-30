@@ -115,7 +115,7 @@ const Contact = () => {
             required
           />
         </div>
-        {formData.email === "" && ShowModalError && (
+        {formData.name === "" && ShowModalError && (
           <span className="field-empty">Champ non rempli</span>
         )}
 
