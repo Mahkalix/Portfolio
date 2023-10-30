@@ -6,7 +6,7 @@
 	  "number": "01/",
 	  "title": "Argent Bank",
 	  "cover": "/images/argentbankhome.png",
-	  "description": "Votre maison loin de chez vous. Que vous veniez de l'autre bout du monde, ou juste de quelques stations de RER, vous vous sentirez chez vous dans notre appartement.",
+	  "description": "'ARGENT BANK', a new online bank striving to make a mark in the banking industry, my main role is to work closely with the project manager to set up the user dashboard. Even though Argent Bank is a newcomer, it has high aspirations, and the CTO has clearly emphasized the importance of this initiative. The project is divided into two phases: the first one deals with user authentication and the development of a functional dashboard, while the second phase will focus on managing user transactions.",
 	  "tools": {
 		"React": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
 		"JavaScript": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg",
@@ -24,7 +24,7 @@
 	  "number": "02/",
 	  "title": "Dimension",
 	  "cover": "/images/dimensionhome.png", 
-	  "description": "'DIMENSION' is an online gallery for digital art.We will be exhibiting various projects in the future. TI created a 3D world view and created the pleasure of watching the work.",
+	  "description": "'DIMENSION' is a music application that helps users stay motivated and focused while working, exercising, or meditating. Built with React, Dimension provides a seamless and intuitive user experience, featuring a clean and simple design that's easy to navigate. It's user-friendly, allowing you to customize your music by selecting various tracks and adjusting the volume. It works across multiple devices and platforms.",
 	  "tools": {
 		"React": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
 		"JavaScript": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg",
@@ -41,7 +41,7 @@
 	  "number": "03/",
 	  "title": "Kasa",
 	  "cover": "/images/kasahome.png", 
-	  "description": "À seulement deux pas des Buttes Chaumont, venez découvrir Paris dans ce studio tout équipé. Entièrement équipé pour votre confort et élégamment décoré, il vous permettra de vivre comme un Parisien le temps de votre séjour.",
+	  "description": "'KASA' a leading apartment rental platform in France, I had a key mission: to completely revamp their website. After a decade, their ASP.NET-based site needed modernization. Laura, the CTO, was transitioning to a full JavaScript stack with NodeJS for the back-end and React for the front-end. My primary task was to kickstart the React project, aligning it with Figma mockups, and collaborating with Paul, the designer, to ensure the design and features matched the vision",
 	  "tools": {
 	
 		"React": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
@@ -59,7 +59,7 @@
 		"number": "04/",
 		"title": "Oh My Food",
 		"cover": "/images/ohmyfoodhome.png", 
-		"description": "À seulement deux pas des Buttes Chaumont, venez découvrir Paris dans ce studio tout équipé. Entièrement équipé pour votre confort et élégamment décoré, il vous permettra de vivre comme un Parisien le temps de votre séjour.",
+		"description": "'OHMYFOOD' is an innovative project that revolutionizes the dining experience, allowing customers to pre-design their menus in gourmet restaurants, eliminating traditional wait times. I was tasked with creating a mobile-first website based on mockups provided by the UX designer, including detailed animations for a seamless user experience.",
 		"tools": {
 			"React": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
 			"JavaScript": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg",

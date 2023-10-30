@@ -115,6 +115,13 @@
     }
   }
 }
+
+.about-header {
+  &::before {
+  filter:  grayscale(1);
+  background-size: contain;
+  }
+}
 }
 
 
