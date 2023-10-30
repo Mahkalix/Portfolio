@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import Modal from "react-modal";
 import { useTheme } from "../components/ThemeSwitch";
-import ScrollText from "../components/ScrollText";
 
 Modal.setAppElement("#root");
 

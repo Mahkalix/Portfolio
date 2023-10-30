@@ -1,67 +1,61 @@
 import React from "react";
-import { Link, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import AnimatedButton from "./AnimatedButton";
+import { NavHashLink } from "react-router-hash-link";
 
 const Navigation = () => {
   const location = useLocation();
-
-  const scrollToSection = (sectionId) => {
-    const section = document.querySelector(sectionId);
-
-    if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
-    }
-  };
 
   return (
     <nav>
       <ul className="menu">
         <li>
-          <Link
+          <NavHashLink
             className={`nav-link ${location.pathname === "/" ? "active" : ""}`}
             to="/"
           >
             <div className="animation-container">
               <AnimatedButton text="Home" />
             </div>
-          </Link>
+          </NavHashLink>
         </li>
         <li>
-          <Link
-            to="/"
-            onClick={() => scrollToSection("#about")}
-            className={`nav-link ${location.hash === "#about" ? "active" : ""}`}
+          <NavHashLink
+            to="/#about"
+            scroll={(el) => el.scrollIntoView({ behavior: "smooth" })}
+            className={`nav-link ${
+              location.pathname === "/#about" ? "active" : ""
+            }`}
           >
             <div className="animation-container">
               <AnimatedButton text="About" />
             </div>
-          </Link>
+          </NavHashLink>
         </li>
         <li>
-          <Link
-            to="/"
-            onClick={() => scrollToSection("#projects")}
+          <NavHashLink
+            to="/#projects"
+            scroll={(el) => el.scrollIntoView({ behavior: "smooth" })}
             className={`nav-link ${
-              location.hash === "#projects" ? "active" : ""
+              location.pathname === "/#projects" ? "active" : ""
             }`}
           >
             <div className="animation-container">
               <AnimatedButton text="Projects" />
             </div>
-          </Link>
+          </NavHashLink>
         </li>
         <li>
-          <Link
+          <NavHashLink
             to="/contact"
-            onClick={() => scrollToSection("/contact")}
             className={`nav-link ${
-              location.hash === "/contact" ? "active" : ""
+              location.pathname === "/contact" ? "active" : ""
             }`}
           >
             <div className="animation-container">
               <AnimatedButton text="Contact" />
             </div>
-          </Link>
+          </NavHashLink>
         </li>
       </ul>
     </nav>
