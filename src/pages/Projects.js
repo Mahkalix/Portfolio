@@ -11,6 +11,10 @@ const Projects = () => {
   const data = dataProjects.find((item) => item.id === id);
 
   useEffect(() => {
+    window.scrollTo({ top: 0 });
+  }, []);
+
+  useEffect(() => {
     if (!data) {
       console.log("Aucun élément correspondant à l'ID trouvé.");
       navigate("*");
