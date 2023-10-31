@@ -5,14 +5,14 @@
 	  "view": "https://github.com/Mahkalix/ArgentBank",
 	  "number": "01/",
 	  "title": "Argent Bank",
-	  "cover": "/images/argentbankhome.png",
+	  "cover": "/images/argentbankhome.webp",
 	  "description": "'ARGENT BANK', a new online bank striving to make a mark in the banking industry, my main role is to work closely with the project manager to set up the user dashboard. Even though Argent Bank is a newcomer, it has high aspirations, and the CTO has clearly emphasized the importance of this initiative. The project is divided into two phases: the first one deals with user authentication and the development of a functional dashboard, while the second phase will focus on managing user transactions.",
 	  "tools": {
 		"React": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
 		"JavaScript": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg",
 		"HTML": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-plain.svg",
 		"CSS": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-plain.svg",
-		"Swagger": "https://upload.wikimedia.org/wikipedia/commons/a/ab/Swagger-logo.png"
+		"Swagger": "https://upload.wikimedia.org/wikipedia/commons/a/ab/Swagger-logo.webp"
 	  },
 	  "year": 2023,
 	  "use": "Bank"
@@ -23,7 +23,7 @@
 	  "view": "https://github.com/Mahkalix/Dimension",
 	  "number": "02/",
 	  "title": "Dimension",
-	  "cover": "/images/dimensionhome.png", 
+	  "cover": "/images/dimensionhome.webp", 
 	  "description": "'DIMENSION' is a music application that helps users stay motivated and focused while working, exercising, or meditating. Built with React, Dimension provides a seamless and intuitive user experience, featuring a clean and simple design that's easy to navigate. It's user-friendly, allowing you to customize your music by selecting various tracks and adjusting the volume. It works across multiple devices and platforms.",
 	  "tools": {
 		"React": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
@@ -40,7 +40,7 @@
 	  "view": "https://github.com/Mahkalix/Kasa",
 	  "number": "03/",
 	  "title": "Kasa",
-	  "cover": "/images/kasahome.png", 
+	  "cover": "/images/kasahome.webp", 
 	  "description": "'KASA' a leading apartment rental platform in France, I had a key mission: to completely revamp their website. After a decade, their ASP.NET-based site needed modernization. Laura, the CTO, was transitioning to a full JavaScript stack with NodeJS for the back-end and React for the front-end. My primary task was to kickstart the React project, aligning it with Figma mockups, and collaborating with Paul, the designer, to ensure the design and features matched the vision",
 	  "tools": {
 	
@@ -48,7 +48,7 @@
 		"JavaScript": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg",
 		"HTML": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-plain.svg",
 		"CSS": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-plain.svg",
-		"Swagger": "https://upload.wikimedia.org/wikipedia/commons/a/ab/Swagger-logo.png"
+		"Swagger": "https://upload.wikimedia.org/wikipedia/commons/a/ab/Swagger-logo.webp"
 	  },  "year": "year 2023",
 	  "use": "Accomodation"
 	},
@@ -58,7 +58,7 @@
 		"view": "https://github.com/Mahkalix/Ohmyfood",
 		"number": "04/",
 		"title": "Oh My Food",
-		"cover": "/images/ohmyfoodhome.png", 
+		"cover": "/images/ohmyfoodhome.webp", 
 		"description": "'OHMYFOOD' is an innovative project that revolutionizes the dining experience, allowing customers to pre-design their menus in gourmet restaurants, eliminating traditional wait times. I was tasked with creating a mobile-first website based on mockups provided by the UX designer, including detailed animations for a seamless user experience.",
 		"tools": {
 			"React": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",

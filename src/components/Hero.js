@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import Spiderman from "../assets/images/spiderman2.png";
+import Spiderman from "../assets/images/spiderman2.webp";
 
 const Hero = () => {
   useEffect(() => {
