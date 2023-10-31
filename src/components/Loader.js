@@ -23,7 +23,7 @@ const Loader = () => {
         Your browser does not support the video tag.
       </video>
 
-      <div className="spinning"></div>
+      <div className="spinning">Welcome</div>
     </div>
   );
 };

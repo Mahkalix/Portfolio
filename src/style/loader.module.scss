@@ -1,28 +1,56 @@
 
 .loader {
+  
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100vw;
     height: 100vh;
     position: fixed;
+    background-color: $primary;
     inset: 0;
     z-index: 1000;
     pointer-events: none;
     transform: translateY(0%);
     transition: .5s transform cubic-bezier(.455, .03, .515, .955);
+    .vid{
+      object-fit: cover;
+      width: 100vw;
+      height: 100vh;
+      }
+         
+      // .spinning {
+      //   position: fixed;
+      //   font-size: 5vw;
+      //   display: inline-block;
+      //   letter-spacing: 5px;
+      //   font-family: "Anton";
+      //   color: $primary;
+      //   box-sizing: border-box;
+      //   animation: animloader 1s ease-in infinite alternate;
+      // }
+      
+      // @keyframes animloader {
+      //   0% {
+      //     filter: blur(0px);
+      //     transform: skew(0deg);
+      //   }
+      //   100% {
+      //     filter: blur(3px);
+      //     transform: skew(-4deg);
+      //   }
+      // }
 
-   
       .spinning{
         display: block;
         position: fixed;
-        height: 20px;
-        width: 50%;
-        border: 1px solid $primary;
+        height: 2.2vh;
+        width: 50vw;
+        border: 2px solid $primary;
         border-radius: 10px;
         overflow: hidden;
       }
-      .spinning:after{
+      .spinning:before{
         content: '';
         position: absolute;
         left: 0;
@@ -30,53 +58,58 @@
         height: 100%;
         width: 0;
         background: $primary;
-        animation: 13s prog forwards linear;
+        animation: 6.5s prog forwards linear;
+      }
+      .spinning:after{
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        font-size: 1.5vh;
+        font-weight: 400;
+        text-align: center;
+        color: $primary;
+        mix-blend-mode: difference;
+        animation: percentage 6.5s linear infinite;
       }
       
-      
-    .vid{
-    object-fit: cover;
-    width: 100vw;
-    height: 100vh;
-    }
-    }
-
-    .loaded {
-
-            transform: translateY(-100%);
-   
-        .spinning{
-            opacity: 0;
-        }
-      
-    }
-
-    // @keyframes fadeOut {
-    //     0% {
-    //       opacity: 1;
-    //     }
-    //     25% {
-    //         opacity: 1;
-    //       }  
-    //       50% {
-    //         opacity: 1;
-    //       }
-    //       75% {
-    //         opacity: 1;
-    //       }
-    //     95% {
-    //         opacity: 1;
-    //       }
-    //     100% {
-    //       opacity: 0;
-    //     }
-    //   }
-      
- 
 
     @keyframes prog {
         to  {   width: 100%;}
       }
+
+      @keyframes percentage {
+        0% { content: "0%"}
+        5% { content: "5%"}
+        10% { content: "10%"}
+        20% { content: "20%"}
+        30% { content: "30%"}
+        40% { content: "40%"}
+        50% { content: "50%"}
+        60% { content: "60%"}
+        70% { content: "70%"}
+        80% { content: "80%"}
+        90% { content: "90%"}
+        95% { content: "95%"}
+        96% { content: "96%"}
+        97% { content: "97%"}
+        98% { content: "98%"}
+        99% { content: "99%"}
+        100% { content: "100%"}
+      }
    
    
-  
+}
+
+.loaded {
+  transform: translateY(-100%);
+      .spinning{
+          opacity: 0;
+      }
+    }
+   
+ 
+     
+ 
