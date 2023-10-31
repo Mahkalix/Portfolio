@@ -1,6 +1,5 @@
 
 .loader {
-  
     display: flex;
     justify-content: center;
     align-items: center;
@@ -18,11 +17,13 @@
       width: 100vw;
       height: 100vh;
       }
-         
-      .progress-container{
+        .progress-container{
         display: block;
         position: fixed;
         height: 2.2vh;
+        width: 40vw;
+        border-radius: 20px;
+        overflow: hidden;
         width: 40vw;
         border-radius: 20px;
         overflow: hidden;
@@ -49,24 +50,19 @@
         background: $primary;
         animation: 6.5s prog forwards linear;
       }
-   
-
 
     @keyframes prog {
         to  {   width: 100%;}
       }
-
-  
-   
-   
 }
 
-// .loaded {
-//   transform: translateY(-100%);
-//       .spinning{
-//           opacity: 0;
-//       }
-//     }
+
+.loaded {
+  transform: translateY(-100%);
+      .spinning{
+          opacity: 0;
+      }
+    }
    
  
      
