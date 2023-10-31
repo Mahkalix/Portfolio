@@ -13,14 +13,14 @@ const Footer = () => {
   return (
     <footer>
       <div className="social-media">
-        <a href={linkedinUrl} target="_blank" rel="noopener noreferrer">
+        <a href={githubUrl} target="_blank" rel="noopener noreferrer">
           <img src={theme === "light" ? githubd : githubl} alt="Logo" />
         </a>
-        <a href={githubUrl} target="_blank" rel="noopener noreferrer">
+        <a href={linkedinUrl} target="_blank" rel="noopener noreferrer">
           <img src={theme === "light" ? linkedind : linkedinl} alt="Logo" />
         </a>
       </div>
-      <p>Designed and developed by me©2023 – All Rights Reserved</p>
+      <p>Developed by me©2023 – All Rights Reserved</p>
     </footer>
   );
 };
