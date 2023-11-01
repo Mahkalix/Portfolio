@@ -17,6 +17,10 @@ const Loader = () => {
   return (
     <div className={`loader ${isLoading ? "" : "loaded"} ${theme}`}>
       <div className="progress"></div>
+      <div className="stripe"></div>
+      <div className="stripe"></div>
+      <div className="stripe"></div>
+      <div className="stripe"></div>
     </div>
   );
 };

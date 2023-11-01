@@ -7,12 +7,14 @@
     height: 100vh;
     position: fixed;
     inset: 0;
-    background-color: $primary;
-    z-index: 1000;
+    z-index: 1000; 
+    background-color: transparent;
     transform: translateY(0%);
-    transition: .5s transform cubic-bezier(.455, .03, .515, .955);
+    transition: 1.4s transform cubic-bezier(.455, .03, .515, .955);
+
 
         .progress {
+            z-index: 1000;
           width: 48px;
           height: 48px;
           border: 5px solid ;
@@ -22,6 +24,37 @@
           box-sizing: border-box;
           animation: rotation 1s linear infinite;
           }
+
+          .stripe{   
+            z-index: 1000; 
+            background-color: $primary;
+            position: fixed;
+            height: 100%;
+            width: 25%;
+            top: 0;
+            z-index: 1;
+            transition: .35s transform cubic-bezier(.455, .03, .515, .955);
+            transform: translateY(0%);
+      
+      
+           
+          }
+          .stripe:nth-child(2) {
+            left: 0;
+            transition-delay: .3s;
+        }
+        .stripe:nth-child(3) {
+            left: 25%;
+            transition-delay: .4s;
+        }
+        .stripe:nth-child(4) {
+            left: 50%;
+            transition-delay: .5s;
+        }
+        .stripe:nth-child(5) {
+            left: 75%;
+            transition-delay: .6s;
+        }
       
           @keyframes rotation {
           0% {
@@ -43,11 +76,13 @@
 
 .loaded {
   transform: translateY(-100%);
-      .progress{
-          opacity: 0;
+
+      .stripe{
+        transform: translateY(-100%);
       }
+      .progress{
+        opacity: 0;
+    }
     }
    
- 
-     
  
