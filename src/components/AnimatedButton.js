@@ -3,7 +3,6 @@ import React, { useState, useEffect, useRef, useCallback } from "react";
 const AnimatedButton = ({ text, isImageHovered }) => {
   const [originalText, setOriginalText] = useState(text);
   const [buttonText, setButtonText] = useState(originalText);
-  const [isAnimating, setIsAnimating] = useState(false);
   const animationDuration = 1000;
   const intervalRef = useRef(null);
   const startTimeRef = useRef(null);
@@ -28,7 +27,7 @@ const AnimatedButton = ({ text, isImageHovered }) => {
     const elapsedTime = Date.now() - startTimeRef.current;
     if (elapsedTime >= animationDuration) {
       clearInterval(intervalRef.current);
-      setIsAnimating(false);
+
       setButtonText(originalText);
     } else {
       setButtonText(scrambleText(originalText));
@@ -39,14 +38,14 @@ const AnimatedButton = ({ text, isImageHovered }) => {
     if (intervalRef.current) {
       clearInterval(intervalRef.current);
     }
-    setIsAnimating(true);
+
     startTimeRef.current = Date.now();
     intervalRef.current = setInterval(myTimer, 100);
   }, [myTimer]);
 
   const handleMouseLeave = useCallback(() => {
     clearInterval(intervalRef.current);
-    setIsAnimating(false);
+
     setButtonText(originalText);
   }, [originalText]);
 
@@ -65,7 +64,7 @@ const AnimatedButton = ({ text, isImageHovered }) => {
 
   return (
     <div
-      className={`btn ${isAnimating ? "animation-start" : ""}`}
+      className="btn"
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
