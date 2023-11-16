@@ -1,9 +1,9 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import Home from "../pages/Home.js";
-import Error from "../pages/Error.js";
-import Projects from "../pages/Projects.js";
-import Contact from "../pages/Contact.js";
+import Home from "../pages/Home.jsx";
+import Error from "../pages/Error.jsx";
+import Projects from "../pages/Projects.jsx";
+import Contact from "../pages/Contact.jsx";
 
 const RoutesComponent = () => {
   return (

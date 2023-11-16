@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import dataProjects from "../data/projects.json";
-import ScrollText from "../components/ScrollText";
+import ScrollText from "../components/ScrollText.jsx";
 
 const Projects = () => {
   const params = useParams();

@@ -1,9 +1,9 @@
 import React from "react";
 import Routes from "../src/router/routes";
-import Header from "../src/components/Header";
-import Footer from "../src/components/Footer";
-import { useTheme } from "../src/components/ThemeSwitch";
-import Loader from "../src/components/Loader.js";
+import Header from "../src/components/Header.jsx";
+import Footer from "../src/components/Footer.jsx";
+import { useTheme } from "../src/components/ThemeSwitch.jsx";
+import Loader from "../src/components/Loader.jsx";
 
 function App() {
   const { theme } = useTheme();

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useTheme } from "../components/ThemeSwitch";
+import { useTheme } from "../components/ThemeSwitch.jsx";
 
 const Loader = () => {
   const [isLoading, setIsLoading] = useState(true);

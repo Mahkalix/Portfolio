@@ -1,7 +1,7 @@
 import React from "react";
-import About from "../components/About.js";
-import Projects from "../components/Projects.js";
-import Hero from "../components/Hero.js";
+import About from "../components/About.jsx";
+import Projects from "../components/Projects.jsx";
+import Hero from "../components/Hero.jsx";
 
 const Home = () => {
   return (

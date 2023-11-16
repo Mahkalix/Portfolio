@@ -3,7 +3,7 @@ import githubd from "../assets/svg/githubd.svg";
 import githubl from "../assets/svg/githubl.svg";
 import linkedind from "../assets/svg/linkedind.svg";
 import linkedinl from "../assets/svg/linkedinl.svg";
-import { useTheme } from "../components/ThemeSwitch";
+import { useTheme } from "../components/ThemeSwitch.jsx";
 
 const Footer = () => {
   const githubUrl = "https://github.com/Mahkalix";
