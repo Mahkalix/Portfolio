@@ -1,3 +1,4 @@
+@import "./colors.module.scss";
 
 #about{
   display: flex;
@@ -6,9 +7,7 @@
   flex-direction: row;
   flex-wrap: wrap;
 
-  
-
-  .about-header {
+  .aboutHeader {
     position: relative;
     display: flex;
     flex-direction: column;

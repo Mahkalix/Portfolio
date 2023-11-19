@@ -1,3 +1,5 @@
+@import "./colors.module.scss";
+
 .contact {
   flex-direction: column;
   display: flex;
@@ -25,10 +27,8 @@ form {
 }
 
 
-.other,
-textarea {
+.other{
   width: 100%;
-  border: 1px solid;
 }
 
 .labels {
@@ -44,25 +44,27 @@ textarea {
   width: 90%;
   position: relative;
 }
-.field-empty {
+.fieldEmpty {
   width: 90%;
   margin-top: 5px;
   font-size: 1.5vh;
   color: $thirdly;
 }
-textarea {
+.textarea {
+  background: transparent;
   margin-top: 40px;
   padding: 20px;
+  border: 1px solid;
 }
 .other[type="text"],
 .other[type="email"] {
   margin-top: 40px;
   height: 62px;
+  border: 1px solid;
   padding: 20px;
-
 }
 .other[type="submit"] {
-  border: solid 1px;
+  border: solid 1px; 
   display: flex;
   width: 150px;
   font-weight: 400;
@@ -79,7 +81,7 @@ transition: 0.8s;
 
 .other[type="submit"]:hover {
   cursor: pointer;
-  color:$thirdly;
+  color: $thirdly;
 }
 
 .overlay {
@@ -103,7 +105,7 @@ transition: 0.8s;
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 40px;
-  .modal-title {
+  .modalTitle {
     font-family: "Anton";
     letter-spacing: 2px;
     font-size: 20px;
@@ -119,11 +121,11 @@ transition: 0.8s;
     font-size: 1.67vh;
   }
 
-  .modal-close-button:hover {
+  .modalCloseButton:hover {
     color:$thirdly;
   }
   
-  .modal-close-button {
+  .modalCloseButton {
     transition: 0.5s;
     display: flex;
     width: 180px;
@@ -142,10 +144,6 @@ transition: 0.8s;
   
 }
 }
-
-
-
-
 
 
 @media screen and (max-width: 768px) {

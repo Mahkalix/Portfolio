@@ -6,7 +6,6 @@ $white: #ffff;
 
 
 .light {
-
     background-color: $primary;
     color: $secondary;
     border: $secondary;
@@ -28,12 +27,9 @@ $white: #ffff;
     .other:-webkit-autofill::first-line {
       color: $secondary !important; 
     }
-
-    
   }
   
   .dark {
-
     stroke: $primary;
     background-color: $secondary;
     color: $primary;
