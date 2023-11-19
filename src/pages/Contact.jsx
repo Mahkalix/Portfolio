@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Modal from "react-modal";
 import { useTheme } from "../components/ThemeSwitch.jsx";
+import styles from "../styles/contact.module.scss";
 
 Modal.setAppElement("#root");
 
@@ -75,19 +76,19 @@ const Contact = () => {
   };
 
   return (
-    <section className="contact">
+    <section className={styles.contact}>
       <h1>Get in touch</h1>
 
-      <form onSubmit={handleSubmit} className="form" noValidate>
+      <form onSubmit={handleSubmit} className={styles.form} noValidate>
         <div>
           <label
-            className={`labels ${theme === "light" ? "light" : "dark"}`}
+            className={`${styles.labels} ${theme === "light" ? "light" : "dark"}`}
             htmlFor="object"
           >
             Object
           </label>
           <input
-            className={`other ${theme === "light" ? "light" : "dark"}`}
+            className={`${styles.other} ${theme === "light" ? "light" : "dark"}`}
             type="text"
             name="object"
             value={formData.object}
@@ -96,18 +97,18 @@ const Contact = () => {
           />
         </div>
         {formData.object === "" && ShowModalError && (
-          <span className="field-empty">Champ non rempli</span>
+          <span className={styles.fieldEmpty}>Champ non rempli</span>
         )}
 
         <div>
           <label
-            className={`labels ${theme === "light" ? "light" : "dark"}`}
+            className={`${styles.labels} ${theme === "light" ? "light" : "dark"}`}
             htmlFor="name"
           >
             Name
           </label>
           <input
-            className={`other ${theme === "light" ? "light" : "dark"}`}
+            className={`${styles.other} ${theme === "light" ? "light" : "dark"}`}
             type="text"
             name="name"
             value={formData.name}
@@ -116,18 +117,18 @@ const Contact = () => {
           />
         </div>
         {formData.name === "" && ShowModalError && (
-          <span className="field-empty">Champ non rempli</span>
+          <span className={styles.fieldEmpty}>Champ non rempli</span>
         )}
 
         <div>
           <label
-            className={`labels ${theme === "light" ? "light" : "dark"}`}
+            className={`${styles.labels} ${theme === "light" ? "light" : "dark"}`}
             htmlFor="email"
           >
             Email
           </label>
           <input
-            className={`other ${theme === "light" ? "light" : "dark"}`}
+            className={`${styles.other} ${theme === "light" ? "light" : "dark"}`}
             type="email"
             name="email"
             value={formData.email}
@@ -136,17 +137,17 @@ const Contact = () => {
           />
         </div>
         {formData.email === "" && ShowModalError && (
-          <span className="field-empty">Champ non rempli</span>
+          <span className={styles.fieldEmpty}>Champ non rempli</span>
         )}
         <div>
           <label
-            className={`labels ${theme === "light" ? "light" : "dark"}`}
+            className={`${styles.labels} ${theme === "light" ? "light" : "dark"}`}
             htmlFor="comments"
           >
             Message
           </label>
           <textarea
-            className={`other ${theme === "light" ? "light" : "dark"}`}
+            className={`${styles.other} ${theme === "light" ? "light" : "dark"}`}
             name="comments"
             rows="8"
             cols="35"
@@ -156,11 +157,11 @@ const Contact = () => {
           ></textarea>
         </div>
         {formData.comments === "" && ShowModalError && (
-          <span className="field-empty">Champ non rempli</span>
+          <span className={styles.fieldEmpty}>Champ non rempli</span>
         )}
 
         <input
-          className={`other ${theme === "light" ? "light" : "dark"}`}
+          className={`${styles.other} ${theme === "light" ? "light" : "dark"}`}
           type="submit"
           name="submit"
           value="Send"
@@ -173,13 +174,13 @@ const Contact = () => {
           className={`modal ${theme === "light" ? "dark" : "light"}`}
           overlayClassName="overlay"
         >
-          <h2 className="modal-title">Your message has been sent !</h2>
+          <h2 className={styles.modalTitle}>Your message has been sent !</h2>
           <p>
             Thank you for reaching out. I'll respond to you as soon as possible.
           </p>
           <button
             onClick={closeModal}
-            className={`modal-close-button ${
+            className={`${styles.modalCloseButton} ${
               theme === "light" ? "dark" : "light"
             }`}
           >
