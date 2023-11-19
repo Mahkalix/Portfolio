@@ -24,12 +24,12 @@ const Hero = () => {
           Badin-Léger
         </h1>
 
-        <div className="subtitle">
-          <div className="container-reverse">
-            <div className="item-one">Portfolio</div>
-            <div className="item-two">Portfolio</div>
+        <div className={styles.subtitle}>
+          <div className={styles.containerReverse}>
+            <div className={styles.itemOne}>Portfolio</div>
+            <div className={styles.itemTwo}>Portfolio</div>
           </div>
-          <div className="description">
+          <div className={styles.description}>
             Hello 👋 <br />
             I'm a front-end developer
             <br />
