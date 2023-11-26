@@ -27,9 +27,6 @@ form {
 }
 
 
-.other{
-  width: 100%;
-}
 
 .labels {
   font-size: 2.33vh;
@@ -49,6 +46,9 @@ form {
   margin-top: 5px;
   font-size: 1.5vh;
   color: $thirdly;
+}
+.other, .textarea{
+  width: 100%;
 }
 .textarea {
   background: transparent;
@@ -75,7 +75,7 @@ form {
   width: 150px;
   align-items: center;
   justify-content: center;
-transition: 0.8s;
+  transition: 0.8s;
 
 }
 
