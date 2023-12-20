@@ -145,6 +145,14 @@ form {
 }
 }
 
+.textareablack{
+  border: 1px solid black;
+}
+
+.textarealight{
+  border: 1px solid #fff7f0;
+}
+
 
 @media screen and (max-width: 768px) {
   form {

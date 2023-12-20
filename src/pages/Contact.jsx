@@ -147,7 +147,7 @@ const Contact = () => {
             Message
           </label>
           <textarea
-            className={`${styles.textarea} ${theme === "light" ? "light" : "dark"}`}
+            className={`${styles.textarea} ${theme === "light" ? "textareablack" : "textarealight"}`}
             name="comments"
             rows="8"
             cols="35"
