@@ -1,5 +1,5 @@
 import React from "react";
-import me from "../assets/images/me.png";
+import me from "../assets/images/me.jpeg";
 import ScrollText from "../components/ScrollText";
 import styles from "../styles/about.module.scss";
 
