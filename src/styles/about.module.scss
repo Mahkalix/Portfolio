@@ -1,6 +1,6 @@
 @import "./colors.module.scss";
 
-#about{
+.about {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -14,24 +14,22 @@
     align-items: flex-start;
     justify-content: center;
     width: 100%;
-    
+
     padding: 6.944vw 2vw;
     text-align: center;
     border-top: solid 1px;
     border-bottom: solid 1px;
-    
-  
-    &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url("../assets/images/banner.webp") no-repeat fixed center;
-    background-size: cover;
-    }
 
+    &::before {
+      content: "";
+      position: absolute;
+      top: 6500;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url("../assets/images/banner.webp") no-repeat fixed center;
+      background-size: cover;
+    }
   }
   h1 {
     color: white;
@@ -45,81 +43,75 @@
     line-height: 10.056vw;
     word-wrap: break-word;
   }
-  .text{
+  .text {
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
     justify-content: center;
-    .floating{
+    .floating {
       display: flex;
       align-items: center;
       justify-content: center;
-  
-      .normal{
+
+      .normal {
         width: 20vw;
       }
-    
-      img{
+
+      img {
         margin-left: 10px;
         margin-right: 10px;
         margin-top: 5vw;
         background-clip: content-box;
       }
-    
     }
-  
-  .introduction {
-    padding: 5vw;
-    margin-top: 20px;
-    
-    h2 {
-      font-size: 3.083vw; 
-      margin-bottom: 2.7778vw;
-  
-    }
-    
-    p {
-      margin-bottom: 2.083vw; 
-      font-size: 1.904vw; 
-      font-family: "Roboto", sans-serif;
-      font-weight: 400;
-      line-height: 2.708vw; 
-      
-      .number {
-        font-size: 1vw; 
-        font-family: "Anton", sans-serif;
-        color: $thirdly;
+
+    .introduction {
+      padding: 5vw;
+      margin-top: 20px;
+
+      h2 {
+        font-size: 3.083vw;
+        margin-bottom: 2.7778vw;
+      }
+
+      p {
+        margin-bottom: 2.083vw;
+        font-size: 1.904vw;
+        font-family: "Roboto", sans-serif;
+        font-weight: 400;
+        line-height: 2.708vw;
+
+        .number {
+          font-size: 1vw;
+          font-family: "Anton", sans-serif;
+          color: $thirdly;
+        }
       }
     }
   }
-}
 }
 
 @media (max-width: 768px) {
-  #about{
-  .introduction {
-    h2 {
-      font-size: 5.083vw; 
-    }
-    
-    p {
-      font-size: 2.604vw; 
-      line-height: 3.708vw; 
-      .number {
-        font-size: 2vw; 
+  #about {
+    .introduction {
+      h2 {
+        font-size: 5.083vw;
+      }
+
+      p {
+        font-size: 2.604vw;
+        line-height: 3.708vw;
+        .number {
+          font-size: 2vw;
+        }
       }
     }
   }
-}
 
-.about-header {
-  &::before {
-  filter:  grayscale(1);
-  background-size: contain;
+  .about-header {
+    &::before {
+      filter: grayscale(1);
+      background-size: contain;
+    }
   }
 }
-}
-
-
-
-
