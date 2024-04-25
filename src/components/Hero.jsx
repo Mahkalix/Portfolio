@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
-import Spiderman from "../assets/images/spiderman2.webp";
-import styles from "../styles/hero.module.scss"
+import Spiderman from "../assets/images/miles.png";
+import styles from "../styles/hero.module.scss";
 
 const Hero = () => {
   useEffect(() => {
