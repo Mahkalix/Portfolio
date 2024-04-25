@@ -4,56 +4,56 @@
   flex-wrap: wrap;
   flex-direction: column;
 
- 
   .container-card {
     display: flex;
     flex-direction: row;
     width: 100%;
     height: 100%;
-
   }
 }
-  article {
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    flex-direction: column;
-    border: 1px solid;
-   
-    width: 100%;
-    padding-left: 1.6667vw; 
-    padding-right: 1.6667vw; 
-    padding-top: 1.6667vw; 
+article {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  flex-direction: column;
+  border: 1px solid;
+  width: 100%;
+  padding-left: 1.6667vw;
+  padding-right: 1.6667vw;
+  padding-top: 1.6667vw;
 
-    img {
-      width: 100%;
-    }
-  
-    .title {
-      display: flex;
-      align-items: center;
-      .number-style{
-        display: flex;
-        font-size: 1vw;
-        color: $thirdly;
-        font-family: "Anton";
-        margin-right: 0.2vw;
-      }
-      .btn{
-        display: flex;
-        font-size: 2vw;
-        text-transform: uppercase;
-        font-family: "Anton";
-        letter-spacing: 0.0167vw; 
-      }
-    }
+  img {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 550px;
+    object-fit: cover;
   }
 
-
-
+  .title {
+    display: flex;
+    align-items: center;
+    .number-style {
+      display: flex;
+      font-size: 1vw;
+      color: $thirdly;
+      font-family: "Anton";
+      margin-right: 0.2vw;
+    }
+    .btn {
+      display: flex;
+      font-size: 2vw;
+      text-transform: uppercase;
+      font-family: "Anton";
+      letter-spacing: 0.0167vw;
+    }
+  }
+}
 
 @media (max-width: 768px) {
-  #projects{
+  #projects {
     .container-card {
       flex-direction: column;
       height: 25%;
@@ -65,35 +65,34 @@
         border-right: 1px solid;
         border-top: 1px solid;
         width: 100%;
-        padding-left: 4.6667vw; 
-        padding-right: 4.6667vw; 
-        padding-top: 4.6667vw; 
-    
+        padding-left: 4.6667vw;
+        padding-right: 4.6667vw;
+        padding-top: 4.6667vw;
+
         img {
           width: 100%;
         }
-      
+
         .title {
           display: flex;
           align-items: center;
-          .number-style{
+          .number-style {
             display: flex;
             font-size: 2.5vw;
             color: $thirdly;
             font-family: "Anton";
             margin-right: 0.2vw;
           }
-          .btn{
+          .btn {
             display: flex;
             font-size: 5vw;
             text-transform: uppercase;
             font-family: "Anton";
-            letter-spacing: 0.0167vw; 
+            letter-spacing: 0.0167vw;
           }
         }
       }
-     
-  } 
+    }
   }
 }
 
@@ -103,8 +102,8 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 5vw; 
-  .container-projects-description{
+  padding: 5vw;
+  .container-projects-description {
     display: flex;
     flex-direction: column;
     width: 45%;
@@ -113,56 +112,54 @@
       text-transform: uppercase;
       letter-spacing: 0.2vw;
       font-family: "Anton";
-      font-size: 3vw; 
+      font-size: 3vw;
       font-weight: 500;
-      margin-top: 4vh; 
+      margin-top: 4vh;
     }
-  
+
     .description {
-      font-size: 1.2vw; 
-      margin-top: 4vh; 
+      font-size: 1.2vw;
+      margin-top: 4vh;
     }
-    .infos{
+    .infos {
       display: flex;
       flex-direction: row;
-      p{
+      p {
         font-weight: 400;
         color: $thirdly;
       }
-      .year, .use{
-  
+      .year,
+      .use {
         margin-right: 50px;
         display: flex;
         flex-direction: column;
         font-size: 1vw;
         margin-top: 4vh;
-   
       }
-    
     }
-    
+
     .project-tools {
       display: flex;
       flex-direction: row;
       align-items: left;
       justify-content: flex-start;
-  
+
       li {
         margin-top: 4vh;
-        margin-right: 1vw; 
+        margin-right: 1vw;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         font-size: 1vw;
         img {
-          width: 3vw; 
-          height: 3vw; 
+          width: 3vw;
+          height: 3vw;
         }
       }
     }
   }
-  .container-projects-img{
+  .container-projects-img {
     display: flex;
     width: 45%;
     height: 100%;
@@ -172,16 +169,14 @@
       width: 100%;
     }
   }
-
-
 }
 
-.preview{
+.preview {
   display: flex;
   flex-direction: row;
 
-
-  .visit, .view{
+  .visit,
+  .view {
     font-size: 6vw;
     text-transform: uppercase;
     display: flex;
@@ -190,9 +185,8 @@
     width: 50%;
     height: 15vw;
     border-top: 1px solid;
-    border-left: 1px solid ;
-    a{
-
+    border-left: 1px solid;
+    a {
       color: transparent;
       -webkit-text-stroke: 3px;
       position: relative;
@@ -201,75 +195,71 @@
       background-clip: text;
       -webkit-background-clip: text;
       transition: background-position 0.4s linear;
-    &:hover{ 
-      cursor: pointer;
-      background-position: -100% 0
+      &:hover {
+        cursor: pointer;
+        background-position: -100% 0;
+      }
     }
-    }
-    
   }
-
 }
 
 @media (max-width: 768px) {
   .projects {
     width: 100%;
     height: 100%;
- flex-direction: column;
- .container-projects-description{
-  width: 100%;
-  .title {
-    width: 100%;
-    font-size: 10vw; 
-  }
+    flex-direction: column;
+    .container-projects-description {
+      width: 100%;
+      .title {
+        width: 100%;
+        font-size: 10vw;
+      }
 
-  .description {
-    font-size: 3.5vw; 
-    margin-top: 4vh; 
-  }
-  .infos{
-    display: flex;
-    flex-direction: row;
-    .year, .use{
-      margin-right: 50px;
-      display: flex;
-      flex-direction: column;
-      font-size: 3vw;
-      margin-top: 4vh;
- 
+      .description {
+        font-size: 3.5vw;
+        margin-top: 4vh;
+      }
+      .infos {
+        display: flex;
+        flex-direction: row;
+        .year,
+        .use {
+          margin-right: 50px;
+          display: flex;
+          flex-direction: column;
+          font-size: 3vw;
+          margin-top: 4vh;
+        }
+      }
+      .project-tools {
+        display: flex;
+        flex-direction: row;
+        align-items: left;
+        justify-content: flex-start;
+
+        li {
+          margin-top: 4vh;
+          margin-right: 2vw;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          font-size: 2vw;
+          img {
+            width: 6vw;
+            height: 6vw;
+          }
+        }
+      }
     }
-  
-  }
-  .project-tools {
-    display: flex;
-    flex-direction: row;
-    align-items: left;
-    justify-content: flex-start;
-
-    li {
-      margin-top: 4vh;
-      margin-right: 2vw; 
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      font-size: 2vw;
+    .container-projects-img {
+      width: 100%;
       img {
-    
-        width: 6vw; 
-        height: 6vw; 
+        margin-top: 20px;
+        object-fit: contain;
+        display: flex;
+        width: 100%;
       }
     }
   }
- }
- .container-projects-img{
-  width: 100%;
-  img {
-    margin-top: 20px;
-    object-fit:contain;
-    display: flex;
-    width: 100%;
-  }
- }
-}
 }

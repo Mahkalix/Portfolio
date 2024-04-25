@@ -24,7 +24,7 @@
 	  "number": "02/",
 	  "title": "Dimension",
 	  "cover": "/images/dimensionhome.webp", 
-	  "description": "'DIMENSION' is a music application that helps users stay motivated and focused while working, exercising, or meditating. Built with React, Dimension provides a seamless and intuitive user experience, featuring a clean and simple design that's easy to navigate. It's user-friendly, allowing you to customize your music by selecting various tracks and adjusting the volume. It works across multiple devices and platforms.",
+	  "description": "'DIMENSION' is a music application that helps users stay motivated and focused while working, exercising, or meditating. Built with React, Dimension provides a seamless and intuitive user experience, featuring a clean and simple design that's easy to navigate. It's user-friendly, allowing you to customize your music by selecting various tracks and adjusting the volume. It's a mobile app.",
 	  "tools": {
 		"React": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
 		"JavaScript": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg",

@@ -1,153 +1,146 @@
-.hero { 
+.hero {
   position: relative;
-    margin-left: 20px;
-    display: flex;
-    justify-content: flex-end;
-    height: 70vw;
-    flex-direction: column;
-    margin-bottom: 0.2vh;
+  margin-left: 20px;
+  display: flex;
+  justify-content: flex-end;
+  height: 70vw;
+  flex-direction: column;
+  margin-bottom: 0.2vh;
 
-    h1 {
-      width: 100%;
-      // height: 100%;
-      font-size: 19.9vw; 
-      font-family: "Anton";
-      font-weight: 400;
-      line-height: 16.9vw;
-      word-wrap: break-word;
-      text-transform: uppercase;
-      margin-bottom:0.8vw;
-    }
-
-    .subtitle {
-      display: flex;
-      flex-direction: row-reverse;
-      justify-content: flex-end;
-      align-items: center;
-      width:90vw;
-      margin-top: -0.8vw; 
-
-      .containerReverse {
-        width: 40vw;
-        margin-left: -0.8px;
-        text-transform: uppercase;
-    
-        .itemOne,
-        .itemTwo {
-          font-size: 10.4vw; 
-          font-family: "Anton";
-          font-weight: 400;
-          line-height: 8.7vw; 
-          letter-spacing:  0.424375vw ; 
-        }
-        .itemTwo {
-          transform: scaleY(-1);
-        }
-      }
-
-      .description {
-        width: 50vw;
-        font-size: 3vw; /* 20px en vw */
-        font-family: "Roboto", sans-serif;
-        font-weight: 400;
-        line-height: 3.5833vw; /* 30px en vw */
-        word-wrap: break-word;
-      }
-    }
+  h1 {
+    width: 100%;
+    // height: 100%;
+    font-size: 19.9vw;
+    font-family: "Anton";
+    font-weight: 400;
+    line-height: 16.9vw;
+    word-wrap: break-word;
+    text-transform: uppercase;
+    margin-bottom: 0.8vw;
   }
 
+  .subtitle {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    align-items: center;
+    width: 90vw;
+    margin-top: -0.8vw;
+
+    .containerReverse {
+      width: 40vw;
+      margin-left: -0.8px;
+      text-transform: uppercase;
+
+      .itemOne,
+      .itemTwo {
+        font-size: 10.4vw;
+        font-family: "Anton";
+        font-weight: 400;
+        line-height: 8.7vw;
+        letter-spacing: 0.424375vw;
+      }
+      .itemTwo {
+        transform: scaleY(-1);
+      }
+    }
+
+    .description {
+      width: 50vw;
+      font-size: 3vw; /* 20px en vw */
+      font-family: "Roboto", sans-serif;
+      font-weight: 400;
+      line-height: 3.5833vw; /* 30px en vw */
+      word-wrap: break-word;
+    }
+  }
+}
+
+.spiderman {
+  position: absolute;
+  top: -80px;
+  right: 5vw;
+  filter: grayscale(0.5);
+  width: 20vw;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+  animation: spiderman 5s ease-in-out forwards;
+  overflow: hidden;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+@keyframes spidermanmoving {
+  0% {
+    transform: translateY(0);
+  }
+  30% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: rotate(-2deg);
+  }
+  100% {
+    transform: translateY(-1000px);
+    transform-origin: center;
+  }
+}
+
+@keyframes spiderman {
+  0% {
+    transform: translateY(-1000px);
+  }
+  30% {
+    transform: translateY(0) rotate(2deg);
+  }
+  50% {
+    transform: rotate(-2deg);
+  }
+  75% {
+    transform: rotate(2deg);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  main {
+    .hero {
+      height: 60vh;
+      margin-left: 10px;
+    }
+    .spiderman {
+      top: -30px;
+      width: 25vw;
+    }
+  }
+}
+
+@media screen and (max-width: 425px) {
+  main {
+    .hero {
+      height: 35vh;
+      margin-left: 10px;
+    }
+  }
 
   .spiderman {
-    position: absolute;
-    top: -5px;
     right: 5vw;
-    filter: grayscale(0.5);
-   filter: invert(0.2);
-    width: 20vw; /* Utilisation de vw pour la largeur */
-    height: auto;
-    margin: 0 auto;
-    display: block;
-    animation: spiderman 5s ease-in-out forwards;
-    overflow: hidden;
-    &:hover{
-      cursor: pointer;
+    top: 0px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  main {
+    .hero {
+      height: 35vh;
+      margin-left: 10px;
     }
   }
 
-  @keyframes spidermanmoving {
-    0% {
-      transform: translateY(0);
-   
-    }
-    30% {
-      transform: translateY(0) ;
-    }
-    50% {
-      transform: rotate(-2deg);
-    }
-    100% {
-      transform: translateY(-1000px); 
-      transform-origin: center;
-  
-    }
-
+  .spiderman {
+    width: 35vw;
+    right: 0vw;
+    top: 0px;
   }
-  
-  @keyframes spiderman {
-    0% {
-      transform: translateY(-1000px);
-    }
-    30% {
-      transform: translateY(0) rotate(2deg);
-    }
-    50% {
-      transform: rotate(-2deg);
-    }
-    75% {
-      transform: rotate(2deg);
-    }
-  }
-  
-
-  @media screen and (max-width: 768px) {
-    main {
-      .hero { 
-        height: 60vh;
-        margin-left: 10px;
-      }
-    }
-  }
-  
-  @media screen and (max-width: 425px) {
-    main {
-      .hero { 
-        height: 35vh;
-        margin-left: 10px;
-      }
-    }
-    
-    .spiderman {
-      right: 5vw;
-    }
-  }
-
-    
-  @media screen and (max-width: 375px) {
-    main {
-      .hero { 
-        height: 35vh;
-        margin-left: 10px;
-      }
-    }
-    
-    .spiderman {
-      width: 35vw;
-      right: 0vw;
-    
-    }
-  }
-
-
-
-    
-  
+}

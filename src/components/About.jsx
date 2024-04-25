@@ -1,12 +1,12 @@
 import React from "react";
-import me from "../assets/images/me.png";
+import me from "../assets/images/me.jpg";
 import ScrollText from "../components/ScrollText";
 import styles from "../styles/about.module.scss";
 
 const About = () => {
   return (
     <>
-      <section id={styles.about}>
+      <section id="about" className={styles.about}>
         <ScrollText text="ABOUT - ABOUT - ABOUT - ABOUT - ABOUT - ABOUT - ABOUT - ABOUT - ABOUT - ABOUT - ABOUT - ABOUT - ABOUT - ABOUT -" />
 
         <div className={styles.aboutHeader}>
@@ -24,20 +24,20 @@ const About = () => {
             <h2>Who am I ?</h2>
 
             <p>
-              <span className={styles.number}>01/</span> I'm Max, a 22-year-old web
-              wizard from the cozy town of Saint Martin D'Uriage near Grenoble.
-              I've got a knack for turning wild web ideas into reality through a
-              blend of code and design. <br />
+              <span className={styles.number}>01/</span> I'm Max, a 22-year-old
+              web wizard from the cozy town of Saint Martin D'Uriage near
+              Grenoble. I've got a knack for turning wild web ideas into reality
+              through a blend of code and design. <br />
             </p>
 
             <p>
-              <span className={styles.number}>02/</span> My web adventure started with
-              the basics - HTML, CSS, and JavaScript during a nine-month course
-              that set me on this path. Along the way, I got a taste of React
-              and found myself hooked on creating dynamic web experiences. But
-              hey, I didn't stop there. I also decided to dive into the design
-              world because, let's be honest, it's where all the cool visuals
-              happen. <br />
+              <span className={styles.number}>02/</span> My web adventure
+              started with the basics - HTML, CSS, and JavaScript during a
+              nine-month course that set me on this path. Along the way, I got a
+              taste of React and found myself hooked on creating dynamic web
+              experiences. But hey, I didn't stop there. I also decided to dive
+              into the design world because, let's be honest, it's where all the
+              cool visuals happen. <br />
             </p>
             <p>
               <span className={styles.number}>03/</span> When it comes to my
