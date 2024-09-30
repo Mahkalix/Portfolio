@@ -14,8 +14,7 @@
     align-items: flex-start;
     justify-content: center;
     width: 100%;
-
-    padding: 6.944vw 2vw;
+    padding: 5.944vw 2vw;
     text-align: center;
     border-top: solid 1px;
     border-bottom: solid 1px;
@@ -27,13 +26,12 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: url("../assets/images/banner.webp") no-repeat fixed center;
+      background: url("../assets/images/banner.png") no-repeat fixed center;
       background-size: cover;
     }
   }
   h1 {
     color: white;
-    text-shadow: 4px 3px 20px rgb(0, 0, 0);
     z-index: 2;
     background: transparent;
     text-align: left;
@@ -45,9 +43,10 @@
   }
   .text {
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    text-align: justify;
     .floating {
       display: flex;
       align-items: center;
@@ -62,16 +61,18 @@
         margin-right: 10px;
         margin-top: 5vw;
         background-clip: content-box;
+        border-radius: 50%;
       }
     }
 
     .introduction {
-      padding: 5vw;
-      margin-top: 20px;
+      padding: 4vw;
 
       h2 {
         font-size: 3.083vw;
         margin-bottom: 2.7778vw;
+        display: flex;
+        justify-content: center;
       }
 
       p {
