@@ -1,58 +1,51 @@
-
 $primary: #fff7f0;
 $secondary: #262523;
-$thirdly: #7f5a4f;
+$thirdly: #ef8152;
 $white: #ffff;
 
-
 .light {
-    background-color: $primary;
+  background-color: $primary;
+  color: $secondary;
+  border: $secondary;
+  background: $primary;
+
+  a {
     color: $secondary;
-    border: $secondary;
-    background: $primary;
-
-    a{
-      color:$secondary;
-    }
-    ul{
-      background-color: $primary;
-    }
-    .view-visit{
-      -webkit-text-stroke: 2px $secondary;
-    }
- 
-    .other:-webkit-autofill {
-      -webkit-box-shadow: 0 0 0 30px inset $primary !important;
-    }
-    .other:-webkit-autofill::first-line {
-      color: $secondary !important; 
-    }
   }
-  
-  .dark {
-    stroke: $primary;
-    background-color: $secondary;
+  ul {
+    background-color: $primary;
+  }
+  .view-visit {
+    -webkit-text-stroke: 2px $secondary;
+  }
+
+  .other:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 30px inset $primary !important;
+  }
+  .other:-webkit-autofill::first-line {
+    color: $secondary !important;
+  }
+}
+
+.dark {
+  stroke: $primary;
+  background-color: $secondary;
+  color: $primary;
+  border: $primary;
+  background: $secondary;
+  a {
     color: $primary;
-    border: $primary;
-    background: $secondary;
-    a{
-      color: $primary;
-    }
-    ul{
-      background-color: $secondary;
-    }
-    .view-visit{
-      -webkit-text-stroke: 2px $primary;
-    }
-      .other:-webkit-autofill {
-        -webkit-box-shadow: 0 0 0 30px inset $secondary !important;
-      }
-      .other:-webkit-autofill::first-line {
-        color: $primary !important; 
-      }
-
   }
-  
- 
-
-
+  ul {
+    background-color: $secondary;
+  }
+  .view-visit {
+    -webkit-text-stroke: 2px $primary;
+  }
+  .other:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 30px inset $secondary !important;
+  }
+  .other:-webkit-autofill::first-line {
+    color: $primary !important;
+  }
+}
