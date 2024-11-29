@@ -32,8 +32,8 @@ const About = () => {
             </p>
 
             <p>
-              <span className={styles.number}>02/</span>My web journey kicked
-              off with the essentials—HTML, CSS, and JavaScript—during a
+              <span className={styles.number}>02/</span> My web journey kicked
+              off with the essentials HTML, CSS, and JavaScript during a
               nine-month course that truly ignited my passion. Along the way, I
               dove into React and became hooked on building dynamic web
               experiences. I didn’t stop there, though! I’ve also ventured into
@@ -43,7 +43,7 @@ const About = () => {
             </p>
             <p>
               <span className={styles.number}>03/</span> Currently, I’m studying
-              for my BUT Métiers du Multimédia et de l’Internet at IUT 1
+              for my BUT métiers du multimédia et de l’internet at IUT 1
               Grenoble, where I’m deepening my skills in backend development
               with PHP and Laravel. Additionally, I’m exploring Java and Android
               Studio, and soon, I’ll be getting hands-on with Next.js and Docker
@@ -53,11 +53,11 @@ const About = () => {
             </p>
             <p>
               <span className={styles.number}>04/</span> Although I’ve already
-              earned a BTEC Higher National Diploma (the French equivalent of
-              Bac +2), I believe that learning is a never-ending
-              journey—especially in the fast-moving world of web development. If
-              you think I’d be a good fit for your team, or just want to chat
-              about the latest tech trends, feel free to reach out!
+              earned a BTEC higher national diploma (the French equivalent of
+              bac +2), I believe that learning is a never-ending journey
+              especially in the fast-moving world of web development. If you
+              think I’d be a good fit for your team, or just want to chat about
+              the latest tech trends, feel free to reach out!
             </p>
           </div>
         </div>

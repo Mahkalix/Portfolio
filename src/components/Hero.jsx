@@ -30,8 +30,8 @@ const Hero = () => {
             <div className={styles.itemTwo}>Portfolio</div>
           </div>
           <div className={styles.description}>
-            Hello 👋 <br />
-            I'm a front-end developer
+            Hello 👋🏼 <br />
+            I'm a student developer
             <br />
             based in Grenoble, France.
           </div>
