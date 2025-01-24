@@ -34,7 +34,7 @@ const Projects = () => {
               {data.year}
             </div>
             <div className="use">
-              <p>USE</p> <br />
+              <p>CATEGORY</p> <br />
               {data.use}
             </div>
           </div>
@@ -67,7 +67,7 @@ const Projects = () => {
             href={data.view}
             target="_blank"
             rel="noreferrer"
-            className="view-visit"
+            className="view-code"
           >
             View code
           </a>

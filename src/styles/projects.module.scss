@@ -38,8 +38,8 @@ article {
     .number-style {
       display: flex;
       font-size: 1vw;
-      color: $thirdly;
-      font-family: "Anton";
+      font-weight: 600;
+      font-family: "Roboto";
       margin-right: 0.2vw;
     }
     .btn {
@@ -124,17 +124,24 @@ article {
     .infos {
       display: flex;
       flex-direction: row;
-      p {
-        font-weight: 400;
-        color: $thirdly;
-      }
+
       .year,
       .use {
-        margin-right: 50px;
+        display: flex;
+        align-items: center;
+        margin-right: 40px;
         display: flex;
         flex-direction: column;
         font-size: 1vw;
         margin-top: 4vh;
+        p {
+          display: flex;
+          align-self: center;
+          padding: 5px 15px;
+          font-weight: 400;
+          border: 1px solid $secondary;
+          border-radius: 20px;
+        }
       }
     }
 
@@ -186,11 +193,26 @@ article {
     height: 15vw;
     border-top: 1px solid;
     border-left: 1px solid;
-    a {
+    .view-visit {
       color: transparent;
       -webkit-text-stroke: 3px;
       position: relative;
-      background: linear-gradient(to left, $thirdly, #7f4f5870);
+      background: linear-gradient(to left, $secondary, $thirdly);
+      background-size: 200% 100%;
+      background-clip: text;
+      -webkit-background-clip: text;
+      transition: background-position 0.4s linear;
+      &:hover {
+        cursor: pointer;
+        background-position: -100% 0;
+      }
+    }
+
+    .view-code {
+      color: transparent;
+      -webkit-text-stroke: 3px;
+      position: relative;
+      background: linear-gradient(to left, $primary, $thirdly);
       background-size: 200% 100%;
       background-clip: text;
       -webkit-background-clip: text;
@@ -224,7 +246,7 @@ article {
         flex-direction: row;
         .year,
         .use {
-          margin-right: 50px;
+          margin-right: 15px;
           display: flex;
           flex-direction: column;
           font-size: 3vw;

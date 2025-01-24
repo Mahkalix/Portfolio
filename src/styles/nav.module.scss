@@ -1,10 +1,7 @@
-
-
-nav{
+nav {
   display: flex;
   justify-content: flex-end;
   width: 100%;
-
 }
 .menu {
   display: flex;
@@ -20,34 +17,29 @@ nav{
 .menu li {
   text-transform: uppercase;
   margin-right: 20px;
-  font-size: 14px;  
+  font-size: 14px;
   letter-spacing: 0px;
 }
 
-.nav-link{
+.nav-link {
   display: inline-block;
   text-decoration: none;
 }
-.nav-link:after{
-  content: '';
-    display: block;
-    width: 0;
-    height: 2px;
-    background: $thirdly;
-    transition: width .3s;
+.nav-link:after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: $thirdly;
+  transition: width 0.3s;
 }
 .nav-link:hover::after {
   width: 100%;
-  transition: width .5s;
+  transition: width 0.5s;
 }
-
 
 @media (max-width: 769px) {
   .menu {
     display: none;
   }
 }
-
-
-
-
