@@ -1,5 +1,0 @@
-node_modules
-# Keep environment variables out of version control
-.env
-
-DATABASE_URL="postgresql://neondb_owner:npg_OLFo9aJv5wkh@ep-square-art-a24m19hp-pooler.eu-central-1.aws.neon.tech/neondb?sslmode=require"
