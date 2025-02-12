@@ -23,12 +23,14 @@ const Projects = () => {
         if (!response.ok) {
           throw new Error("Erreur lors du chargement des projets");
         }
-        const data = await response.json();
-        setProjects(data); // Mettre à jour l'état avec les projets récupérés
+        const text = await response.text(); // Lire la réponse en tant que texte d'abord
+        console.log(text); // Afficher la réponse dans la console
+        const data = JSON.parse(text); // Parser la réponse JSON si le texte est valide JSON
+        setProjects(data);
       } catch (err) {
-        setError(err.message); // En cas d'erreur, mettre à jour l'état d'erreur
+        setError(err.message);
       } finally {
-        setLoading(false); // Une fois le chargement terminé, changer l'état
+        setLoading(false);
       }
     };
 
