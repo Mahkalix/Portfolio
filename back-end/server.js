@@ -12,7 +12,8 @@ const port = 4000;
 
 // Middleware pour gérer le corps des requêtes
 app.use(express.json());
-app.use(cors());  // Enable cross-origin resource sharing
+app.use(cors({ origin: "https://portfolio-q8zw.onrender.com" }));  
+
 
 app.get("/", (req, res) => {
   res.send("✅ Le serveur fonctionne !");
