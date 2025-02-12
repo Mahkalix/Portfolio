@@ -1,11 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import { useLocation } from "react-router-dom";
 import AnimatedButton from "./AnimatedButton";
 import { NavHashLink } from "react-router-hash-link";
 import { VscAccount } from "react-icons/vsc";
+import LoginModal from "./LoginModal";
+
 
 const Navigation = () => {
   const location = useLocation();
+  const [isLoginModalOpen, setLoginModalOpen] = useState(false);
+
+  const toggleLoginModal = () => setLoginModalOpen((prev) => !prev);
 
   const isAdmin = () => {
     return false;
@@ -64,16 +69,16 @@ const Navigation = () => {
         </li>
 
         <li>
-          <NavHashLink
-            to="/login"
+          <div
             className={`nav-link ${
-              location.pathname === "/login" ? "active" : ""
+              location.pathname === "/admin" ? "active" : ""
             }`}
+            onClick={toggleLoginModal}
           >
             <div className="animation-container">
               <VscAccount size={20} />
             </div>
-          </NavHashLink>
+          </div>
         </li>
 
         {isAdmin() && (
@@ -91,6 +96,7 @@ const Navigation = () => {
           </li>
         )}
       </ul>
+      <LoginModal isOpen={isLoginModalOpen} onClose={toggleLoginModal} />
     </nav>
   );
 };
