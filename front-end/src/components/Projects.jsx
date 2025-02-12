@@ -18,7 +18,7 @@ const Projects = () => {
     const fetchProjects = async () => {
       try {
         const response = await fetch(
-          `${process.env.REACT_APP_API_URL}/api/projects`
+          `https://portfolio-q8zw.onrender.com/api/projects`
         );
         if (!response.ok) {
           throw new Error("Erreur lors du chargement des projets");

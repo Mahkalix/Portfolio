@@ -35,7 +35,7 @@ const Admin = () => {
     const fetchProjects = async () => {
       try {
         const response = await fetch(
-          `${process.env.REACT_APP_API_URL}/api/projects`
+          `https://portfolio-q8zw.onrender.com/api/projects`
         );
 
         if (!response.ok) {
@@ -69,7 +69,7 @@ const Admin = () => {
   const handleDelete = async (projectId) => {
     try {
       const response = await fetch(
-        `${process.env.REACT_APP_API_URL}/api/projects${projectId}`,
+        `https://portfolio-q8zw.onrender.com/api/projects${projectId}`,
         {
           method: "DELETE",
         }
@@ -100,7 +100,7 @@ const Admin = () => {
 
     try {
       const response = await fetch(
-        `${process.env.REACT_APP_API_URL}/api/projects${currentProject.id}`,
+        `https://portfolio-q8zw.onrender.com/api/projects${currentProject.id}`,
         {
           method: "PUT",
           headers: {
@@ -146,7 +146,7 @@ const Admin = () => {
 
     try {
       const response = await fetch(
-        `${process.env.REACT_APP_API_URL}/api/projects`,
+        `https://portfolio-q8zw.onrender.com/api/projects`,
         {
           method: "POST",
           headers: {
