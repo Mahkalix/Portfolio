@@ -17,7 +17,9 @@ const Projects = () => {
   useEffect(() => {
     const fetchProjects = async () => {
       try {
-        const response = await fetch("http://localhost:4000/api/projects");
+        const response = await fetch(
+          "https://portfolio-q8zw.onrender.com/api/projects"
+        );
         if (!response.ok) {
           throw new Error("Erreur lors du chargement des projets");
         }

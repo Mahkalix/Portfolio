@@ -9,7 +9,6 @@ const LoginModal = ({ isOpen, onClose }) => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
-  const API_URL = process.env.API_URL || "http://localhost:4000";
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -20,13 +19,16 @@ const LoginModal = ({ isOpen, onClose }) => {
     console.log("Password:", password);
 
     try {
-      const response = await fetch(`${API_URL}/login`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ username, password }),
-      });
+      const response = await fetch(
+        `https://portfolio-q8zw.onrender.com/login`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ username, password }),
+        }
+      );
 
       const data = await response.json();
 
