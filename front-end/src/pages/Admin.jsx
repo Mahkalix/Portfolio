@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import { VscAdd } from "react-icons/vsc";
 import AdminModal from "../components/AdminModal";
 import ScrollText from "../components/ScrollText";
@@ -19,6 +20,15 @@ const Admin = () => {
   const [error, setError] = useState(null);
   const [isEditModalOpen, setIsEditModalOpen] = useState(false);
   const [isAddModalOpen, setIsAddModalOpen] = useState(false);
+  const navigate = useNavigate();
+
+  // Check if user is logged in
+  useEffect(() => {
+    const token = localStorage.getItem("token");
+    if (!token) {
+      navigate("/error");
+    }
+  }, [navigate]);
 
   // Récupérer les projets
   useEffect(() => {
@@ -203,6 +213,11 @@ const Admin = () => {
     }
   };
 
+  const handleLogout = () => {
+    localStorage.removeItem("token");
+    navigate("/");
+  };
+
   return (
     <>
       <div className="admin__container">
@@ -212,6 +227,9 @@ const Admin = () => {
             onClick={() => setIsAddModalOpen(true)}
           >
             <VscAdd size={25} />
+          </button>
+          <button className="admin__logout-button" onClick={handleLogout}>
+            Déconnecter
           </button>
         </div>
 

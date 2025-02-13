@@ -26,13 +26,16 @@
     margin-bottom: $spacing-md;
   }
   &__table {
+    border: 1px solid;
     width: 100%;
     border-collapse: collapse;
     margin-bottom: $spacing-lg;
     font-size: $font-size-md;
     th,
-    td {
-      border: 1px solid;
+    td,
+    tr,
+    thead {
+      border: 0.5px solid;
       padding: $spacing-sm;
       text-align: left;
     }
@@ -49,7 +52,8 @@
     }
   }
 
-  &__add-button {
+  &__add-button,
+  &__logout-button {
     align-items: right;
     margin-bottom: $spacing-md;
   }
@@ -79,6 +83,18 @@
     border: 1px solid $secondary-color;
     font-family: $font-primary;
     font-size: $font-size-md;
+  }
+  &__logout-button {
+    margin-left: $spacing-md;
+    padding: $spacing-sm $spacing-md;
+    background-color: $accent-color !important;
+    border: none;
+    cursor: pointer;
+    font-family: $font-primary;
+    font-size: $font-size-md;
+    &:hover {
+      color: $primary-color;
+    }
   }
 }
 

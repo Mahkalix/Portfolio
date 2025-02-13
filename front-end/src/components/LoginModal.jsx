@@ -30,6 +30,7 @@ const LoginModal = ({ isOpen, onClose }) => {
       const data = await response.json();
 
       if (response.ok) {
+        localStorage.setItem("token", data.token);
         window.location.href = "/admin";
       } else {
         setError(data.error);
