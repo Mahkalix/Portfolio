@@ -1,0 +1,15 @@
+@import "../utils/_variables";
+
+input {
+  width: 80%;
+  margin-bottom: $spacing-md;
+  padding: $spacing-sm;
+  background: $primary-color;
+  border: 1px solid $secondary-color;
+  font-family: $font-primary;
+  font-size: $font-size-md;
+}
+
+textarea {
+  background: $primary-color;
+}

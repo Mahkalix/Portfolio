@@ -1,0 +1,24 @@
+@import "../utils/variables";
+
+.dark {
+  stroke: $primary-color;
+  background-color: $secondary-color;
+  color: $primary-color;
+  border: $primary-color;
+  background: $secondary-color;
+  a {
+    color: $primary-color;
+  }
+  ul {
+    background-color: $secondary-color;
+  }
+  .view-visit {
+    -webkit-text-stroke: 2px $primary-color;
+  }
+  .other:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 30px inset $secondary-color !important;
+  }
+  .other:-webkit-autofill::first-line {
+    color: $primary-color !important;
+  }
+}

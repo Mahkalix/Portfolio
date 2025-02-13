@@ -1,0 +1,37 @@
+// 🌈 Couleurs principales
+$primary-color: #f0f0f0;
+$secondary-color: #262523;
+$accent-color: #981e0c;
+$white-color: #ffffff;
+$black-color: #000000;
+$error: red;
+$valid: green;
+
+// ✍️ Typographie
+$font-primary: "Roboto", sans-serif;
+$font-secondary: "Anton", sans-serif;
+
+// 📏 Tailles de police
+$font-size-xs: 0.75rem; // 12px
+$font-size-sm: 0.875rem; // 14px
+$font-size-md: 1rem; // 16px
+$font-size-lg: 1.25rem; // 20px
+$font-size-xl: 1.5rem; // 24px
+$font-size-xxl: 2rem; // 32px
+
+// 📦 Espacements
+$spacing-xs: 4px;
+$spacing-sm: 8px;
+$spacing-md: 16px;
+$spacing-lg: 24px;
+$spacing-xl: 32px;
+
+// 🎨 Bordures et radius
+$border-radius-sm: 4px;
+$border-radius-md: 8px;
+$border-radius-lg: 12px;
+
+// 🌟 Ombres
+$box-shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+$box-shadow-md: 0 4px 8px rgba(0, 0, 0, 0.15);
+$box-shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.2);

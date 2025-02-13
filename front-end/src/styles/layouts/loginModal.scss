@@ -1,0 +1,89 @@
+@import "../utils/_variables";
+
+.modal__overlay {
+  background-color: rgba(0, 0, 0, 0.75) !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(5px);
+}
+
+.modal__content {
+  background: $white-color !important;
+  padding: $spacing-md;
+  border-radius: $border-radius-md;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: $box-shadow-md;
+  opacity: 1;
+  z-index: 1000;
+  transition: opacity 0.3s ease-in-out;
+  position: relative;
+}
+
+.modal__close-button {
+  position: absolute;
+  top: $spacing-sm;
+  right: $spacing-sm;
+  background: none;
+  border: none;
+  color: $accent-color;
+  cursor: pointer;
+}
+
+.modal__title {
+  margin-top: 0;
+  text-align: center;
+  font-family: $font-secondary;
+  font-size: $font-size-xl;
+}
+
+.modal__form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal__form-group {
+  margin-bottom: $spacing-md;
+}
+
+.modal__label {
+  display: block;
+  margin-bottom: $spacing-xs;
+  font-weight: bold;
+  font-size: $font-size-md;
+  font-family: $font-primary;
+}
+
+.modal__input {
+  width: 100%;
+  padding: $spacing-sm;
+  border: 1px solid $secondary-color;
+  border-radius: $border-radius-sm;
+  font-size: $font-size-md;
+}
+
+.modal__submit {
+  width: 100%;
+  padding: $spacing-md;
+  background-color: $accent-color;
+  color: $white-color;
+  border: none;
+  border-radius: $border-radius-sm;
+  cursor: pointer;
+  font-size: $font-size-md;
+  font-family: $font-primary;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: darken($accent-color, 10%);
+  }
+}
+
+.modal__error-message {
+  color: red;
+  margin-top: $spacing-sm;
+  text-align: center;
+  font-size: $font-size-sm;
+}

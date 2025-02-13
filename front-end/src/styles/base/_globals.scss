@@ -1,0 +1,54 @@
+@use "../utils/variables" as *;
+@use "./reset";
+@use "../themes/dark";
+@use "../themes/light";
+
+//components
+@use "../components/button";
+@use "../components/input";
+//module
+@use "../about.module.scss";
+@use "../contact.module.scss";
+@use "../error.module.scss";
+@use "../footer.module.scss";
+@use "../header.module.scss";
+@use "../hero.module.scss";
+@use "../home.module.scss";
+@use "../horizontalscroll.module.scss";
+@use "../loader.module.scss";
+@use "../menu.module.scss";
+@use "../nav.module.scss";
+@use "../projects.module.scss";
+@use "../scrolltext.module.scss";
+@use "../switch.module.scss";
+
+//layouts
+@use "../layouts/loginModal.scss";
+@use "../layouts/admin.scss";
+
+body {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer et Edge */
+}
+
+/* Pour les navigateurs WebKit (Chrome et Safari) */
+body::-webkit-scrollbar {
+  width: 0;
+  display: none;
+}
+
+body {
+  min-width: 320px;
+  width: 100%;
+  height: 100vh;
+  margin: auto;
+  padding: 0;
+  font-family: "Roboto", "Anton", sans-serif;
+  font-family: $font-primary;
+  font-size: $font-size-md;
+  background-color: $primary-color;
+  color: $secondary-color;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 2vw;
+}

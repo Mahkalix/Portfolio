@@ -1,18 +1,18 @@
-.switch {
-    display: flex;
-    align-items: center;
-    border-left: 1px solid;
-    padding-left: 20px;
-    padding-right: 20px;
-    height: 100%;
-  }
+@import "./utils/variables";
 
+.switch {
+  display: flex;
+  align-items: center;
+  border-left: 1px solid;
+  padding-left: 20px;
+  padding-right: 20px;
+  height: 100%;
+}
 
 .input[type="checkbox"] {
   height: 0;
   width: 0;
   visibility: hidden;
-  
 }
 
 .label {
@@ -21,7 +21,7 @@
   width: 50px;
   height: 30px;
   background: transparent;
-  border: 1px solid $secondary;
+  border: 1px solid $secondary-color;
   display: block;
   align-items: center;
   border-radius: 100px;
@@ -35,28 +35,26 @@
   left: 3px;
   width: 20px;
   height: 20px;
-  border: 1px solid $secondary;
-  background: $secondary;
+  border: 1px solid $secondary-color;
+  background: $secondary-color;
   border-radius: 100%;
   transition: 0.3s;
 }
 
 .input:checked + .label {
-  background: $secondary;
-  border: 1px solid $primary;
+  background: $secondary-color;
+  border: 1px solid $primary-color;
 }
 
 .input:checked + .label:after {
   left: calc(100% - 4px);
   transform: translateX(-100%);
-  background-color: $primary;
+  background-color: $primary-color;
 }
 
 .label:active:after {
-  background-color: $primary;
+  background-color: $primary-color;
 }
-
-
 
 @media (max-width: 769px) {
   .switch {

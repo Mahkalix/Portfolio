@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Modal from "react-modal";
 import { VscClose } from "react-icons/vsc";
-import styles from "../styles/loginModal.module.scss";
+import "../styles/layouts/loginModal.scss";
 
 Modal.setAppElement("#root");
 
@@ -9,18 +9,15 @@ const LoginModal = ({ isOpen, onClose }) => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
+  console.log("Modal isOpen:", isOpen);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
     setError("");
-
-    console.log("Username:", username);
-    console.log("Password:", password);
 
     try {
       const response = await fetch(
-        `https://portfolio-q8zw.onrender.com/login`,
+        "https://portfolio-q8zw.onrender.com/login",
         {
           method: "POST",
           headers: {
@@ -31,8 +28,6 @@ const LoginModal = ({ isOpen, onClose }) => {
       );
 
       const data = await response.json();
-
-      console.log("Response data:", data);
 
       if (response.ok) {
         window.location.href = "/admin";
@@ -49,60 +44,41 @@ const LoginModal = ({ isOpen, onClose }) => {
       isOpen={isOpen}
       onRequestClose={onClose}
       contentLabel="Login Modal"
-      className={styles.modalContent}
-      overlayClassName={styles.modalOverlay}
-      style={{
-        overlay: {
-          backgroundColor: "rgba(255, 255, 255, 0.75)",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          zIndex: 1000,
-          backdropFilter: "blur(5px)",
-        },
-        content: {
-          top: "50%",
-          left: "50%",
-          right: "auto",
-          bottom: "auto",
-          marginRight: "-50%",
-          transform: "translate(-50%, -50%)",
-          width: "90%",
-          maxWidth: "400px",
-          maxHeight: "90%",
-          padding: "20px",
-          borderRadius: "8px",
-          boxShadow: "0 2px 10px rgba(0, 0, 0, 0.1)",
-          opacity: 1,
-          transition: "opacity 0.3s ease-in-out",
-        },
-      }}
+      className="modal__content"
+      overlayClassName="modal__overlay"
     >
-      <button className={styles.closeButton} onClick={onClose}>
-        <VscClose size={20} />
+      <button className="modal__close-button" onClick={onClose}>
+        <VscClose size={25} />
       </button>
-      <div className={styles.loginContainer}>
-        <form className={styles.form} onSubmit={handleSubmit}>
-          <div className={styles.formGroup}>
-            <label htmlFor="username">Username:</label>
+      <div className="modal__container">
+        <h2 className="modal__title">Admin</h2>
+        <form className="modal__form" onSubmit={handleSubmit}>
+          <div className="modal__form-group">
+            <label className="modal__label" htmlFor="username">
+              Username:
+            </label>
             <input
+              className="modal__input"
               type="text"
               id="username"
               value={username}
               onChange={(e) => setUsername(e.target.value)}
             />
           </div>
-          <div className={styles.formGroup}>
-            <label htmlFor="password">Password:</label>
+          <div className="modal__form-group">
+            <label className="modal__label" htmlFor="password">
+              Password:
+            </label>
             <input
+              className="modal__input"
               type="password"
               id="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
             />
           </div>
-          {error && <div className={styles.errorMessage}>{error}</div>}
-          <button className={styles.submit} type="submit">
+          {error && <div className="modal__error-message">{error}</div>}
+          <button className="modal__submit" type="submit">
             Login
           </button>
         </form>

@@ -1,3 +1,5 @@
+@import "./utils/variables";
+
 .menu-hamburger {
   position: absolute;
   top: 0;
@@ -46,7 +48,7 @@
   transition: opacity 1s ease, visibility 1s ease, display 0s 1s;
 }
 
-.center{
+.center {
   height: 100%;
   width: 100%;
   display: flex;
@@ -76,7 +78,6 @@ a {
   font-weight: 400;
   padding-left: 25px;
 }
-
 
 @keyframes none {
   from {
@@ -109,18 +110,16 @@ a {
   }
 }
 
-// ANIMATION MENU 
+// ANIMATION MENU
 
 // === Variables =====
-$perspective:     60rem;
-$font-size:       4.25rem;
-$split-position:  50%;
+$perspective: 60rem;
+$font-size: 4.25rem;
+$split-position: 50%;
 $split-thickness: 3px;
-$split-color:     rgb(0, 0, 0);
-
+$split-color: rgb(0, 0, 0);
 
 #menu-body {
-
   text-transform: uppercase;
   text-align: center;
   display: flex;
@@ -128,15 +127,14 @@ $split-color:     rgb(0, 0, 0);
   align-items: center;
 }
 
-
-.invisible{
+.invisible {
   color: transparent;
 }
 .menu-item {
   position: relative;
   cursor: pointer;
   &::before {
-    content: '';
+    content: "";
     display: block;
     position: absolute;
     top: $split-position;
@@ -145,9 +143,9 @@ $split-color:     rgb(0, 0, 0);
     height: $split-thickness;
     border-radius: $split-thickness;
     margin-top: calc($split-thickness / 12);
-    background: $thirdly;
+    background: $accent-color;
     transform: scale(0);
-    transition: transform .8s cubic-bezier(.16,1.08,.38,.98);
+    transition: transform 0.8s cubic-bezier(0.16, 1.08, 0.38, 0.98);
     z-index: 1;
   }
 }
@@ -158,28 +156,39 @@ $split-color:     rgb(0, 0, 0);
   overflow: hidden;
   top: 0;
   height: $split-position;
-  transition: all .8s cubic-bezier(.16,1.08,.38,.98);
-  span { display: block; }
-
+  transition: all 0.8s cubic-bezier(0.16, 1.08, 0.38, 0.98);
+  span {
+    display: block;
+  }
 }
-.Top{
+.Top {
   top: $split-position - 50;
   height: 100 - $split-position + 0.1;
-  span { transform: translateY(20%); }
+  span {
+    transform: translateY(20%);
+  }
 }
 
 .Mask + .Mask {
   top: $split-position - 0;
   height: 100 - $split-position + 0.1;
-  span { transform: translateY(-$split-position); }
+  span {
+    transform: translateY(-$split-position);
+  }
 }
 
 // === Where the fun stuff happens =====
 .menu-item:hover,
 .menu-item:active {
-  .Mask { transform: skewX(6deg) translateX(0px); }
-  .Mask + .Mask { transform: skewX(6deg) translateX(0px); }
-  &::before { transform: scale(1); }
+  .Mask {
+    transform: skewX(6deg) translateX(0px);
+  }
+  .Mask + .Mask {
+    transform: skewX(6deg) translateX(0px);
+  }
+  &::before {
+    transform: scale(1);
+  }
 }
 
 @media screen and (min-width: 769px) {
@@ -215,7 +224,3 @@ $split-color:     rgb(0, 0, 0);
     z-index: 101;
   }
 }
-
-
-
-

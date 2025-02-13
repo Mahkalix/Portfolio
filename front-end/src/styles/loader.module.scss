@@ -1,3 +1,5 @@
+@import "./utils/variables";
+
 .loader {
   display: flex;
   justify-content: center;
@@ -25,7 +27,7 @@
 
   .stripe {
     z-index: 1000;
-    background-color: $primary;
+    background-color: $primary-color;
     position: fixed;
     height: 100%;
     width: 25%;

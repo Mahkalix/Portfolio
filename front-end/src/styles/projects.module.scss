@@ -1,4 +1,5 @@
-/* SECTION */
+@import "./utils/variables";
+
 #projects {
   display: flex;
   flex-wrap: wrap;
@@ -79,7 +80,7 @@ article {
           .number-style {
             display: flex;
             font-size: 2.5vw;
-            color: $thirdly;
+            color: $accent-color;
             font-family: "Anton";
             margin-right: 0.2vw;
           }
@@ -139,7 +140,7 @@ article {
           align-self: center;
           padding: 5px 15px;
           font-weight: 400;
-          border: 1px solid $secondary;
+          border: 1px solid $secondary-color;
           border-radius: 20px;
         }
       }
@@ -197,7 +198,7 @@ article {
       color: transparent;
       -webkit-text-stroke: 3px;
       position: relative;
-      background: linear-gradient(to left, $secondary, $thirdly);
+      background: linear-gradient(to left, $secondary-color, $accent-color);
       background-size: 200% 100%;
       background-clip: text;
       -webkit-background-clip: text;
@@ -212,7 +213,7 @@ article {
       color: transparent;
       -webkit-text-stroke: 3px;
       position: relative;
-      background: linear-gradient(to left, $primary, $thirdly);
+      background: linear-gradient(to left, $primary-color, $accent-color);
       background-size: 200% 100%;
       background-clip: text;
       -webkit-background-clip: text;
