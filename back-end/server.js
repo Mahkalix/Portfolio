@@ -14,6 +14,11 @@ const port = 4000;
 app.use(express.json());
 app.use(cors());  // Enable cross-origin resource sharing
 
+app.get("/", (req, res) => {
+  res.send("✅ Le serveur fonctionne !");
+});
+
+
 // Route de login
 app.post('/login', (req, res) => login(req, res, prisma));  // Pass the prisma client to login route
 

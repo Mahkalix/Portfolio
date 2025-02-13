@@ -3,8 +3,6 @@ import React, { useState, useEffect } from "react";
 import styles from "../styles/admin.module.scss";
 
 const Admin = () => {
-  const API_URL = process.env.REACT_APP_API_URL || "http://localhost:4000";
-
   const [projects, setProjects] = useState([]);
   const [currentProject, setCurrentProject] = useState(null);
   const [newProject, setNewProject] = useState({
@@ -36,7 +34,9 @@ const Admin = () => {
   useEffect(() => {
     const fetchProjects = async () => {
       try {
-        const response = await fetch(`${API_URL}/api/projects`);
+        const response = await fetch(
+          `https://portfolio-q8zw.onrender.com/api/projects`
+        );
 
         if (!response.ok) {
           throw new Error(`Erreur HTTP : ${response.status}`);
@@ -50,7 +50,7 @@ const Admin = () => {
     };
 
     fetchProjects();
-  }, [API_URL, projects]);
+  }, []);
 
   const handleEdit = (projectId) => {
     try {
@@ -68,9 +68,12 @@ const Admin = () => {
 
   const handleDelete = async (projectId) => {
     try {
-      const response = await fetch(`${API_URL}/api/projects${projectId}`, {
-        method: "DELETE",
-      });
+      const response = await fetch(
+        `https://portfolio-q8zw.onrender.com/api/projects${projectId}`,
+        {
+          method: "DELETE",
+        }
+      );
 
       if (!response.ok) {
         throw new Error(`Erreur HTTP : ${response.status}`);
@@ -97,7 +100,7 @@ const Admin = () => {
 
     try {
       const response = await fetch(
-        `${API_URL}/api/projects${currentProject.id}`,
+        `https://portfolio-q8zw.onrender.com/api/projects${currentProject.id}`,
         {
           method: "PUT",
           headers: {
@@ -142,22 +145,25 @@ const Admin = () => {
     }
 
     try {
-      const response = await fetch(`${API_URL}/api/projects`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          title,
-          description,
-          year: parseInt(year),
-          use,
-          visit,
-          view,
-          cover,
-          tools,
-        }),
-      });
+      const response = await fetch(
+        `https://portfolio-q8zw.onrender.com/api/projects`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            title,
+            description,
+            year: parseInt(year),
+            use,
+            visit,
+            view,
+            cover,
+            tools,
+          }),
+        }
+      );
 
       if (!response.ok) {
         throw new Error(`Erreur HTTP : ${response.status}`);
