@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import Modal from "react-modal";
 import { VscClose } from "react-icons/vsc";
-import "../styles/layouts/loginModal.scss";
 
 Modal.setAppElement("#root");
 

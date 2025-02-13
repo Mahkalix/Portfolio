@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Modal from "react-modal";
 import { useTheme } from "../components/ThemeSwitch.jsx";
 import styles from "../styles/contact.module.scss";
+import ScrollText from "../components/ScrollText";
 
 Modal.setAppElement("#root");
 
@@ -76,119 +77,141 @@ const Contact = () => {
   };
 
   return (
-    <section className={styles.contact}>
-      <h1>Get in touch</h1>
+    <>
+      <section className={styles.contact}>
+        <h1>Get in touch</h1>
 
-      <form onSubmit={handleSubmit} className={styles.form} noValidate>
-        <div>
-          <label
-            className={`${styles.labels} ${theme === "light" ? "light" : "dark"}`}
-            htmlFor="object"
-          >
-            Object
-          </label>
+        <form onSubmit={handleSubmit} className={styles.form} noValidate>
+          <div>
+            <label
+              className={`${styles.labels} ${
+                theme === "light" ? "light" : "dark"
+              }`}
+              htmlFor="object"
+            >
+              Object
+            </label>
+            <input
+              className={`${styles.other} ${
+                theme === "light" ? "light" : "dark"
+              }`}
+              type="text"
+              name="object"
+              value={formData.object}
+              onChange={handleChange}
+              required
+            />
+          </div>
+          {formData.object === "" && ShowModalError && (
+            <span className={styles.fieldEmpty}>Champ non rempli</span>
+          )}
+
+          <div>
+            <label
+              className={`${styles.labels} ${
+                theme === "light" ? "light" : "dark"
+              }`}
+              htmlFor="name"
+            >
+              Name
+            </label>
+            <input
+              className={`${styles.other} ${
+                theme === "light" ? "light" : "dark"
+              }`}
+              type="text"
+              name="name"
+              value={formData.name}
+              onChange={handleChange}
+              required
+            />
+          </div>
+          {formData.name === "" && ShowModalError && (
+            <span className={styles.fieldEmpty}>Champ non rempli</span>
+          )}
+
+          <div>
+            <label
+              className={`${styles.labels} ${
+                theme === "light" ? "light" : "dark"
+              }`}
+              htmlFor="email"
+            >
+              Email
+            </label>
+            <input
+              className={`${styles.other} ${
+                theme === "light" ? "light" : "dark"
+              }`}
+              type="email"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+              required
+            />
+          </div>
+          {formData.email === "" && ShowModalError && (
+            <span className={styles.fieldEmpty}>Champ non rempli</span>
+          )}
+          <div>
+            <label
+              className={`${styles.labels} ${
+                theme === "light" ? "light" : "dark"
+              }`}
+              htmlFor="comments"
+            >
+              Message
+            </label>
+            <textarea
+              className={`${styles.textarea} ${
+                theme === "light" ? "textareablack" : "textarealight"
+              }`}
+              name="comments"
+              rows="8"
+              cols="35"
+              value={formData.comments}
+              onChange={handleChange}
+              required
+            ></textarea>
+          </div>
+          {formData.comments === "" && ShowModalError && (
+            <span className={styles.fieldEmpty}>Champ non rempli</span>
+          )}
+
           <input
-            className={`${styles.other} ${theme === "light" ? "light" : "dark"}`}
-            type="text"
-            name="object"
-            value={formData.object}
-            onChange={handleChange}
-            required
-          />
-        </div>
-        {formData.object === "" && ShowModalError && (
-          <span className={styles.fieldEmpty}>Champ non rempli</span>
-        )}
-
-        <div>
-          <label
-            className={`${styles.labels} ${theme === "light" ? "light" : "dark"}`}
-            htmlFor="name"
-          >
-            Name
-          </label>
-          <input
-            className={`${styles.other} ${theme === "light" ? "light" : "dark"}`}
-            type="text"
-            name="name"
-            value={formData.name}
-            onChange={handleChange}
-            required
-          />
-        </div>
-        {formData.name === "" && ShowModalError && (
-          <span className={styles.fieldEmpty}>Champ non rempli</span>
-        )}
-
-        <div>
-          <label
-            className={`${styles.labels} ${theme === "light" ? "light" : "dark"}`}
-            htmlFor="email"
-          >
-            Email
-          </label>
-          <input
-            className={`${styles.other} ${theme === "light" ? "light" : "dark"}`}
-            type="email"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
-            required
-          />
-        </div>
-        {formData.email === "" && ShowModalError && (
-          <span className={styles.fieldEmpty}>Champ non rempli</span>
-        )}
-        <div>
-          <label
-            className={`${styles.labels} ${theme === "light" ? "light" : "dark"}`}
-            htmlFor="comments"
-          >
-            Message
-          </label>
-          <textarea
-            className={`${styles.textarea} ${theme === "light" ? "textareablack" : "textarealight"}`}
-            name="comments"
-            rows="8"
-            cols="35"
-            value={formData.comments}
-            onChange={handleChange}
-            required
-          ></textarea>
-        </div>
-        {formData.comments === "" && ShowModalError && (
-          <span className={styles.fieldEmpty}>Champ non rempli</span>
-        )}
-
-        <input
-          className={`${styles.other} ${theme === "light" ? "light" : "dark"}`}
-          type="submit"
-          name="submit"
-          value="Send"
-        />
-
-        <Modal
-          isOpen={showModal}
-          onRequestClose={closeModal}
-          contentLabel="Message sent !"
-          className={`modal ${theme === "light" ? "dark" : "light"}`}
-          overlayClassName="overlay"
-        >
-          <h2 className={styles.modalTitle}>Your message has been sent !</h2>
-          <p>
-            Thank you for reaching out. I'll respond to you as soon as possible.
-          </p>
-          <button
-            onClick={closeModal}
-            className={`${styles.modalCloseButton} ${
-              theme === "light" ? "dark" : "light"
+            className={`${styles.other} ${
+              theme === "light" ? "light" : "dark"
             }`}
+            type="submit"
+            name="submit"
+            value="Send"
+          />
+
+          <Modal
+            isOpen={showModal}
+            onRequestClose={closeModal}
+            contentLabel="Message sent !"
+            className={`modal ${theme === "light" ? "dark" : "light"}`}
+            overlayClassName="overlay"
           >
-            Close
-          </button>
-        </Modal>
-      </form>
-    </section>
+            <h2 className={styles.modalTitle}>Your message has been sent !</h2>
+            <p>
+              Thank you for reaching out. I'll respond to you as soon as
+              possible.
+            </p>
+            <button
+              onClick={closeModal}
+              className={`${styles.modalCloseButton} ${
+                theme === "light" ? "dark" : "light"
+              }`}
+            >
+              Close
+            </button>
+          </Modal>
+        </form>
+      </section>
+      <ScrollText text="- CONTACT - CONTACT - CONTACT - CONTACT - CONTACT - CONTACT - CONTACT - CONTACT - CONTACT - CONTACT -" />
+    </>
   );
 };
 

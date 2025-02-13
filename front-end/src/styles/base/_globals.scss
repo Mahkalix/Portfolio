@@ -2,10 +2,13 @@
 @use "./reset";
 @use "../themes/dark";
 @use "../themes/light";
+@use "./typography";
 
 //components
+@use "../components/modal";
 @use "../components/button";
 @use "../components/input";
+
 //module
 @use "../about.module.scss";
 @use "../contact.module.scss";
@@ -23,8 +26,8 @@
 @use "../switch.module.scss";
 
 //layouts
-@use "../layouts/loginModal.scss";
-@use "../layouts/admin.scss";
+@use "../layouts/_loginModal.scss";
+@use "../layouts/_admin.scss";
 
 body {
   scrollbar-width: none; /* Firefox */

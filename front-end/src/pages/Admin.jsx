@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from "react";
-import Modal from "react-modal";
-import { VscClose, VscAdd } from "react-icons/vsc";
-import "../styles/layouts/admin.scss";
-
-Modal.setAppElement("#root");
+import { VscAdd } from "react-icons/vsc";
+import AdminModal from "../components/AdminModal";
+import ScrollText from "../components/ScrollText";
 
 const Admin = () => {
   const [projects, setProjects] = useState([]);
@@ -191,228 +189,66 @@ const Admin = () => {
   };
 
   return (
-    <div className="admin__container">
-      <h1 className="admin__title">Panneau Admin - Projets</h1>
-      {error && <p className="admin__error">{error}</p>}
-      <table className="admin__table">
-        <thead>
-          <tr>
-            <th>Titre</th>
-            <th>Année</th>
-            <th>Action</th>
-          </tr>
-        </thead>
-        <tbody>
-          {projects.map((project) => (
-            <tr key={project.id}>
-              <td>{project.title}</td>
-              <td>{project.year}</td>
-              <td>
-                <button onClick={() => handleEdit(project.id)}>Modifier</button>
-                <button onClick={() => handleDelete(project.id)}>
-                  Supprimer
-                </button>
-              </td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
-      <button className="admin__add-button" onClick={() => setIsAddModalOpen(true)}>
-        <VscAdd size={25} />
-      </button>
-      <Modal
-        isOpen={isEditModalOpen}
-        onRequestClose={() => setIsEditModalOpen(false)}
-        contentLabel="Edit Project Modal"
-        className="modal__content--admin"
-        overlayClassName="modal__overlay--admin"
-      >
-        <button className="modal__close-button" onClick={() => setIsEditModalOpen(false)}>
-          <VscClose size={25} />
-        </button>
-        {currentProject && (
-          <form onSubmit={handleSubmit} className="admin__form">
-            <input
-              type="text"
-              value={currentProject.title}
-              onChange={(e) =>
-                setCurrentProject({ ...currentProject, title: e.target.value })
-              }
-              placeholder="Titre"
-              className="admin__input"
-            />
-            <textarea
-              value={currentProject.description}
-              onChange={(e) =>
-                setCurrentProject({
-                  ...currentProject,
-                  description: e.target.value,
-                })
-              }
-              placeholder="Description"
-              className="admin__textarea"
-            />
-            <input
-              type="number"
-              value={currentProject.year}
-              onChange={(e) =>
-                setCurrentProject({ ...currentProject, year: e.target.value })
-              }
-              placeholder="Année"
-              className="admin__input"
-            />
-            <input
-              type="text"
-              value={currentProject.use}
-              onChange={(e) =>
-                setCurrentProject({ ...currentProject, use: e.target.value })
-              }
-              placeholder="Catégorie"
-              className="admin__input"
-            />
-            <input
-              type="text"
-              value={currentProject.visit}
-              onChange={(e) =>
-                setCurrentProject({ ...currentProject, visit: e.target.value })
-              }
-              placeholder="Lien de visite"
-              className="admin__input"
-            />
-            <input
-              type="text"
-              value={currentProject.view}
-              onChange={(e) =>
-                setCurrentProject({ ...currentProject, view: e.target.value })
-              }
-              placeholder="Lien du code source"
-              className="admin__input"
-            />
-            <input
-              type="text"
-              value={currentProject.cover}
-              onChange={(e) =>
-                setCurrentProject({ ...currentProject, cover: e.target.value })
-              }
-              placeholder="URL de l'image de couverture"
-              className="admin__input"
-            />
-            <textarea
-              value={JSON.stringify(currentProject.tools, null, 2)}
-              onChange={(e) => {
-                try {
-                  setCurrentProject({
-                    ...currentProject,
-                    tools: JSON.parse(e.target.value),
-                  });
-                } catch {
-                  setError("Le format JSON des outils est invalide");
-                }
-              }}
-              placeholder="Outils (format JSON)"
-              className="admin__textarea"
-            />
-            <button type="submit" className="admin__button">
-              Mettre à jour
-            </button>
-          </form>
-        )}
-      </Modal>
-      <Modal
-        isOpen={isAddModalOpen}
-        onRequestClose={() => setIsAddModalOpen(false)}
-        contentLabel="Add Project Modal"
-        className="modal__content--admin"
-        overlayClassName="modal__overlay--admin"
-      >
-        <button className="modal__close-button" onClick={() => setIsAddModalOpen(false)}>
-          <VscClose size={25} />
-        </button>
-        <form onSubmit={handleAddProject} className="admin__form">
-          <h2>Ajouter un nouveau projet</h2>
-          <input
-            type="text"
-            value={newProject.title}
-            onChange={(e) =>
-              setNewProject({ ...newProject, title: e.target.value })
-            }
-            placeholder="Titre"
-            className="admin__input"
-          />
-          <textarea
-            value={newProject.description}
-            onChange={(e) =>
-              setNewProject({ ...newProject, description: e.target.value })
-            }
-            placeholder="Description"
-            className="admin__textarea"
-          />
-          <input
-            type="number"
-            value={newProject.year}
-            onChange={(e) =>
-              setNewProject({ ...newProject, year: e.target.value })
-            }
-            placeholder="Année"
-            className="admin__input"
-          />
-          <input
-            type="text"
-            value={newProject.use}
-            onChange={(e) =>
-              setNewProject({ ...newProject, use: e.target.value })
-            }
-            placeholder="Catégorie"
-            className="admin__input"
-          />
-          <input
-            type="text"
-            value={newProject.visit}
-            onChange={(e) =>
-              setNewProject({ ...newProject, visit: e.target.value })
-            }
-            placeholder="Lien de visite"
-            className="admin__input"
-          />
-          <input
-            type="text"
-            value={newProject.view}
-            onChange={(e) =>
-              setNewProject({ ...newProject, view: e.target.value })
-            }
-            placeholder="Lien du code source"
-            className="admin__input"
-          />
-          <input
-            type="text"
-            value={newProject.cover}
-            onChange={(e) =>
-              setNewProject({ ...newProject, cover: e.target.value })
-            }
-            placeholder="URL de l'image de couverture"
-            className="admin__input"
-          />
-          <textarea
-            value={JSON.stringify(newProject.tools, null, 2)}
-            onChange={(e) => {
-              try {
-                setNewProject({
-                  ...newProject,
-                  tools: JSON.parse(e.target.value),
-                });
-              } catch {
-                setError("Le format JSON des outils est invalide");
-              }
-            }}
-            placeholder="Outils (format JSON)"
-            className="admin__textarea"
-          />
-          <button type="submit" className="admin__button">
-            Ajouter
+    <>
+      <div className="admin__container">
+        <div className="admin__header">
+          <button
+            className="admin__add-button"
+            onClick={() => setIsAddModalOpen(true)}
+          >
+            <VscAdd size={25} />
           </button>
-        </form>
-      </Modal>
-    </div>
+        </div>
+        {error && <p className="admin__error">{error}</p>}
+        <table className="admin__table">
+          <thead>
+            <tr>
+              <th>Title</th>
+              <th>Year</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            {projects.map((project) => (
+              <tr key={project.id}>
+                <td>{project.title}</td>
+                <td>{project.year}</td>
+                <td>
+                  <div className="admin__actions">
+                    <button onClick={() => handleEdit(project.id)}>
+                      Modifier
+                    </button>
+                    <button onClick={() => handleDelete(project.id)}>
+                      Supprimer
+                    </button>
+                  </div>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+
+        <AdminModal
+          isOpen={isEditModalOpen}
+          onClose={() => setIsEditModalOpen(false)}
+          currentProject={currentProject}
+          handleSubmit={handleSubmit}
+          setCurrentProject={setCurrentProject}
+          error={error}
+          setError={setError}
+        />
+        <AdminModal
+          isOpen={isAddModalOpen}
+          onClose={() => setIsAddModalOpen(false)}
+          currentProject={newProject}
+          handleSubmit={handleAddProject}
+          setCurrentProject={setNewProject}
+          error={error}
+          setError={setError}
+        />
+      </div>
+      <ScrollText text="- ADMIN - ADMIN - ADMIN - ADMIN - ADMIN - ADMIN - ADMIN - ADMIN - ADMIN - ADMIN -" />
+    </>
   );
 };
 

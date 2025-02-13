@@ -22,4 +22,14 @@
   .other:-webkit-autofill::first-line {
     color: $secondary-color !important;
   }
+  th {
+    background-color: $secondary-color;
+    color: $primary-color;
+    font-family: $font-primary;
+  }
+  td {
+    background-color: $primary-color;
+    color: $secondary-color;
+    font-family: $font-primary;
+  }
 }

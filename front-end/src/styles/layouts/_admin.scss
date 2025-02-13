@@ -1,0 +1,88 @@
+@import "../utils/_variables";
+
+.admin {
+  border-collapse: collapse;
+  margin-bottom: $spacing-lg;
+
+  &__container {
+    padding: $spacing-lg;
+  }
+  &__header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: $spacing-xs;
+    width: 100%;
+  }
+  &___title {
+    margin-bottom: $spacing-lg;
+    margin-top: 0;
+    text-align: center;
+    font-family: $font-secondary;
+    font-size: $font-size-xl;
+  }
+  &__error {
+    color: $error;
+    margin-bottom: $spacing-md;
+  }
+  &__table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: $spacing-lg;
+    font-size: $font-size-md;
+    th,
+    td {
+      border: 1px solid;
+      padding: $spacing-sm;
+      text-align: left;
+    }
+
+    .admin__actions {
+      display: flex;
+      flex-direction: row;
+      margin: 0;
+      align-items: center;
+      gap: $spacing-xs;
+    }
+    button {
+      margin-top: 0px;
+    }
+  }
+
+  &__add-button {
+    align-items: right;
+    margin-bottom: $spacing-md;
+  }
+
+  &__form {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: $spacing-md;
+    flex-direction: row;
+  }
+  &__form-column {
+    flex: 1 1 calc(50% - $spacing-md);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  &__form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: $spacing-md;
+  }
+  &__input,
+  &__textarea {
+    width: 100%;
+    padding: $spacing-sm;
+    border: 1px solid $secondary-color;
+    font-family: $font-primary;
+    font-size: $font-size-md;
+  }
+}
+
+.modal__content--admin {
+  width: 90%;
+  max-width: 600px;
+}
