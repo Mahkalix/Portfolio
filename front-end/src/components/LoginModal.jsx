@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import Modal from "react-modal";
-import { VscClose } from "react-icons/vsc";
+import { VscClose, VscEye, VscEyeClosed } from "react-icons/vsc";
 
 Modal.setAppElement("#root");
 
 const LoginModal = ({ isOpen, onClose }) => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState("");
   console.log("Modal isOpen:", isOpen);
 
@@ -68,13 +69,27 @@ const LoginModal = ({ isOpen, onClose }) => {
             <label className="modal__label" htmlFor="password">
               Password:
             </label>
-            <input
-              className="modal__input"
-              type="password"
-              id="password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-            />
+            <div className="modal__password-container">
+              <input
+                className="modal__input"
+                type={showPassword ? "text" : "password"}
+                id="password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+              />
+              <button
+                type="button"
+                className="modal__password-toggle"
+                onClick={() => setShowPassword(!showPassword)}
+                style={{ position: "absolute", right: "10px" }}
+              >
+                {showPassword ? (
+                  <VscEyeClosed size={20} />
+                ) : (
+                  <VscEye size={20} />
+                )}
+              </button>
+            </div>
           </div>
           {error && <div className="modal__error-message">{error}</div>}
           <button className="modal__submit" type="submit">

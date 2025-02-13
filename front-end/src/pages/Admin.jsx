@@ -68,7 +68,7 @@ const Admin = () => {
   const handleDelete = async (projectId) => {
     try {
       const response = await fetch(
-        `https://portfolio-q8zw.onrender.com/api/projects${projectId}`,
+        `https://portfolio-q8zw.onrender.com/api/projects/${projectId}`,
         {
           method: "DELETE",
         }
@@ -99,7 +99,7 @@ const Admin = () => {
 
     try {
       const response = await fetch(
-        `https://portfolio-q8zw.onrender.com/api/projects${currentProject.id}`,
+        `https://portfolio-q8zw.onrender.com/api/projects/${currentProject.id}`,
         {
           method: "PUT",
           headers: {

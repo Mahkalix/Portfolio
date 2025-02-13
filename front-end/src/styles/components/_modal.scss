@@ -60,9 +60,29 @@
   font-size: $font-size-md;
   font-family: $font-primary;
 }
+
 .modal__error-message {
   color: $error;
   margin-top: $spacing-sm;
   text-align: center;
   font-size: $font-size-sm;
+}
+
+.modal__password-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.modal__password-toggle {
+  position: absolute;
+  right: $spacing-xs;
+  top: 50%;
+  width: 40px;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: $secondary-color;
 }
