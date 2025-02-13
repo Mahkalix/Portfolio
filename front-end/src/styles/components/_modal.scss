@@ -86,3 +86,11 @@
   cursor: pointer;
   color: $secondary-color;
 }
+
+.modal__error-message {
+  color: $error;
+  margin-top: $spacing-sm;
+  text-align: center;
+  font-size: $font-size-sm;
+  margin-bottom: $spacing-sm;
+}

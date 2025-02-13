@@ -84,9 +84,9 @@ const LoginModal = ({ isOpen, onClose }) => {
                 style={{ position: "absolute", right: "10px" }}
               >
                 {showPassword ? (
-                  <VscEyeClosed size={20} />
-                ) : (
                   <VscEye size={20} />
+                ) : (
+                  <VscEyeClosed size={20} />
                 )}
               </button>
             </div>

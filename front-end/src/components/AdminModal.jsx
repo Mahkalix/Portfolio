@@ -165,10 +165,12 @@ const AdminModal = ({
               />
             </div>
           </div>
-          {error && <div className="admin__error">{error}</div>}
-          <button type="submit" className="admin__button">
-            Mettre à jour
-          </button>
+          <div className="modal__form-group">
+            {error && <div className="modal__error-message">{error}</div>}
+            <button type="submit" className="admin__button">
+              Mettre à jour
+            </button>
+          </div>
         </form>
       )}
     </Modal>

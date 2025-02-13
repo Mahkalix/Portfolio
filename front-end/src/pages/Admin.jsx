@@ -36,6 +36,7 @@ const Admin = () => {
         setProjects(data);
       } catch (error) {
         setError(`Erreur lors du chargement des projets : ${error.message}`);
+        setTimeout(() => setError(null), 5000);
       }
     };
 
@@ -50,6 +51,13 @@ const Admin = () => {
     }
   }, [isEditModalOpen, isAddModalOpen]);
 
+  useEffect(() => {
+    if (error) {
+      const timer = setTimeout(() => setError(null), 5000);
+      return () => clearTimeout(timer);
+    }
+  }, [error]);
+
   const handleEdit = (projectId) => {
     try {
       const project = projects.find((p) => p.id === projectId);
@@ -59,9 +67,11 @@ const Admin = () => {
         setIsEditModalOpen(true);
       } else {
         setError("Projet introuvable");
+        setTimeout(() => setError(null), 5000);
       }
     } catch (error) {
       setError(`Erreur lors de la sélection du projet : ${error.message}`);
+      setTimeout(() => setError(null), 5000);
     }
   };
 
@@ -82,6 +92,7 @@ const Admin = () => {
       setProjects((prev) => prev.filter((p) => p.id !== projectId));
     } catch (error) {
       setError(`Erreur lors de la suppression du projet : ${error.message}`);
+      setTimeout(() => setError(null), 5000);
     }
   };
 
@@ -94,6 +105,7 @@ const Admin = () => {
 
     if (!title || !year || isNaN(year)) {
       setError("Veuillez entrer un titre valide et une année valide.");
+      setTimeout(() => setError(null), 5000);
       return;
     }
 
@@ -131,6 +143,7 @@ const Admin = () => {
       setIsEditModalOpen(false);
     } catch (error) {
       setError(`Erreur lors de la mise à jour du projet : ${error.message}`);
+      setTimeout(() => setError(null), 5000);
     }
   };
 
@@ -141,6 +154,7 @@ const Admin = () => {
 
     if (!title || !year || isNaN(year)) {
       setError("Veuillez entrer un titre valide et une année valide.");
+      setTimeout(() => setError(null), 5000);
       return;
     }
 
@@ -185,6 +199,7 @@ const Admin = () => {
       setIsAddModalOpen(false);
     } catch (error) {
       setError(`Erreur lors de l'ajout du projet : ${error.message}`);
+      setTimeout(() => setError(null), 5000);
     }
   };
 
@@ -199,7 +214,7 @@ const Admin = () => {
             <VscAdd size={25} />
           </button>
         </div>
-        {error && <p className="admin__error">{error}</p>}
+
         <table className="admin__table">
           <thead>
             <tr>
@@ -246,6 +261,7 @@ const Admin = () => {
           error={error}
           setError={setError}
         />
+        {error && <p className="modal__error-message">{error}</p>}
       </div>
       <ScrollText text="- ADMIN - ADMIN - ADMIN - ADMIN - ADMIN - ADMIN - ADMIN - ADMIN - ADMIN - ADMIN -" />
     </>
