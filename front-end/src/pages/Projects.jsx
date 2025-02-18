@@ -1,60 +1,77 @@
-import React, { useEffect } from "react";
-import { useParams } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
-import dataProjects from "../data/projects.json";
+import React, { useEffect, useState } from "react";
+import { useParams, useNavigate } from "react-router-dom";
 import ScrollText from "../components/ScrollText.jsx";
 
-const Projects = () => {
-  const params = useParams();
-  const id = params.id;
+const ProjectDetails = () => {
+  const { id } = useParams(); // L'ID est en fait le slug
   const navigate = useNavigate();
-  const data = dataProjects.find((item) => item.id === id);
+  const [project, setProject] = useState(null);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    const fetchProject = async () => {
+      try {
+        const response = await fetch(
+          `https://portfolio-q8zw.onrender.com/api/projects/${id}`
+        );
+        if (!response.ok) throw new Error("Projet introuvable");
+
+        const data = await response.json();
+        setProject(data);
+      } catch (err) {
+        setError(err.message);
+      }
+    };
+
+    fetchProject();
+  }, [id]);
 
   useEffect(() => {
     window.scrollTo({ top: 0 });
   }, []);
 
-  useEffect(() => {
-    if (!data) {
-      console.log("Aucun élément correspondant à l'ID trouvé.");
-      navigate("*");
-    }
-  }, [data, navigate]);
+  if (error) {
+    navigate("*"); // Redirection en cas d'erreur
+    return null;
+  }
+
+  if (!project) {
+    return <p>Chargement...</p>;
+  }
 
   return (
     <>
       <div className="projects">
         <div className="container-projects-description">
-          <div className="title">{data.title}</div>
-          <div className="description">{data.description}</div>
-
+          <div className="title">{project.title}</div>
+          <div className="description">{project.description}</div>
           <div className="infos">
             <div className="year">
               <p>YEAR</p> <br />
-              {data.year}
+              {project.year}
             </div>
             <div className="use">
               <p>CATEGORY</p> <br />
-              {data.use}
+              {project.use}
             </div>
           </div>
           <ul className="project-tools">
-            {Object.entries(data.tools).map(([tool, icon], index) => (
+            {project.tools.map((tool, index) => (
               <li key={index}>
-                <img src={icon} alt={tool} />
+                <img src={tool.icon} alt={tool.name} />
               </li>
             ))}
           </ul>
         </div>
         <div className="container-projects-img">
-          <img src={data.cover} alt={data.title} />
+          <img src={project.cover} alt={project.title} />
         </div>
       </div>
-      <ScrollText text="PREVIEW - PREVIEW - PREVIEW - PREVIEW - PREVIEW - PREVIEW - PREVIEW - PREVIEW - PREVIEW - PREVIEW - PREVIEW - PREVIEW - PREVIEW - PREVIEW -" />
+      <ScrollText text="PREVIEW - PREVIEW - PREVIEW -" />
       <div className="preview">
         <div className="visit">
           <a
-            href={data.visit}
+            href={project.visit}
             target="_blank"
             rel="noreferrer"
             className="view-visit"
@@ -64,7 +81,7 @@ const Projects = () => {
         </div>
         <div className="view">
           <a
-            href={data.view}
+            href={project.view}
             target="_blank"
             rel="noreferrer"
             className="view-code"
@@ -77,4 +94,4 @@ const Projects = () => {
   );
 };
 
-export default Projects;
+export default ProjectDetails;

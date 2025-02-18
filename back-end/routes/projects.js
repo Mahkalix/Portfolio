@@ -1,6 +1,30 @@
 const { PrismaClient } = require('@prisma/client');
 const prisma = new PrismaClient();
 
+// Récupérer un projet par son ID
+const getProjectById = async (req, res) => {
+  const { id } = req.params;
+  console.log("ID de la requête:", id); // Loguer pour vérifier la valeur de l'ID
+
+  try {
+    const project = await prisma.project.findUnique({
+      where: { id },
+    });
+
+    if (!project) {
+      return res.status(404).json({ error: "Projet non trouvé" });
+    }
+
+    res.json(project);
+  } catch (error) {
+    console.error("Erreur Prisma:", error);
+    res.status(500).json({ error: "Erreur serveur lors de la récupération du projet" });
+  }
+};
+
+
+
+
 // Récupérer tous les projets
 const getProjects = async (req, res) => {
   try {
@@ -77,4 +101,4 @@ const deleteProject = async (req, res) => {
   }
 };
 
-module.exports = { getProjects, addProject, updateProject, deleteProject };
+module.exports = { getProjects, addProject, updateProject, deleteProject, getProjectById };
