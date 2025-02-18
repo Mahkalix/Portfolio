@@ -1,6 +1,6 @@
 const express = require('express');
 const cors = require('cors');
-const { getProjects, addProject, updateProject, deleteProject } = require('./routes/projects'); // Importation des routes des projets
+const { getProjects, addProject, updateProject, deleteProject, getProjectById } = require('./routes/projects'); // Importation des routes des projets
 const login = require('./routes/login');  // Importation de la fonction login
 const { PrismaClient } = require('@prisma/client'); // Prisma client
 
@@ -23,10 +23,13 @@ app.get("/", (req, res) => {
 app.post('/login', (req, res) => login(req, res, prisma));  // Pass the prisma client to login route
 
 // Routes pour gérer les projets
-app.get('/api/projects', (req, res) => getProjects(req, res, prisma)); // Pass the prisma client to project routes
+app.get('/api/projects', (req, res) => getProjects(req, res, prisma)); 
+app.get('/api/projects/:id', (req, res) => getProjectById(req, res, prisma));
 app.post('/api/projects', (req, res) => addProject(req, res, prisma));
 app.put('/api/projects/:id', (req, res) => updateProject(req, res, prisma));
 app.delete('/api/projects/:id', (req, res) => deleteProject(req, res, prisma));
+
+
 
 // Lancement du serveur
 app.listen(port, () => {
