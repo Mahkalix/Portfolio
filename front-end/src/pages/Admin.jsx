@@ -21,6 +21,7 @@ const Admin = () => {
   const [error, setError] = useState(null);
   const [isEditModalOpen, setIsEditModalOpen] = useState(false);
   const [isAddModalOpen, setIsAddModalOpen] = useState(false);
+  const [filter, setFilter] = useState("all");
   const navigate = useNavigate();
 
   // Check if user is logged in
@@ -240,6 +241,13 @@ const Admin = () => {
     navigate("/");
   };
 
+  const filteredProjects =
+    filter === "all"
+      ? projects
+      : projects.filter(
+          (project) => project.category.toLowerCase() === filter.toLowerCase()
+        );
+
   return (
     <>
       <div className="admin__container">
@@ -255,6 +263,33 @@ const Admin = () => {
           </button>
         </div>
 
+        <div className="admin__filter">
+          <label>
+            <input
+              type="checkbox"
+              checked={filter === "all"}
+              onChange={() => setFilter("all")}
+            />
+            Tous
+          </label>
+          <label>
+            <input
+              type="checkbox"
+              checked={filter === "design"}
+              onChange={() => setFilter("design")}
+            />
+            Design
+          </label>
+          <label>
+            <input
+              type="checkbox"
+              checked={filter === "web"}
+              onChange={() => setFilter("web")}
+            />
+            Web
+          </label>
+        </div>
+
         <table className="admin__table">
           <thead>
             <tr>
@@ -265,7 +300,7 @@ const Admin = () => {
             </tr>
           </thead>
           <tbody>
-            {projects.map((project) => (
+            {filteredProjects.map((project) => (
               <tr key={project.id}>
                 <td>{project.title}</td>
                 <td>{project.year}</td>

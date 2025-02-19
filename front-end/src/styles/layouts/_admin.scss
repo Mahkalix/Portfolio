@@ -103,6 +103,19 @@
     height: auto;
     margin-top: $spacing-sm;
   }
+  &__filter {
+    display: flex;
+    align-items: center;
+    gap: $spacing-md;
+    margin-bottom: $spacing-md;
+    label {
+      display: flex;
+      align-items: center;
+      input {
+        margin-right: $spacing-xs;
+      }
+    }
+  }
 }
 
 .modal__content--admin {
