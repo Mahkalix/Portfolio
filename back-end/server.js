@@ -11,7 +11,7 @@ const app = express();
 const port = 4000;
 
 // Middleware pour gérer le corps des requêtes
-app.use(express.json());
+app.use(express.json({ limit: '10mb' })); 
 app.use(cors());  // Enable cross-origin resource sharing
 
 app.get("/", (req, res) => {

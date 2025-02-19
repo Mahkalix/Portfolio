@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Modal from "react-modal";
 import { VscClose } from "react-icons/vsc";
 
@@ -88,7 +88,7 @@ const AdminModal = ({
             </div>
             <div className="modal__form-group">
               <label className="modal__label" htmlFor="use">
-                Catégorie:
+                Use:
               </label>
               <input
                 type="text"
@@ -97,7 +97,25 @@ const AdminModal = ({
                 onChange={(e) =>
                   setCurrentProject({ ...currentProject, use: e.target.value })
                 }
-                placeholder="Catégorie"
+                placeholder="Use"
+                className="admin__input"
+              />
+            </div>
+            <div className="modal__form-group">
+              <label className="modal__label" htmlFor="category">
+                Category:
+              </label>
+              <input
+                type="text"
+                id="use"
+                value={currentProject.category}
+                onChange={(e) =>
+                  setCurrentProject({
+                    ...currentProject,
+                    category: e.target.value,
+                  })
+                }
+                placeholder="Category"
                 className="admin__input"
               />
             </div>

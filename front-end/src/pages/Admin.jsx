@@ -16,6 +16,7 @@ const Admin = () => {
     view: "",
     cover: "",
     tools: [],
+    category: "",
   });
   const [error, setError] = useState(null);
   const [isEditModalOpen, setIsEditModalOpen] = useState(false);
@@ -110,8 +111,17 @@ const Admin = () => {
     e.preventDefault();
     if (!currentProject) return;
 
-    const { title, description, year, use, visit, view, cover, tools } =
-      currentProject;
+    const {
+      title,
+      description,
+      year,
+      use,
+      visit,
+      view,
+      cover,
+      tools,
+      category,
+    } = currentProject;
 
     if (!title || !year || isNaN(year)) {
       setError("Veuillez entrer un titre valide et une année valide.");
@@ -136,6 +146,7 @@ const Admin = () => {
             view,
             cover,
             tools,
+            category,
           }),
         }
       );
@@ -159,8 +170,17 @@ const Admin = () => {
 
   const handleAddProject = async (e) => {
     e.preventDefault();
-    const { title, description, year, use, visit, view, cover, tools } =
-      newProject;
+    const {
+      title,
+      description,
+      year,
+      use,
+      visit,
+      view,
+      cover,
+      tools,
+      category,
+    } = newProject;
 
     if (!title || !year || isNaN(year)) {
       setError("Veuillez entrer un titre valide et une année valide.");
@@ -185,6 +205,7 @@ const Admin = () => {
             view,
             cover,
             tools,
+            category,
           }),
         }
       );
@@ -205,6 +226,7 @@ const Admin = () => {
         view: "",
         cover: "",
         tools: [],
+        category: "",
       });
       setIsAddModalOpen(false);
     } catch (error) {
