@@ -9,10 +9,6 @@ const Projects = () => {
   const [error, setError] = useState(null); // État pour les erreurs
   const [hoveredProject, setHoveredProject] = useState(null);
 
-  const middleIndex = Math.floor(projects.length / 2);
-  const firstHalf = projects.slice(0, middleIndex);
-  const secondHalf = projects.slice(middleIndex);
-
   // Fonction pour récupérer les projets depuis l'API
   useEffect(() => {
     const fetchProjects = async () => {
@@ -54,53 +50,40 @@ const Projects = () => {
     return <p className="loading">Erreur : {error}</p>;
   }
 
+  // Diviser les projets en groupes de 2
+  const projectGroups = [];
+  for (let i = 0; i < projects.length; i += 2) {
+    projectGroups.push(projects.slice(i, i + 2));
+  }
+
   return (
     <>
       <section id="projects">
         <ScrollText text="PROJECTs - PROJECTs - PROJECTs - PROJECTs - PROJECTs - PROJECTs - PROJECTs - PROJECTs - PROJECTS - PROJ" />
 
-        <div className="container-card">
-          {firstHalf.map((project, index) => (
-            <article key={index}>
-              <Link to={`/projects/${project.id}`}>
-                <img
-                  src={project.cover}
-                  alt={project.title}
-                  onMouseEnter={() => handleMouseEnter(project)}
-                  onMouseLeave={handleMouseLeave}
-                />
-              </Link>
-              <div className="title">
-                <div className="number-style">{project.number}</div>
-                <AnimatedButton
-                  text={project.title}
-                  isImageHovered={hoveredProject === project}
-                />
-              </div>
-            </article>
-          ))}
-        </div>
-        <div className="container-card">
-          {secondHalf.map((project, index) => (
-            <article key={index}>
-              <Link to={`/projects/${project.id}`}>
-                <img
-                  src={project.cover}
-                  alt={project.title}
-                  onMouseEnter={() => handleMouseEnter(project)}
-                  onMouseLeave={handleMouseLeave}
-                />
-              </Link>
-              <div className="title">
-                <span className="number-style">{project.number}</span>
-                <AnimatedButton
-                  text={project.title}
-                  isImageHovered={hoveredProject === project}
-                />
-              </div>
-            </article>
-          ))}
-        </div>
+        {projectGroups.map((group, groupIndex) => (
+          <div className="container-card" key={groupIndex}>
+            {group.map((project, index) => (
+              <article key={index}>
+                <Link to={`/projects/${project.id}`}>
+                  <img
+                    src={project.cover}
+                    alt={project.title}
+                    onMouseEnter={() => handleMouseEnter(project)}
+                    onMouseLeave={handleMouseLeave}
+                  />
+                </Link>
+                <div className="title">
+                  <div className="number-style">{project.number}</div>
+                  <AnimatedButton
+                    text={project.title}
+                    isImageHovered={hoveredProject === project}
+                  />
+                </div>
+              </article>
+            ))}
+          </div>
+        ))}
       </section>
     </>
   );
