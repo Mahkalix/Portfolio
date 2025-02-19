@@ -17,7 +17,9 @@ const Projects = () => {
   useEffect(() => {
     const fetchProjects = async () => {
       try {
-        const response = await fetch(`https://portfolio-q8zw.onrender.com/api/projects`);
+        const response = await fetch(
+          `https://portfolio-q8zw.onrender.com/api/projects`
+        );
         if (!response.ok) {
           throw new Error("Erreur lors du chargement des projets");
         }
@@ -45,11 +47,11 @@ const Projects = () => {
   };
 
   if (loading) {
-    return <p>Chargement...</p>; // Afficher un message de chargement
+    return <p className="loading">Chargement...</p>;
   }
 
   if (error) {
-    return <p>Erreur : {error}</p>; // Afficher un message d'erreur si nécessaire
+    return <p className="loading">Erreur : {error}</p>;
   }
 
   return (

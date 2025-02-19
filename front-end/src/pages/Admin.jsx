@@ -238,6 +238,7 @@ const Admin = () => {
             <tr>
               <th>Title</th>
               <th>Year</th>
+              <th>Category</th>
               <th>Action</th>
             </tr>
           </thead>
@@ -246,6 +247,7 @@ const Admin = () => {
               <tr key={project.id}>
                 <td>{project.title}</td>
                 <td>{project.year}</td>
+                <td>{project.category}</td>
                 <td>
                   <div className="admin__actions">
                     <button onClick={() => handleEdit(project.id)}>

@@ -38,7 +38,7 @@ const getProjects = async (req, res) => {
 
 // Ajouter un projet
 const addProject = async (req, res) => {
-  const { title, description, year, use, visit, view, cover, tools } = req.body;
+  const { title, description, year, use, visit, view, cover, tools, category} = req.body;
   
   try {
     const newProject = await prisma.project.create({
@@ -50,7 +50,8 @@ const addProject = async (req, res) => {
         visit,
         view,
         cover,
-        tools
+        tools, 
+        category
       }
     });
     res.json(newProject);
@@ -63,7 +64,7 @@ const addProject = async (req, res) => {
 // Mettre à jour un projet
 const updateProject = async (req, res) => {
   const { id } = req.params;
-  const { title, description, year, use, visit, view, cover, tools } = req.body;
+  const { title, description, year, use, visit, view, cover, tools, category } = req.body;
   
   try {
     const updatedProject = await prisma.project.update({
@@ -76,7 +77,8 @@ const updateProject = async (req, res) => {
         visit,
         view,
         cover,
-        tools
+        tools, 
+        category
       }
     });
     res.json(updatedProject);

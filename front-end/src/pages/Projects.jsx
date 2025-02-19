@@ -16,6 +16,11 @@ const ProjectDetails = () => {
         if (!response.ok) throw new Error("Projet introuvable");
 
         const data = await response.json();
+
+        if (typeof data.tools === "string") {
+          data.tools = JSON.parse(data.tools);
+        }
+
         setProject(data);
       } catch (err) {
         setError(err.message);
@@ -32,7 +37,7 @@ const ProjectDetails = () => {
   console.log(error);
 
   if (!project) {
-    return <p>Chargement...</p>;
+    return <p className="loading">Chargement...</p>;
   }
 
   return (
@@ -52,10 +57,10 @@ const ProjectDetails = () => {
             </div>
           </div>
           <ul className="project-tools">
-            {Array.isArray(project.tools) &&
-              project.tools.map((tool, index) => (
+            {project.tools &&
+              Object.entries(project.tools).map(([name, icon], index) => (
                 <li key={index}>
-                  <img src={tool.icon} alt={tool.name} />
+                  <img src={icon} alt={name} />
                 </li>
               ))}
           </ul>
