@@ -18,7 +18,7 @@ article {
   align-items: flex-end;
   flex-direction: column;
   border: 1px solid;
-  width: 100%;
+  width: 50%;
   padding-left: 1.6667vw;
   padding-right: 1.6667vw;
   padding-top: 1.6667vw;
@@ -287,4 +287,16 @@ article {
       }
     }
   }
+}
+
+.category {
+  display: flex;
+  align-items: center;
+  border: 1px solid;
+  padding: 5px 15px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  font-size: 1vw;
 }

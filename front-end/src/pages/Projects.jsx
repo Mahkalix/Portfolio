@@ -37,7 +37,7 @@ const ProjectDetails = () => {
   console.log(error);
 
   if (!project) {
-    return <p className="loading">Chargement...</p>;
+    return <p className="loading2">Chargement...</p>;
   }
 
   return (

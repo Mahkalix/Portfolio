@@ -8,6 +8,7 @@ const Projects = () => {
   const [loading, setLoading] = useState(true); // État pour le chargement
   const [error, setError] = useState(null); // État pour les erreurs
   const [hoveredProject, setHoveredProject] = useState(null);
+  const [filter, setFilter] = useState("All"); // État pour le filtre
 
   // Fonction pour récupérer les projets depuis l'API
   useEffect(() => {
@@ -42,6 +43,11 @@ const Projects = () => {
     setHoveredProject(null);
   };
 
+  const filteredProjects = projects.filter((project) => {
+    if (filter === "All") return true;
+    return project.category === filter;
+  });
+
   if (loading) {
     return <p className="loading">Chargement...</p>;
   }
@@ -50,16 +56,21 @@ const Projects = () => {
     return <p className="loading">Erreur : {error}</p>;
   }
 
-  // Diviser les projets en groupes de 2
   const projectGroups = [];
-  for (let i = 0; i < projects.length; i += 2) {
-    projectGroups.push(projects.slice(i, i + 2));
+  for (let i = 0; i < filteredProjects.length; i += 2) {
+    projectGroups.push(filteredProjects.slice(i, i + 2));
   }
 
   return (
     <>
       <section id="projects">
         <ScrollText text="PROJECTs - PROJECTs - PROJECTs - PROJECTs - PROJECTs - PROJECTs - PROJECTs - PROJECTs - PROJECTS - PROJ" />
+
+        <div className="filter-buttons">
+          <button onClick={() => setFilter("All")}>All</button>
+          <button onClick={() => setFilter("Web")}>Web</button>
+          <button onClick={() => setFilter("Design")}>Design</button>
+        </div>
 
         {projectGroups.map((group, groupIndex) => (
           <div className="container-card" key={groupIndex}>
@@ -79,6 +90,9 @@ const Projects = () => {
                     text={project.title}
                     isImageHovered={hoveredProject === project}
                   />
+                </div>
+                <div className="infos">
+                  <div className="category">{project.category}</div>
                 </div>
               </article>
             ))}
