@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from "react";
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import ScrollText from "../components/ScrollText.jsx";
 
 const ProjectDetails = () => {
   const { id } = useParams(); // L'ID est en fait le slug
-  const navigate = useNavigate();
   const [project, setProject] = useState(null);
   const [error, setError] = useState(null);
 
@@ -17,6 +16,11 @@ const ProjectDetails = () => {
         if (!response.ok) throw new Error("Projet introuvable");
 
         const data = await response.json();
+
+        if (typeof data.tools === "string") {
+          data.tools = JSON.parse(data.tools);
+        }
+
         setProject(data);
       } catch (err) {
         setError(err.message);
@@ -30,13 +34,10 @@ const ProjectDetails = () => {
     window.scrollTo({ top: 0 });
   }, []);
 
-  if (error) {
-    navigate("*"); // Redirection en cas d'erreur
-    return null;
-  }
+  console.log(error);
 
   if (!project) {
-    return <p>Chargement...</p>;
+    return <p className="loading">Chargement...</p>;
   }
 
   return (
@@ -56,11 +57,12 @@ const ProjectDetails = () => {
             </div>
           </div>
           <ul className="project-tools">
-            {project.tools.map((tool, index) => (
-              <li key={index}>
-                <img src={tool.icon} alt={tool.name} />
-              </li>
-            ))}
+            {project.tools &&
+              Object.entries(project.tools).map(([name, icon], index) => (
+                <li key={index}>
+                  <img src={icon} alt={name} />
+                </li>
+              ))}
           </ul>
         </div>
         <div className="container-projects-img">

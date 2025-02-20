@@ -25,4 +25,5 @@ model Project {
   view        String
   cover       String
   tools       Json
+  category    String
 }

@@ -28,6 +28,7 @@ async function main() {
           view: project.view,
           cover: project.cover,
           tools: JSON.stringify(project.tools), // Convertion de l'objet tools en chaîne JSON
+          category: project.category,
         },
       });
       console.log(`Le projet ${project.title} a été mis à jour.`);
@@ -44,6 +45,7 @@ async function main() {
           view: project.view,
           cover: project.cover,
           tools: JSON.stringify(project.tools), // Convertion de l'objet tools en chaîne JSON
+          category: project.category,
         },
       });
       console.log(`Le projet ${project.title} a été inséré.`);
