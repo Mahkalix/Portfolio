@@ -1,0 +1,18 @@
+#projects {
+  .filter-buttons {
+    border-top: 1px solid;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 5vh;
+    margin-bottom: 5vh;
+    button {
+      margin-right: 10px;
+      cursor: pointer;
+    }
+  }
+}
+
+.stext {
+  border-bottom: 1px solid;
+}

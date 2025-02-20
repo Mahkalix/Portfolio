@@ -8,6 +8,7 @@
 @use "../components/modal";
 @use "../components/button";
 @use "../components/input";
+@use "../components/projects";
 
 //module
 @use "../about.module.scss";
@@ -21,7 +22,7 @@
 @use "../loader.module.scss";
 @use "../menu.module.scss";
 @use "../nav.module.scss";
-@use "../projects.module.scss";
+@use "../project.module.scss";
 @use "../scrolltext.module.scss";
 @use "../switch.module.scss";
 
