@@ -140,21 +140,26 @@ const AdminModal = ({
                 className="admin__input"
               />
             </div>
-            <div className="modal__form-group">
-              <label className="modal__label" htmlFor="view">
-                Lien du code source:
-              </label>
-              <input
-                type="text"
-                id="view"
-                value={currentProject.view}
-                onChange={(e) =>
-                  setCurrentProject({ ...currentProject, view: e.target.value })
-                }
-                placeholder="Lien du code source"
-                className="admin__input"
-              />
-            </div>
+            {currentProject.category?.toLowerCase() === "web" && (
+              <div className="modal__form-group">
+                <label className="modal__label" htmlFor="view">
+                  Lien du code source:
+                </label>
+                <input
+                  type="text"
+                  id="view"
+                  value={currentProject.view}
+                  onChange={(e) =>
+                    setCurrentProject({
+                      ...currentProject,
+                      view: e.target.value,
+                    })
+                  }
+                  placeholder="Lien du code source"
+                  className="admin__input"
+                />
+              </div>
+            )}
 
             <div className="modal__form-group">
               <label className="modal__label" htmlFor="tools">

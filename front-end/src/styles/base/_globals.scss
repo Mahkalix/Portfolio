@@ -57,9 +57,18 @@ body {
 }
 
 .loading {
+  border-top: 1px solid;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 200px;
-  width: 100vw;
+  width: 100%;
+}
+
+.loading2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  width: 100%;
 }

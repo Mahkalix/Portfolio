@@ -73,7 +73,7 @@ const ProjectDetails = () => {
           <img src={project.cover} alt={project.title} />
         </div>
       </div>
-      <ScrollText text="PREVIEW - PREVIEW - PREVIEW -" />
+      <ScrollText text="PREVIEW - PREVIEW - PREVIEW - PREVIEW - PREVIEW - PREVIEW - PREVIEW - PREVIEW - PREVIEW - PREVIEW - PREVIEW -" />
       <div className="preview">
         <div className="visit">
           <a
@@ -85,16 +85,18 @@ const ProjectDetails = () => {
             Visit site
           </a>
         </div>
-        <div className="view">
-          <a
-            href={project.view}
-            target="_blank"
-            rel="noreferrer"
-            className="view-code"
-          >
-            View code
-          </a>
-        </div>
+        {project.category.toLowerCase() !== "design" && (
+          <div className="view">
+            <a
+              href={project.view}
+              target="_blank"
+              rel="noreferrer"
+              className="view-code"
+            >
+              View code
+            </a>
+          </div>
+        )}
       </div>
     </>
   );
