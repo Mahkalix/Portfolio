@@ -1,12 +1,16 @@
-#projects {
-  .filter-buttons {
+@import "../utils/variables";
+
+.projects {
+  &__filter {
     border-top: 1px solid;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    padding-top: 5vh;
-    margin-bottom: 5vh;
-    button {
+    padding-top: $spacing-md;
+    margin-bottom: $spacing-md;
+    margin-right: $spacing-lg;
+    width: 100%;
+    &-button {
       margin-right: 10px;
       cursor: pointer;
     }
@@ -15,4 +19,16 @@
 
 .stext {
   border-bottom: 1px solid;
+}
+
+@media (max-width: 768px) {
+  .projects {
+    &__filter {
+      &-button {
+        padding: 0px;
+        width: 80px;
+        height: 30px;
+      }
+    }
+  }
 }

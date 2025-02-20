@@ -66,10 +66,25 @@ const Projects = () => {
       <section id="projects">
         <ScrollText text="PROJECTs - PROJECTs - PROJECTs - PROJECTs - PROJECTs - PROJECTs - PROJECTs - PROJECTs - PROJECTS - PROJ" />
 
-        <div className="filter-buttons">
-          <button onClick={() => setFilter("All")}>All</button>
-          <button onClick={() => setFilter("Web")}>Web</button>
-          <button onClick={() => setFilter("Design")}>Design</button>
+        <div className="projects__filter">
+          <button
+            className="projects__filter-button"
+            onClick={() => setFilter("All")}
+          >
+            All
+          </button>
+          <button
+            className="projects__filter-button"
+            onClick={() => setFilter("Web")}
+          >
+            Web
+          </button>
+          <button
+            className="projects__filter-button"
+            onClick={() => setFilter("Design")}
+          >
+            Design
+          </button>
         </div>
 
         {projectGroups.map((group, groupIndex) => (
