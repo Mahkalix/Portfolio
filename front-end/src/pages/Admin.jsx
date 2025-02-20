@@ -16,10 +16,12 @@ const Admin = () => {
     view: "",
     cover: "",
     tools: [],
+    category: "",
   });
   const [error, setError] = useState(null);
   const [isEditModalOpen, setIsEditModalOpen] = useState(false);
   const [isAddModalOpen, setIsAddModalOpen] = useState(false);
+  const [filter, setFilter] = useState("all");
   const navigate = useNavigate();
 
   // Check if user is logged in
@@ -110,8 +112,17 @@ const Admin = () => {
     e.preventDefault();
     if (!currentProject) return;
 
-    const { title, description, year, use, visit, view, cover, tools } =
-      currentProject;
+    const {
+      title,
+      description,
+      year,
+      use,
+      visit,
+      view,
+      cover,
+      tools,
+      category,
+    } = currentProject;
 
     if (!title || !year || isNaN(year)) {
       setError("Veuillez entrer un titre valide et une année valide.");
@@ -136,6 +147,7 @@ const Admin = () => {
             view,
             cover,
             tools,
+            category,
           }),
         }
       );
@@ -159,8 +171,17 @@ const Admin = () => {
 
   const handleAddProject = async (e) => {
     e.preventDefault();
-    const { title, description, year, use, visit, view, cover, tools } =
-      newProject;
+    const {
+      title,
+      description,
+      year,
+      use,
+      visit,
+      view,
+      cover,
+      tools,
+      category,
+    } = newProject;
 
     if (!title || !year || isNaN(year)) {
       setError("Veuillez entrer un titre valide et une année valide.");
@@ -185,6 +206,7 @@ const Admin = () => {
             view,
             cover,
             tools,
+            category,
           }),
         }
       );
@@ -205,6 +227,7 @@ const Admin = () => {
         view: "",
         cover: "",
         tools: [],
+        category: "",
       });
       setIsAddModalOpen(false);
     } catch (error) {
@@ -217,6 +240,13 @@ const Admin = () => {
     localStorage.removeItem("token");
     navigate("/");
   };
+
+  const filteredProjects =
+    filter === "all"
+      ? projects
+      : projects.filter(
+          (project) => project.category.toLowerCase() === filter.toLowerCase()
+        );
 
   return (
     <>
@@ -233,19 +263,48 @@ const Admin = () => {
           </button>
         </div>
 
+        <div className="admin__filter">
+          <label>
+            <input
+              type="checkbox"
+              checked={filter === "all"}
+              onChange={() => setFilter("all")}
+            />
+            Tous
+          </label>
+          <label>
+            <input
+              type="checkbox"
+              checked={filter === "design"}
+              onChange={() => setFilter("design")}
+            />
+            Design
+          </label>
+          <label>
+            <input
+              type="checkbox"
+              checked={filter === "web"}
+              onChange={() => setFilter("web")}
+            />
+            Web
+          </label>
+        </div>
+
         <table className="admin__table">
           <thead>
             <tr>
               <th>Title</th>
               <th>Year</th>
+              <th>Category</th>
               <th>Action</th>
             </tr>
           </thead>
           <tbody>
-            {projects.map((project) => (
+            {filteredProjects.map((project) => (
               <tr key={project.id}>
                 <td>{project.title}</td>
                 <td>{project.year}</td>
+                <td>{project.category}</td>
                 <td>
                   <div className="admin__actions">
                     <button onClick={() => handleEdit(project.id)}>

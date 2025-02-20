@@ -88,12 +88,32 @@
     margin-left: $spacing-md;
     padding: $spacing-sm $spacing-md;
     background-color: $accent-color !important;
+    color: $primary-color !important;
     border: none;
     cursor: pointer;
     font-family: $font-primary;
     font-size: $font-size-md;
     &:hover {
       color: $primary-color;
+    }
+  }
+  &__image-preview {
+    max-width: 100%;
+    max-height: 200px;
+    height: auto;
+    margin-top: $spacing-sm;
+  }
+  &__filter {
+    display: flex;
+    align-items: center;
+    gap: $spacing-md;
+    margin-bottom: $spacing-md;
+    label {
+      display: flex;
+      align-items: center;
+      input {
+        margin-right: $spacing-xs;
+      }
     }
   }
 }
