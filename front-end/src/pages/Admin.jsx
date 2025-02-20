@@ -241,17 +241,36 @@ const Admin = () => {
     navigate("/");
   };
 
-  const filteredProjects =
-    filter === "all"
-      ? projects
-      : projects.filter(
-          (project) => project.category.toLowerCase() === filter.toLowerCase()
-        );
+  const filteredProjects = projects.filter((project) => {
+    if (filter === "All") return true;
+    return project.category === filter;
+  });
 
   return (
     <>
       <div className="admin__container">
         <div className="admin__header">
+          <div className="admin__filter">
+            <button
+              className="admin__filter-button"
+              onClick={() => setFilter("All")}
+            >
+              All
+            </button>
+            <button
+              className="admin__filter-button"
+              onClick={() => setFilter("Web")}
+            >
+              Web
+            </button>
+            <button
+              className="admin__filter-button"
+              onClick={() => setFilter("Design")}
+            >
+              Design
+            </button>
+          </div>
+
           <button
             className="admin__add-button"
             onClick={() => setIsAddModalOpen(true)}
@@ -261,33 +280,6 @@ const Admin = () => {
           <button className="admin__logout-button" onClick={handleLogout}>
             Déconnecter
           </button>
-        </div>
-
-        <div className="admin__filter">
-          <label>
-            <input
-              type="checkbox"
-              checked={filter === "all"}
-              onChange={() => setFilter("all")}
-            />
-            Tous
-          </label>
-          <label>
-            <input
-              type="checkbox"
-              checked={filter === "design"}
-              onChange={() => setFilter("design")}
-            />
-            Design
-          </label>
-          <label>
-            <input
-              type="checkbox"
-              checked={filter === "web"}
-              onChange={() => setFilter("web")}
-            />
-            Web
-          </label>
         </div>
 
         <table className="admin__table">

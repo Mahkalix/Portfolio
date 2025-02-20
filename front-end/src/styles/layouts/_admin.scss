@@ -105,15 +105,13 @@
   }
   &__filter {
     display: flex;
-    align-items: center;
     gap: $spacing-md;
     margin-bottom: $spacing-md;
-    label {
-      display: flex;
-      align-items: center;
-      input {
-        margin-right: $spacing-xs;
-      }
+    margin-right: $spacing-lg;
+    &-button {
+      padding: 0px;
+      width: 80px;
+      height: 30px;
     }
   }
 }
