@@ -25,7 +25,14 @@ const Projects = () => {
         const data = JSON.parse(text); // Parser la réponse JSON si le texte est valide JSON
         setProjects(data);
       } catch (err) {
-        setError(err.message);
+        console.error(err);
+        try {
+          const localResponse = await fetch("/projects.json");
+          const localData = await localResponse.json();
+          setProjects(localData);
+        } catch (localErr) {
+          setError(localErr.message);
+        }
       } finally {
         setLoading(false);
       }

@@ -1,77 +1,114 @@
 [
 	{
 	  "id": "argentbank",
+	  "title": "Argent Bank",
+	  "description": "'ARGENT BANK', a new online bank striving to make a mark in the banking industry, my main role is to work closely with the project manager to set up the user dashboard. Even though Argent Bank is a newcomer, it has high aspirations, and the CTO has clearly emphasized the importance of this initiative. The project is divided into two phases: the first one deals with user authentication and the development of a functional dashboard, while the second phase will focus on managing user transactions.",
+	  "year": "2023",
+	  "use": "Bank",
 	  "visit": "https://bankargent.netlify.app",
 	  "view": "https://github.com/Mahkalix/ArgentBank",
-	  "number": "01/",
-	  "title": "Argent Bank",
 	  "cover": "/images/argentbankhome.webp",
-	  "description": "'ARGENT BANK', a new online bank striving to make a mark in the banking industry, my main role is to work closely with the project manager to set up the user dashboard. Even though Argent Bank is a newcomer, it has high aspirations, and the CTO has clearly emphasized the importance of this initiative. The project is divided into two phases: the first one deals with user authentication and the development of a functional dashboard, while the second phase will focus on managing user transactions.",
 	  "tools": {
-		"React": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
-		"JavaScript": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg",
-		"HTML": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-plain.svg",
 		"CSS": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-plain.svg",
-		"Swagger": "https://img.jsdelivr.com/github.com/swagger-api.png"
+		"HTML": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-plain.svg",
+		"React": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+		"Swagger": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/swagger/swagger-original.svg",
+		"JavaScript": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg"
 	  },
-	  "year": 2023,
-	  "use": "Bank",
 	  "category": "Web"
 	},
 	{
+	  "id": "cm7bqlkq20009hj326h437nab",
+	  "title": "InfinityStep",
+	  "description": "InfinityStep is an innovative project born from a creative entrepreneurship course, blending technology and fashion to revolutionize the footwear industry. The concept introduces modular magnetic shoes, allowing users to customize and interchange various parts of their footwear effortlessly. Designed with both style and functionality in mind, InfinityStep aims to offer a sustainable and versatile solution to modern fashion needs.",
+	  "year": "2025",
+	  "use": "Marketing",
+	  "visit": "https://www.behance.net/gallery/213329957/INFINITYSTEP",
+	  "view": "https://www.behance.net/gallery/213329957/INFINITYSTEP",
+	  "cover": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAcHBwcIBwgJCQgMDAsMDBEQDg4QERoSFBIUEhonGB0YGB0YJyMqIiAiKiM+MSsrMT5IPDk8SFdOTldtaG2Pj8ABBwcHBwgHCAkJCAwMCwwMERAODhARGhIUEhQSGicYHRgYHRgnIyoiICIqIz4xKysxPkg8OTxIV05OV21obY+PwP/CABEIFAAUAAMBIgACEQEDEQH/xAAdAAACAwEBAQEBAAAAAAAAAAAAAQIDBAUGBwgJ/9oACAEBAAAAAPpvoqpU+S+D/WPoWi6b+cfWEnZ8h+f8GvBWfYvJYfKNi+h+9ricj5h9pbnL5t4zB6X3W/2FcvKfHs9Ob32u/wAPhiz3vr4IB+T8dlw57vrOWirx92XnFEtGSc7X7v0UQQZPnBzbrLY6gfZ4nOsuntzVzslu+iwhRHSPz3iiuNc3nz17PTVZuTGBv2VLRp3Y77Ks3HMfsfs/rGDGNgwABgAEmh5dYMABiooE3TBANtg2Wavlf57uaj7jxM7Zg5N7pgAChNM087k7LLVpskxgcQES48RDlK+tARsF6PBzvQ8bNlo33saEIECBZ6xr0OTlsUdFg0AgEhRI1+68Y2AAhiKpMYC9n52gRjp6DBgqahCFD3/i7ijOhADWiyQCSp9TyfdabHMNeckbdINuuZOHVALmCi8zGimEKsXJp+kSIoDPmelFdXN8t5Lr+89dBxSqh9EgpXfk/lPds7nr/WCRE+Q+F9HC29eeNXrut72uE5ynFxPiOPjYSVEOt3fuYDI5JzkiPF4efuewjJOFFN7pqjDh8ef0mtCkKJ7z2ifkPyZpo7/6F938+79cl8k+YfWPoWm2UvmP19RlZ8h+fcGHPrl9g8dm8pNxX0z2lcTj/M/s7c5fNfHc70/uuj7HLZ5P49TTm95fp8TkhdT7310ATfk/H5MFGz7Dlx8Xz8svLlns05C20976BIQ8fzpc2eiV7q0Prcbny1S0567dVFn05whKSPPeLjGjBRJy1dDtU0ceuL6WuE5avScacijn7/s/t+N0ogxjYMAAYABMCFegAYDAzUBJUxQDkDGOez8/fKLWQ9x4qdhGN83LbMAAjCwDVzeTsssNU5MY1xAFLlQBKKutcURtS9Hz+f6Hlww4OjoYEUIASEZ6iUfQ5eYCjotBACBBGJCHuvGMYJgpJOmYwBey4VLFzqOoJAKmoEJQ+g+KtKcyQANapSASjV6vle5vsm09VLDob6YRk5EapdW1CvFJixjBEaK8vFq+huTcCVMKU7IxjyuPyeD92mKMKqvosFK78ocl9LV2vYesSBV/MPF8jb2S7hrT67p++HXVDpSrrPj06sXP5Oevtb/u0xE68VpYpQ43Ey9z2ElGb59ekphUuFxn9OrSjIgL3ftk/IfkvVR3/wBC+78F24FfxPw31n6Bossfyn7ORlZ8g+e8KGCt/YPPc3xspR9j6z0dSfE+bfZiUpfNPIc71Hr+z6+EvJfH89Of3nQt8Rnnhz/RvXQQM8n5DHho3/Y+F803Ssyc2VE9OOdyu916GKIsxfPFzb75R0xkdni8/VM15rpYo9T6URIuL8742MOHOU7LdOzp5aOXEN+uq9LsWt2VfS/oyjy+nEGNjGMAAABSkBm1NAwAYZaRSKEgHJgxlm38peUscY+58OJ2ztm3rsYMriFoGrl8rZZYa5tsYuIAPlwABTpjZc67UvSc7n+gwVUcfoaYiBghAJFFSlH0WTltENFrAQIQhRIQ914xjABDEVTGAL2PHqSXNz9RsSSqqQkRh9D8Raq80AAGapSQJKn1/J9vdOyUZaqBm3dJquMJJnVzO+y0iKxQIqEKyOTPyafosoMAqrmiqIsXCrr+l1xhIhD6BCM7vylyJb9Xe9Z6xigj5h5aGPHs7fBWn1vS90rJhRPUU/HJ1Z4cnmx9R3foWi2xhinKyAcXi5u37BspeanVCNUI8Pl4PpelIjCSPc+4Dxn5Q0U979Ce98P0yNXw/wAd9c95fZZL4/8AcUnb8f8AnnCOfXL675zn+PlL23H9/wChqRwvnv2Ic3808hz/AFXrvU+gWnwXyTEs3v8Aqz8Zj4M5fSPWQTGeS8jjxZ9/2z5pxYGvFz3RPVinKU/f+hihBz/AR5um+rQ67pdfkZXKXRqw1tdr6NEiEX5vx6r51VuqErdfXzZ+XAey4va6WqdH0P6dZCJzunEGxtgwAAAajaA8e5IGAMDHVFhXETJNgNl2n8XQk4x914OcrnKyQ9VrkoQtZCYGrlcrZZYarG2wXEYh8tAgd7VNdcrpL0vNwd7BGPA3axgkERAhKioF6PHzGiGmwYIBISSUa/deMbAGCkoyqkxoF7Dk1kFzM/TbBqNVIhEa/oXibVXmgAAS1SGJEafX8n22ic5Bqzse69lk4uFcJ9qEs8N7Eh5roNVqqGPDzD6LKVYmUoB1uvFxaY/RyEJV1w+gQUr/AMp8l7dff9X65Mg6vmHlyvo5eTXbf6zp+/ZByk6DR8bIZo8vmw9V2/pWqmJdVnLLIo43Ezdn2FkVZHJCyedV18bkV/RlMjKMB1fWO6/I/ky+nu/oH6D8U+jjp+KeG+we3vtnL4v95Sdvx/55wbObVP6353n+R1e285V9O7VaOB4L683M+Z+Rwes9f6rv4Z+B+VwWb3/V1/OfNapx+lepgBJ+P8ljx0bPtPyCEJbMnOuxS05HO6r6T24pJvm+Cq59l07W5S7XDyu3q481cZW973QooH5ryJTnq0aM87b+pjp5cHdstldGHQ1en+xbYQQYd6GMkwYwAQwCNg08uxCABsoOfMmitIHIYMbvwfjbY2oe58PKyybkx6rp1V2WMjGYGvkcvXZaapyYwXEGiXLSED0IHGhTPT8zD3edVd5/VtAaEhCBIopA9Fj5jIz0gCEMSRGJGv3fjGmAASSdMxtBH2HLqIrmZ+i5ACppEBGv6B4qwrorQAF2hgJEavY8b2t9spo1Z3I3bXGA204dVWxJBJiy5bbouiMc2bm1+/nNKLdNbExGLgQh7vVOqmUKde3v6dH5S5R0Nva9T61xUXX8y8wVb7a/O3Wet6P0Cqd0YynN5PkJXQcvnQ9T2fo22Qsl3N0SuQuNxM/a9nGM4Gem901lPH4q+jWQgTgQl4Ts+m9yvylbV3P0B9E+Ve0DH8T8b9k9jfZN/FPv6hK34/8AO+Ddzaz6xxeZxPY+VsX03q1B57xH1tk18y8pz/X+19DZv2/Pfk0IZPoPT4vzzZNL6R6eDFJ+P8pix0y6BTZ0a8WCNFunE7N3d9P04CB8vwdfPnfaaq5Pt+dydHZy5md6Jd33JGIJ+a8nGqhazNdLT0subBROfQshpjT6P7V6muCQZp3pjCbBgAAAOJNgZtaQABSaTjWOSUEJtgxsd/g/zRoYQ9v4eyy+QA9V1Vk2NKMwNnG5mu2b1Tk2NLiMFLmJCAvAFTJr1HKw93nV28K3eNAgSEISpqTj6LJzAJ3sASEwilEhD3fjWJDAJJOmbACPr+XUkczP0WxoKqASIw+g+Km6q6EAxabhiRFVex43tr5zYbssZHQ2JgEBvsQjJTlGJdHPGN2SLjHLn59PvZyCYqoNkIqNHAqp+i3UjhDHk6UOv6b8r4X09fZ9P7FRjCS+XeYde2dXDut9V0voAVztlWrJfGHHIc3mw9T2PpOsrA+D9r6P0JBxeNm6/sJqErMkXKqEI8jhw+jySIpI8r4T03pq/Lebzdr759L+Z+qplR8P8r9o9XdZNfFv0BFSt+O/PODfzqn9U5Es/Bkn9O6NYeb8d9YCR8v8vz/onaq95uPn/wAohXj+j4uf5W6Tr+mejjGaZ47yuPHVK8Vr387JVTfpwS9Ecj6Z0oxTDk+Hq520lspUzueb34890ii8XovciipRPL+WhVTX09PPnZb0suTmQmdYVlv2P6ZXXFAGDoiBslIAYCAGEZsCFWqIAGeWmRn5tjZAigbGDG9XxX4rcxR9v4eV+hpiS6khMBRmM2cTnarbDXYSGJcUBS5iBAXACqYvVcnD3uepcevpABEQRBCVNI16LFzGK29ggQgEoxUa/eeMkMIxGTIumUgBL1WGqCObRvkxgqs4CIw+g+JsdSyoBi2TYEURp9nw/cX2TA3YyUejrmoyg4kzqtNzg6pQeSyFxGNNNObnV/QNECAp1xBREsfErz+92TrqdWX46fRPRT4HgPPdTT2/Te0biQq+X+Wde2UOJfb6jd79XNwnbGmz45EoXM5kPU9j6JskOFfwzzUvoP0jXHk8fH1vbEUo0xm6lGrk8PP9JnNVtVhCPkvK+p7NXmeX9q+h+M9SQr+Fea+1+ntnOHxf9ApSu+NfPeFdza5fVYee5EnZj+ta6m/L+V+qpuPy7zWLV0fsfT6UPnvyyuHP78/tn51tmofTfR1gx+M8viyU2ErL47ubkqqu139TiaLPoG9RQS43i8vP123uubXe5PElplboyVyn6X2sXEkl5Ty8aaauxdgnbPfmzc2u07MK/rX1mVcUABh6KQ2SbBgxAABGwAy63EQUPTIZgzTYQIgNgDHLZ+Z/A3Ao+48PdfYIQHWQmxJSB7eFg1WzeqwkwS4oIlzECAtYCqbj6zj4e/z6redi6gCBIQhCKKkHosPNZHRcAgQgEoxUa/d+SvqrAi4pEpVjGIj6zzFF1tmKnfYDQq6BCSh7/wAVY6yqqIMNsgEkRq9nwfcaLJNS2ZGR7fSxwJREVnejBynCUCDyIvrhOqWbnYK/e3sHGMK4XJqMKfP10++1VTdRHjcbxuf6D6mzieM4XZ9L7cQiv5f5aVOqceLfb6rZ9OzxirJwlZH40oUrm82v1XX+jboRjXd8L8je5/RvomLhZul7S1EXmrlZXSocniZvpU4SQhV1zrXk+D2+07er6L09cq/g/B+3ehm51fHvv6UrfjXz7g3c2vZ6/ucfzzty5Ps10XLyXnfqEeH3V8r87j1+m+ndfo5/n/yuujnV/TPpP57tKT6l34oUn4rzOHHUfWfHea1Pp8nLTVp9RyqtNmL6Xrik1Lh+Pw47bdaCzqafJ0T1WW15b1L1XsGokoryXm68+Q7duG2VnQy5cEJLr+/+z66oAAwMXQSbHJsGAIBgKNgMw9GMQzx1WA0cyLYQIgNgDHZs/HGCY1H3Hh9F1kYsA6whgokwe3z+LVbN65ttohxgQ+aITRcAKpuPrONi72Cu7FyuqMBEQSEIppTXo+fzmo7LBAhAgFCKjX7rxJo0zopQAoRUpoAXrPPZCMUXXWjArzAkKH0DxFrrKlWgJ62AkkqvacD22qcwOjnonDudooyUSURz66koTEOL+Nex9QRhOpU5ebn9/pcGhVwURyDHwIU+32lc2nlox4/Hcf23tFzeFd7ki1GHzLyllO2MeLps9Rq+jxnYUuxxPjsY0R53Oq9X1vom2yCnR8k8Tgd6u+hehx7PZqyco50CjXDl8LP9JkNEapxrnXGK835Xo+v6npfTVTh8C5P3DuOyWb5J99iO74t8/wCFdzPTVr3vmeI8tdn2KaJ+Q4vpuH1fUR+U8LH1u59O6vRz+B+TYqM93o/svwKUSP1jsxHGR4nzeDHVf9j5XM8O+3w8tXU1cbrXvkx+raIxGPg+R5+O+/TFbrOb6fyFS6dWDu82Zr9f6CUAIvyHna8uers7OdbK/XRmwVv1/wB59FTWmMBhHPtiNtuQDBiAASc0Mw9GKqp0WgwDkSckQSBsTGDuy/jbTIFH3HiLrrEgTOsAIETTe3zuTTbYbJtg4righ85AhFwAUSa9ZxMXfwQ05uF05ggSBCQKqgF6Tm89kNswQEQEChAjX7vx8owV95VQMFXFE5kD1nAyMIJhKyyZDMIEoe+8VY4KuCiBdpGJJEafacD2+qxtvfzpwfX7k0oZc4hdyEpMjCMiXxPj9T3XqoRiVYeVT9A0g24ZgZBKzP56qr2nRIuLjmurry4/I+Z9L7a/j+zcYxcfmnk5V6rKuLos9Ro+kVOyyTqr0w+PwjQubzavW9X33TjIjD5j5/JxsRbHX7D0P0mmtTupiSrUYcnhZ/pNsUTUIRpnUrKo4vK8D7B6P1KoX59yfcurOTx/LPvMSVvxLwPA7XU8h7m3s+V4ue+m76+KOHjeP39jL9Co+W8Xm9X0f0npdfk/GvJ5jFo731/4OrIL632IIbfiPN8/JVq+yeb5XPw9bzGX03JzXdevi6K/rF0YgS8/5Pm59Fl76XPhp7Xka7Xn09DBd06ul7mcSMorx/noY82budPl2W3a8+Xn6/uf0uqqKJDBg8mqQMbkwYMEAAQsYOOfdTlt0AMAhybWCgADAGD0+G/Melgo+48PYbBAB1hIkCUwe7zWbTbY9cyQNR4oIlzRAkXABQ5L13Bx9/BXpjwdV4kAJCEIrpRH0eWLmhXumAJCEAoQSr914+bajCN1zqqCEUlG3Qeo85hk2kEhpuVIhIr994m0qlXGKBabxoIpKr2PB9xpuEnvyAuxbPfKTjmzB3ColMKoSl8W4zht9x6+NNOfnZfoeqMRTVdURkq4VcGqn2uuNkmo5bGo1Z8vmvGb+/8AU4KMlD5r4+yGiyPD0Weo0fSrsiJ3OVEvkNUKXzebT63rfQOhGNir+Z+eKsXIxy6XofWfUCGei2NUnKqC5vAx/SNCIyRGmsQ4Qycbne89P6kyx/PEfuXSlI5/zb7pElb8P8D2svE291+j8V5voQU/rZyPP+a7lNXe9m8vyvkc7p+p+heg493x7y+Z47vpfe+MXNV/X+pBA5eG87zstWv7L5nm8rneh42nzktF/V85dZd9Kvgk1LzvmOVnun2XyLbtPY8nXGXTy3w6fIwe29oApVvxnBrx57ehv5tttuzHk+l/ab6YJDbAYPB0UDbbYxgCAASsAlj6GFahgAwy4LhkIgDABhLV8U+LXBKMPd+Gc9biA11QYxRkxvf5fPptseubbAr4wA+cgSSvAFSSXr+Di9Dza9hx4aoxUZyBCEBXSiPos1dVWPbMBAkAkQgRr954yTbBKKnaV0IQJR9v57myYgRKY4qACSh73xTcZVxSQtljBJCjV7bznvyywT6HPlOvudOrO9OhSKMPdotrdoNU2/F+ERUbvaezMPOo9xsstSCuDhWpDy+ejR7joqEFYZgScK8vm88PqAQRH5t46cNM1wtE/U6PpWeyNs6ydkfi+e+h4Odn9f1ffdMhBW/MPNypIc/heg7/AHvp9kHHJXKE0VR5/Bx/R9CRKJGq/LFSrMvDw+59L6qOY/ONv3XeBzPn/wBwiTs+Ied819F8bn9Od3wHI00F/wBbx+J63Hwavo2txxfKuXz+p7X0vlfuvN+C+VoMdv03b8qmFf2PfABvw3nubmp6H2Py3L5j7Pl+VatNsYLbn+n2wSCXmvNcmrX1uW292zb5jI+tGW7ncmxe29iQBxn4jhVY6/R5dfO0KzT6z7F2aoJDBsAaeLcBJkmMYACAAUwJcXTvGAMGnz6LAcIMAYDBz1/mHxMwah7vwsrNQIGusxMCEpDOh5WjTdOWuTYxQ4wDObEYkrxMKCS9hwMXoOXmd8edvrpZawEIQQpRD0eWNcMWm0SSAIjSrilX7vxrG2ACE662gQvX8DFIEEU7JCKwSFD3viZAQgJOO6TBJJKv2nA9jvmCOlhTfZ6iiZ6p75Tw9aAQnGSmj4z5xqLca/Wethh93c3Oy9VQi4tQcPN56/a9GQFUFEdcoxj5SuH0iKi3R8+8ROOqS4eifqtH0uhwmrC6s+QcnMbMnOz+w6nu+w65rN858y64FfmvQdrt/UM+iuNcKpTjGJzuFh+ia2RZFVallzaaYZ+Ni9t6P0s8c/zfq+8aSE+N4r7ZByl8T8bD1/ka+7s7Hz7mEJX/AFvn+Vtswdb2DDnfLOZzvZ6vk36N+ueb+CeXoWO36tD5pJ11/Z9cBkjwfB5uWrrfW/Jcqc5eZ51sdNHd5lrz/VLKxCl5nznI12YdDWnqw2eZy679suNS3L2vrSI1C3wvGqwP0uXbydVfpPtPp664gMYAMBZNyG22xsAABAJyDKZ+mAADBrlkmKMWAADB2a/xlSxih7vws3tQmC64IYozkmdHydWi6ctcmICHJaA56SSVbumBSM9h5/F6Hk4wlk6BUSkACQgjTEj6TGoQyy0AlEQhAqklD3fj2kAMYCqigEL13D502ARCbAgkhKHvvESBxrEC3sBJIVXsfO+9unOdj2c+DXS21W6rURqwr1tLlCYo0yo7OVeS+eebipR2bun9bnONlbo6EGJKJVwKafYdRyERypxcbKauBmq9/bFSjCuijz/lOauJpl6rR9SoJxUVJHyjJTy9/Fhj9l1fddeBZnn8z81ZnTq873uz0/qsymuXmfC/RdVllccPCwfRtUKFomlVqzQLaYU8LD7X2vapxS/NfY+8Nt+Z839jrhXo+LeRl6PzsMntep825llU9/1KrYq/Aeh9FYHG+ZYuVms6H6f9X5H4J5zMsc/reX501Gr7bZEFN/PePy81e36NweO59XzOBS6GfsZ826r6UQScX5jhcNWrXq01O3Z5vTHnP1NPnJ2z9r6lNwtqj4Tl0YLfS5dX0f61OqKACQACGBj3A2SGNgAACAVcNEyivYgBMYFXLukEYgAAAx6fm/500RbIr2/h5PeIBrrCBxI3MZ0PIQ02znpYAFfMkgWASREajXGKdz9l5zL6HkZowRLRXm2DAEIEVQIemwOEa82poFGIgQqkKv3XkZAwSikMrg0IF63i86QA0wYOEUgUPfeIbbKUgXQGhISVfsPP8Au9tkhrfzGHQ2tRlfoShHuRg2JTgR7mbnZJ8L535Qj0Olr+tbaYXUyq2oinJVLz2aHseqKZEyQsSgSo4mCj6FdGDI+N8v9DuhyPJeIvs9bb9Tsrrg1ZBP5NjhzNXKpxez6vuO44OUPnHjroVwj5zvdvofUtKjXVwPiEvb++1DwcXm/RNYq6S6yrVTVCyEKuJh9n7nqZcy/NnoPu8ST8nw/reeD1/E/J2eg8vytPvut8w50Yz6X1lqNPz/ANR3pxXG+b4+Xnt1fqT1vzD4757MstnsKuAnCH24iBKXznk8zN0Orxu3lpu6vmedPRdR1qN0pe7UFGuU/K8Lju2WzXRKdu7i8yMrPVZfNWXS9n6quyESuzwXOz82303s/sm+utADYMEAAnh6SCQ2DYACAArpvtYc/ouIIBsHix3NOEWAAAwlq+DfJrUMS9t4hve4jGuqJiHG4Q+j4+Oi2c9DBMK+egDmRGCGFUkRrn7TzmX0PJzNKFeox7JAAhAKuCh6bnyiq8mpgFcQQEakKHuvIyQwECSVURAheu4nMk2Npg2EIkREPoHhhuapSHHe2gSSVfr+D7rbelI281yh0t9bmoK/SQ68CRJ1hE7teXFzuNyvA5M/S36vreiMYwbtqlIUkVefxw9d2JkSazVyFF0nCwVex06UEeZ5XxXS970Tk+N8z6qX1YSGqIyl8oxV83XyqcPs+p7TuokWfM/ISiKrznd7e/6RZpnOrzvxCafs/da8nG5vv9cnVKFdd+uFdZBVcPD7b3e/HTn/ADp6T7nAk/G8v6pnjLZ8S8qocvP2Pb9n5XypRl3fqKI0fPfYdp1WcH53k5ee7R+pLvy/2vN5lls60sNEnH7nCMZDn...",
+	  "tools": {
+		"Photoshop": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-original.svg"
+	  },
+	  "category": "Design"
+	},
+	{
+	  "id": "cm7de5dvh0000hx32jgvpa2s0",
+	  "title": "Places of the Dragon's",
+	  "description": "Places of the Dragons is an enchanting project that explores mythical locations inspired by iconic dragons in culture and cinema. Highlighting the breathtaking Great Wall of China, the majestic Mount Fuji and their symbolic connection to dragons, this project brings to life the essence of these landmarks. Featuring Haku, the elegant river spirit from Spirited Away, and the playful yet determined Mushu from Mulan, it intertwines fantasy with history, creating an immersive celebration of legendary creatures and awe-inspiring destinations.",
+	  "year": "2025",
+	  "use": "Poster",
+	  "visit": "https://www.behance.net/gallery/212604747/PLACES-OF-THE-DRAGONS",
+	  "view": "",
+	  "cover": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAE4gAAA0JCAMAAACIS1cXAAAACXBIWXMAAC4jAAAuIwF4pT92AAABCFBMVEX////x8fEXFxfv7u3z8/MEBAT+/v4KCgoTExIODg6ut7jw8O8cHByqtLX7/PuzvL329vamsbG1qqjt7Ov5+fkiIiLk4+HSzsvq6ujIycehra6roJ7n5+XY19XLzcwpKSjg392pm5oNWlS3rqzd29iwpKJQUE+bqalISEe7sa+vqKW7w8LQ0tFBQUAvLy/Y09CgmZe+trPBvLk6OjpYWFfKw8CWoqI0NTRhYWCKiYaAgH2hkpCRk5B2dnRrbGqeBwbWurDGGRTfzcN8EQ3gNCemNDE8Ew+uWU3QqKF4npx2RTtAdnLqU0HLlYtgKCG1hXsqaWRTgn9lj4y8dGyabl7reVrtuVU1UlCpjrOCAAAgAElEQVR42uyY/XeiPBbHnWnpm9a3USnVVq3vKAgoSjAwlCrSVIJto/3//5O90XamM7vPPrM/7Nlz9vi5NyEJJIKSr8lNJA4cOPDXnPw5aQCyj8JJupDes2/4u94nu0773ul0oQD+mSzn+Dh7/OU4+SWZTB5xvoEDvHQF9u1qR6VS4vaTGk+fadaav3LzzhDsZjgUhxzIxcEACoOBKAHG013xrnj69Ny/vM5kIHUmj+r6SXgRTu8EMMhV9e752ehnGhc9M9O4zLVatqNMx1gQuimhem7ZTt0qsVkYEj/2Ip/GVsQ8sDguMeIx5sXNkMUFrxkSFoZZn7AojpQoDn0rjiLiRawUxyzyGfUjPy6wMI5jKw4ZC5nPWEwYYzAyZC3P86IZ4/UWNEeMWsxT4ZIwJjFpET4KCxghAmUBoYQGjJ2xiFBq0ZiyJlwX16EQBmdEEGhMqABHRgPCKDgVaCAE0ACJCkAQwUgBGBwEch6cBgGDE2cUCAToTYWYnhPCAkczJUPGLTNvWrJhu/UetmRTrmu607K1oYZlzdW0FnYwQpphaA1DN2y9bJhYdrSy42AbtzTNxBpuiLgh605Z0yZlrCFdxqbUKyPcwlCVL2zb0aVGS0NYnsiThoyRhN2OgnH/eoAdudl3LWdsX1hTdaK4OYRchB0kmgiKWMe6bkwM1310306F1Fo9FV7U6zf1q4tcPLE7cq6R613k9Ev5sqPZk+tHa/1Y/Zo6V9fr5zV0eH5T1ZeU+6S4SC+7LcPo9yStLJYQmrXK5YbMH01Gebknappsmr6GZDTTkT4Ua7Ik95y+LDYwssuTmjaRcg10I2ckSdTky3J/YvTRpS31NXzRv4Bv0h3kGrfoypBz8FEZE7d6Yq98JZn5sjGQUCNfN7SeKDWNhmGIxjCPNcPNuW/KWnh7LgrPkzc8gAlRKlVq+znCj5UdV5/h1Y+Wb79w9JPkni+fOf4EzOD0QVL/QHP/t0q/19+95PKf7V1u+Y+9exWufqhrbS+rHyrqc/eH/m943MFMj/tfE777u3H/jWhvrYh7VIYU1d/TjPsM1HIWR/Es5v5vYNw/2d+xtNiSWUsoxeXwW0JKOKY3sxK67tpqqp1KTYNUKkWXqdRDavVA5/fA9/n8fj5fre7vH6BO55vV/RyK3yHbzFffFxt6v7h/WKweFtBOvz/MA1osFlOUBCQokmKKdKFWDKpccJfb5Xbr75xtttvN9nUB2Xa5WW5fXwmJfEKWDG6AqiwVVOkMhlGKNFUt0mmxatFx1aqj0Ww2G4/Gs5lTrFZRddx2q13LtauaOnbbDbfb7nVtOW+5rtXVjISmWpoztdrOqD1y7TEaq227rQynbrelVquqWu0qI5XDlOmUKGQ0ZWQULfkfEIV7hbvbbCu7Y2nb5Le6bW6vtlu65Y+SZD7xfWglu2fZ8scobTdsWyptl0voF23910plu4kVEm9hdDCLjUYKmY4IoCyWq8V8s1ksVqt5F77ZxWZBFptluGtYLlaLpUKWCiNKW3EsW+mPpcsjY1BINLNi4ug4mSgUkrtX/uPV/xfTIZ3m8zD7Jclf+yw0FE7+aGKeHPTr/2zx+66G+xVo9ocoArtF6F4WQRQrldJnVfy5tvxsv/g/sV927rm9lfaYpslTf29G3+BuZLhn9Iy+o7ejsSf/QSvf2lNu1Vv1cv2dGTfu/ynxb2lHfdYzh7Nyvafb6aqnqISppApK4C1eX6Plawgzkyy5PqlEpSAYdlXl+jFVlLEyQqMpSMxIHavdqaVKjpsWdWkmSrU8fMGGZA49A/4zdA+WSMNS7QjqQ/9KR1kxb1tdGGykTtWuOnKnSnfatUbK1OlayO70Hx3l5aXd7o9fXLedtqcVC03bU8e2iAW3shityGYRzVegHOFis1qBIEN5A+rBiws4OycgKERRFAIrcSv2XUfrD0onmdoFaEGzlkhwSUgUSgnpxjxKVApZM1sZNhPHtUQPzieyjURaLIDOJArH2cNEOnDgwIED//0w3D4EVzh5j6el97YLy50U/iASl/4I4aV/bAQ/InA8ew/E8TXQF/iPTv7kiu/8k/u9YvLbz8DBBzwoxyNxPyJztd1C6Udkbh+H2y+ShrAUAh+A3wwGw4E4uOWhOKkvZSSps35aq+vR+vG2nxkM+plMp/P4+LxevxTvquvpnbC+u3t+eXzSM7lWxtgtnIyJjFynq3XR16ogTIViyiFjn81iL/bjyPPiyqvvwS6Q7wx5JI1acUSimPKIXGjFsR8y2FeGEaOMBZEVhwTKITTGLAk5I6HF+FjUK/EgnEXGzGIz3hmuixi/tE5Y6DJiEysmFvNgTcFoPI7CGeVLEiE4FU4JVWAofjU5YwG0U9jakagbj+M27KtCD64TiBJYhAYkoiyANvKqEEGhPAZ3BokJuwKhbgDVs4BXz4Nz2FPS4Mw7I4TCBqo5pt7MHY0QQpqJXJRvtLCGHK1u5MtODyFHdIdOzxSxI6OGYTiiLGFsIBFptn3bs5GmOS42G5peRo2cXEbaNSr37Y4Gg8BJ3JGdG0uXbIwzyJavRRhQxhPHNuGANcPBObvTnWDk2MZkgksTxzEsNL7GyHY6jiN3bCxhVJ6gia4ZyG1MDM2Y9CfT6tlbSn0W3lIWD139g12z7U6U18KwMx36Ym3tG1qlFh18xYKAICQCo6hoo8a2ov7/f3J2sNp2OvOcD+fLs85qEpM0oKas5WbfF/fTJm/6HV9OSmd6spFG/ssm9TzdPIrf1SfxiLNfNo8q99SeqhtO/D5F6FKWBJclzhLClawmdVHQ0hqarFlyCwk5Q9ewEUgycmVBrshX2JIlq4lQXr5HObg0rnyJtctiXmtKqKkl73Nyx3cv9XvZ0pNlGWfK2n0nqePiQ1O6bMoojZrZou4mNbiy+h2yyjKCFL5hyfqVLmVaWclo3bVwzi/Wqo+OI26euel0Y29QOf51FLfEOvP207n7HcV9oHAH7xncDsIxSP5XEMdQ3M1XVP13x/rz98JzF253ijNGcTvJuYugAbQytA/1E4bbVtb+guA+cLhPGE5g/O0KXpW5wDCcwDhcKa6MwXXniy2F2062NO59RQvWFpi16HXczrf1z0jOH/tjB4Kj/4rhIFZ3rWuUKHZ7i4XjCx5RUt2wnqJmKqQ0NRrR1WA0GPQHq/5wxlq/Pxv06ag/Gw1HoPD6q2F/1P81h67fXw1YN1v16WBGR5QPIb6maMTzIc+LPM/TkPIRoZRGZL1eM3DFSNyarlZkvVqT1Xg8XsPhNc+epEA0F/l6mLKpyDvw/rAOS6JIxUjBqlmHvu5goqpVTxWw5gtVE0t1T/R83XYtLHumpxmgNjMt99AzqldqpaJrPkYlyylhEZkqslVsojZFGnGwqtpXILe7dmSrkW2LEfQE6nixhr2NyXgJm43GK7bfzHq9yiwZcSMwX2VWd6vbNYHVzCp+wV/bf4zxu9vieBWsx/M5O3s9h3W4sa3Zs6MFg32kDdqYdfAVI6aeZ3BNVyNQ1CuQ00O4lqCkQV2Ph6PxaEnqpK5gT1HqLrpOeOXMzY6UXRxevyNmf+RrkL0wHPftAiLbN/b44DxxfvgXXv775AvG/f8ExX06uktBdwXubW8c7g3DfXw2EeO2OLN8RW/xZNfv0VwhzjsLceL50Mo+ZLP32RyrMYjLQSrZzBkxhYMZ9Okmo3BpPckGI6lDbSQbZ3sWt+dwVzsQV5mXIHCW5qV9zPxTLS3eajcOph+C6G8Ybnu4O2m0WpmGNGlYSFFJm6FynorjMaGTJe1NlsveEiaEqiqtEo+KqspInKoqnqO2VdOpKjGIU+qWZ3mJXCJxYOnlQqPcykiWFViW1bMYiCsXW0GraLVaQRl5hmfhuq84bUc1bdtU7Kpdr9c95Dm23fTTnedOp2aevbw4+cd0zam1nWenXnUcJ4Ldtcl4psAmRzMIIMFwGKO3EQQPaDPCiBwMBILIbKUsyXy+JNV6r+ElCn4mcQgCp5yQEnewz2LitHWTuD48hZvmQTmRKCSMRPE88SNxc3FaOLz5cccCAbwlRvhfP6Wv8lW+ylf5Kv8rfDv/bxyOZSwXhzfnhxfMDccqS2BiOhcjuX/6hHdmuvPzvRvuIm57P1ysC0/3FO769Pb0IO7Y/HrritszOEYU9vgtNv0UP9ri3vniCg9ZyImy2WY5W2iV7wsPBZYQPdw/FBiLy0Hik3t5tqfPT5unx1xaO0s30+l08hEWfnI/fz5zT9wJlzp+5F/Okvl0Li01dCNtJZOGIfm2kzIVVTlWjrmqzfl+NegRZxLMCWWMazIP7iaLORN4JOgtAsKShczix2J+DqK0F5AomEeQIfXmE0p6i7nDLAegFyeE3sIarPeCaE4mESUhyDGG87YWO7QgPScCSaoQZpoL6WJx3IsIQ2yliDjwjRUSwceFR0exMY5OoogqhKNKyJHeybxLYEfMSxcRbg46iPk02HFo4SIKyRGF72O8jTviKBdxIRHJiR0eMZsc43Yh5ciRClNKFidh4JhRZaGXnMDudlFD6xpaC5c0t4taXkXTmLvNwZKE5CySXJx1ZQyrBpYFV9JcXxAa966WNTQBTmy6WM8JblPOu76PZUPoeLiDfUf3XSfpwjsFjJHLjHNYSxsykmHN0DsdHeTmpdMxaxsXNd2N67pw2ga50ya23ZrvNOV6vYbTjqt7XgfjJnyojFyjlvf9Z9/viFP7+MlsPz8+Htvp56RekzpSx1FE+5Hjpib3ZB99b3P2dArX49nmj5yXjdcRZAFLl5auGwVDyGllXS5IlW5ZtrqwbQG5liVrruvIRkPWXQGVBEGTNGy4rgWbTmv5jpzOWVq+4smX7pmQ1vB95949g38MjiVres3KG82kpuXcs5x8ltXdppWUjbzWcT1L1rOea2Ddu8rqhmVpDalsWHrLesgWC0G5nJVl8+TJtrnjkw2X2uR3gDpTLm6Z9d2nsvVC3X5gc3tP3PXBmzXuT7a4dzju4uYrKf1XR/4PBpCt4jw9+PaqOGPjxz6mZlgEDTLFoPgJv+0g3A7D/bMD7nXcwre3jpWryUSI8Ru0SczgSlsz3DsxuaVv22Fbt5MPzjg2QZ88cQzFoWiBWVSFLsLLePjkiPO3Y7fU7ZV7k0yvZ3XPna6WMuv0eyo0KY3CVBimZqPBYDhkDrjBLBxBP6L9VZ8Z4ma/+r9mg9GA9vuj4WzQH/SZF24w+jXrDygdjkI4RFMpSsQUz4sR5aMUUShPITYv17GPbL2KnWXMB0fGazqm64hSEkFwhuhPjlPtkA95M0RmxIeIV3iRt0VF9EWHYNERvVJF1XFdM3xL8U1falxoqmbcnWumUYSIWlIN2XZB9V9BfLlzPNw1ETY01UCVbsVHJd2p6hXFUVUEKrqNxbbiOGKsp1ViEzGCqR0RUSQE9kWW0XgZ7OAhA2ysrDKMtLFZJsMwG3PMldkKw4rbM1hHxiSgJHb+jV/Pn8Ptijik3m4rTEErpK2MmJJmUno4GcY+FlDQZMikNSyOhzPmwYGXoij+f9g50+5ElS0MmzaYdDqOcYhxQBNHVGRSCgQu4QiSSgNJxPj//8mtXWpiTve5d911vtx1lgXFEIbuZjU7ez/1vpAS30Q6sq4sUiQnEpVEpzOtN87/S3EMLwKsYCDwt8o5yGa+JEuJjzTpFEr+QYnwRzz8Mhq8k8R9oLg/R8YPFAfMjUwNklZOYU07TLBPG93Zj/8CihtTNVylWq3MqjPQwwGA26nhqByOCuJGoIajgridJG4o7iVxQOIKMO1AnN/t+jUSPbvtLnC4I0XcX2jigqNOTwjo3N6vj169...(truncated)...",
+	  "tools": {
+		"Photoshop": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-original.svg"
+	  },
+	  "category": "Design"
+	},
+	{
+	  "id": "cm7dej6s40005hx32iivv5twq",
+	  "title": "Act Up",
+	  "description": "",
+	  "year": "2025",
+	  "use": "Poster",
+	  "visit": "https://www.behance.net/gallery/212330799/ACT-UP",
+	  "view": "",
+	  "cover": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAE4gAAA0JCAMAAACIS1cXAAAACXBIWXMAAC4jAAAuIwF4pT92AAAAVFBMVEViYmHy8vL19fUOCQxfX19kZGTr6ulnZ2ZoaGjv7+8oKSgaGRnk4+J0cm/4+Pjb2tjQzczBvLw8PDuvqqudm5pQTU16eHaQjo6IhYaAf3/UfqqcaYGZQPH/AAAgAElEQVR42syci7Kbug6GTcYXPOMUGNKQvP+LnoBvv2QZsjqds0t3E2PLsnxJVvn2r6XUfmm9/92v4/2oUqklNdWbaK7ym4a7WK4V2Sfxni+VjMsbGKa+JLByg06YQdOqRdt++4WBpvFfdlPnQzcdy33PpWJ+lf5BxPo9T+uzjnG1XL3ZwC413d1jmqb5ZVRvpuqLBe2vgbQs3XDa1ewsaz6G3Qn3g7w+Xuqbs0Y+COpy4eGToqSuwjybo1Ze8WPOo+MrV17ox1t1JowtsEvjEo7L7i/TY6TW9+loswHeivVeYcXm486iPZpYi9apLvVJ3sGkMZzmKRvObOJunbL5bOrXnsJvNVW+TXVTYPdK4Z7gdzBZZ/CptKIVGoaD72g8CcyA9aoh0QnQMptbfuFf+LQrDtiUFHVZR9EXZjXoIwgSG6wCX1vwqMiPtHZ+ZNXxp1z0opUum1H90YFZxBg6DZcuNRkWqmv7Kx57a6dtP4Dq8+X73M/k8VF5RBfvycZPx/F3Wu+f2kdIdSHW7+a2fIg+JZ9K1pZPVjKPxo/RCHvRRCjeknU0pjkKZGvNYUA/SslB7koWPrYbNpbpBAoN3cmgl7LLKoXOB6sxHfMpt9WoPb/JLHfQZF3adSwtpACDGdq3tLbV9L4dca8iMzDVixk/h8j7dCBSIV5+v2ptaku1uUjN0zH0xxE7Gj3aZfMAIx2Fw9pbcIytu5PcQt7qFSzGAv3ra4oipCnQmUIJp1dCz31h8nzmli4PmzJvbFez3OY6tBGaIcL9vlRuT5OuvNNps1PBYN1+Hmp1Pj7Yu5z61im78mmUjUoViYqbKBIf9fAoCzC9xmxDfG4TLA8sIy6a98Pg+QU7f9xHEwvtnzra4bBJy/4pD2D9udZndxo/uBRdPPdNlz8f7e9erhvte1yXMNRlzoVaNQypPGSLYWA3pZRfUzt2zY3lphZrBw+Wt1KB/mJdHXUgTj8/Rdf3c3RfLkpeFievj4P3joU76y974zF0d4hUOSOFmqdQK8ukGofuaCOtUAHdU121aD0Xm/oWC6Mb724cx/uYqoo/Ry4SAIkLB7yb93MNNm/vrSnQ8u1zxfd6f2NtUp/GfC/kB5TbAJX0gkpikQuDHW7LvKz312u8swUQrrt7PbbHusxhmG7S9SsX7Pp8vnn3sZZGLOcqqISG2HK0HjUjWI7kYjWs67914bNAfkgp/+iP/+bkz3P84RHInebPOvB8rQiAqyNJME1gD/ggJfIMpa7pCAeBPwV1Pcxy3U99B2na+V8EqOj8LqJwjymEzD049DkviUstchazBDs/2/l/DH7XM3E9ty843AV6bY+VOltWpb6lfldQ8SugS1ZCnbJkYR4Nfxa4Xn8SpKSabSQMRPoYKbq6Sl9GTECcUmviYNP+yLVoOof3HFunit8SAZgOPgDVNlgC4qp5AmgA0+KfCVoTZEhhxN4WqV+wGdFNn3/9pcrFMID1nvKo01Y/kWSzGLsSvlIpjOXUTksgTlN0pMjO8P+nwc5HCx4YKuOEUDDTCJ80BWT4Dd5BjrwgIDa9f2fATwrV5TUEXxH2JkNOGI2PThkp/v8iXAvK2DTfM+JPBHFaZHyEjwtLIoKqRwFm65jCOs5khGbzuNtsk0WsNm8fTy/AazaRuwzZDhZSsVtic9mnTcjuCWRVZqOdSWcyxEiV4sctgzhx+roFcaoBceY:,",
+	  "tools": {
+		"Photoshop": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-original.svg"
+	  },
+	  "category": "Design"
+	},
+	{
 	  "id": "dimension",
+	  "title": "Dimension",
+	  "description": "'DIMENSION' is a music application that helps users stay motivated and focused while working, exercising, or meditating. Built with React, Dimension provides a seamless and intuitive user experience, featuring a clean and simple design that's easy to navigate. It's user-friendly, allowing you to customize your music by selecting various tracks and adjusting the volume. It's a mobile app.",
+	  "year": "2023",
+	  "use": "Music",
 	  "visit": "https://dimensionmusic.netlify.app/",
 	  "view": "https://github.com/Mahkalix/Dimension",
-	  "number": "02/",
-	  "title": "Dimension",
-	  "cover": "/images/dimensionhome.webp", 
-	  "description": "'DIMENSION' is a music application that helps users stay motivated and focused while working, exercising, or meditating. Built with React, Dimension provides a seamless and intuitive user experience, featuring a clean and simple design that's easy to navigate. It's user-friendly, allowing you to customize your music by selecting various tracks and adjusting the volume. It's a mobile app.",
+	  "cover": "/images/dimensionhome.webp",
 	  "tools": {
-		"React": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
-		"JavaScript": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg",
+		"CSS": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-plain.svg",
 		"HTML": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-plain.svg",
-		"CSS": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-plain.svg"
+		"React": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+		"JavaScript": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg"
 	  },
-	  "year": 2023,
-	  "use": "Music",
 	  "category": "Web"
 	},
 	{
 	  "id": "kasa",
+	  "title": "Kasa",
+	  "description": "'KASA' a leading apartment rental platform in France, I had a key mission: to completely revamp their website. After a decade, their ASP.NET-based site needed modernization. Laura, the CTO, was transitioning to a full JavaScript stack with NodeJS for the back-end and React for the front-end. My primary task was to kickstart the React project, aligning it with Figma mockups, and collaborating with Paul, the designer, to ensure the design and features matched the vision",
+	  "year": "2023",
+	  "use": "Accomodation",
 	  "visit": "https://kasahome.netlify.app/",
 	  "view": "https://github.com/Mahkalix/Kasa",
-	  "number": "03/",
-	  "title": "Kasa",
-	  "cover": "/images/kasahome.webp", 
-	  "description": "'KASA' a leading apartment rental platform in France, I had a key mission: to completely revamp their website. After a decade, their ASP.NET-based site needed modernization. Laura, the CTO, was transitioning to a full JavaScript stack with NodeJS for the back-end and React for the front-end. My primary task was to kickstart the React project, aligning it with Figma mockups, and collaborating with Paul, the designer, to ensure the design and features matched the vision",
+	  "cover": "/images/kasahome.webp",
 	  "tools": {
-		"React": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
-		"JavaScript": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg",
-		"HTML": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-plain.svg",
 		"CSS": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-plain.svg",
-		"Swagger": "https://img.jsdelivr.com/github.com/swagger-api.png"
-	  },  
-	  "year": 2023,
-	  "use": "Accomodation",
+		"HTML": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-plain.svg",
+		"React": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+		"Swagger": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/swagger/swagger-original.svg",
+		"JavaScript": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg"
+	  },
 	  "category": "Web"
 	},
 	{
 	  "id": "ohmyfood",
+	  "title": "Oh My Food",
+	  "description": "'OHMYFOOD' is an innovative project that revolutionizes the dining experience, allowing customers to pre-design their menus in gourmet restaurants, eliminating traditional wait times. I was tasked with creating a mobile-first website based on mockups provided by the UX designer, including detailed animations for a seamless user experience.",
+	  "year": "2023",
+	  "use": "Food",
 	  "visit": "https://mahkalix.github.io/Ohmyfood/",
 	  "view": "https://github.com/Mahkalix/Ohmyfood",
-	  "number": "04/",
-	  "title": "Oh My Food",
-	  "cover": "/images/ohmyfoodhome.webp", 
-	  "description": "'OHMYFOOD' is an innovative project that revolutionizes the dining experience, allowing customers to pre-design their menus in gourmet restaurants, eliminating traditional wait times. I was tasked with creating a mobile-first website based on mockups provided by the UX designer, including detailed animations for a seamless user experience.",
+	  "cover": "/images/ohmyfoodhome.webp",
 	  "tools": {
-		"React": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
-		"JavaScript": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg",
 		"HTML": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-plain.svg",
-		"Sass": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg"
-	  },   
-	  "year": 2023,
-	  "use": "Food",
+		"Sass": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg",
+		"React": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+		"JavaScript": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg"
+	  },
 	  "category": "Web"
 	}
   ]
-  

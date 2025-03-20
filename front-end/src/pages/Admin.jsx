@@ -21,7 +21,8 @@ const Admin = () => {
   const [error, setError] = useState(null);
   const [isEditModalOpen, setIsEditModalOpen] = useState(false);
   const [isAddModalOpen, setIsAddModalOpen] = useState(false);
-  const [filter, setFilter] = useState("all");
+  const [filter, setFilter] = useState("All");
+  const [loading, setLoading] = useState(true);
   const navigate = useNavigate();
 
   // Check if user is logged in
@@ -46,9 +47,12 @@ const Admin = () => {
 
         const data = await response.json();
         setProjects(data);
+        setFilter("All");
       } catch (error) {
         setError(`Erreur lors du chargement des projets : ${error.message}`);
         setTimeout(() => setError(null), 5000);
+      } finally {
+        setLoading(false);
       }
     };
 
@@ -282,35 +286,39 @@ const Admin = () => {
           </button>
         </div>
 
-        <table className="admin__table">
-          <thead>
-            <tr>
-              <th>Title</th>
-              <th>Year</th>
-              <th>Category</th>
-              <th>Action</th>
-            </tr>
-          </thead>
-          <tbody>
-            {filteredProjects.map((project) => (
-              <tr key={project.id}>
-                <td>{project.title}</td>
-                <td>{project.year}</td>
-                <td>{project.category}</td>
-                <td>
-                  <div className="admin__actions">
-                    <button onClick={() => handleEdit(project.id)}>
-                      Modifier
-                    </button>
-                    <button onClick={() => handleDelete(project.id)}>
-                      Supprimer
-                    </button>
-                  </div>
-                </td>
+        {loading ? ( // Display loading message if loading is true
+          <p className="loading">Chargement des projets...</p>
+        ) : (
+          <table className="admin__table">
+            <thead>
+              <tr>
+                <th>Title</th>
+                <th>Year</th>
+                <th>Category</th>
+                <th>Action</th>
               </tr>
-            ))}
-          </tbody>
-        </table>
+            </thead>
+            <tbody>
+              {filteredProjects.map((project) => (
+                <tr key={project.id}>
+                  <td>{project.title}</td>
+                  <td>{project.year}</td>
+                  <td>{project.category}</td>
+                  <td>
+                    <div className="admin__actions">
+                      <button onClick={() => handleEdit(project.id)}>
+                        Modifier
+                      </button>
+                      <button onClick={() => handleDelete(project.id)}>
+                        Supprimer
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        )}
 
         <AdminModal
           isOpen={isEditModalOpen}
