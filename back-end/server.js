@@ -45,12 +45,12 @@ app.delete('/api/projects/:id', (req, res) => deleteProject(req, res, prisma));
 
 
 
-// Export de l'app pour Vercel
-module.exports = app;
-
 // Lancement du serveur (uniquement en développement local)
 if (process.env.NODE_ENV !== 'production') {
   app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
   });
 }
+
+// Export de l'app pour Vercel
+module.exports = app;

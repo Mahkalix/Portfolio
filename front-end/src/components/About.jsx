@@ -24,40 +24,50 @@ const About = () => {
             <h2>Who am I ?</h2>
 
             <p>
-              <span className={styles.number}>01/</span> I'm Max, a 23-year-old
-              web wizard from the cozy town of Saint Martin d'Uriage near
-              Grenoble. I have a knack for turning wild web ideas into reality
-              through a blend of code and design, and right now, I’m on the
-              lookout for my next adventure. <br />
+              <span className={styles.number}>01/</span> I'm Max, a 24-year-old
+              web wizard from the cozy town of Saint-Martin-d'Uriage near
+              Grenoble. I love turning ambitious web ideas into reality through
+              a blend of clean code and creative design. Right now, I’m always
+              seeking new opportunities to learn, grow, and collaborate.
             </p>
 
             <p>
-              <span className={styles.number}>02/</span> My web journey kicked
-              off with the essentials HTML, CSS, and JavaScript during a
-              nine-month course that truly ignited my passion. Along the way, I
-              dove into React and became hooked on building dynamic web
-              experiences. I didn’t stop there, though! I’ve also ventured into
-              the design world because, let’s be honest, that’s where all the
-              cool visuals happen.
-              <br />
+              <span className={styles.number}>02/</span> My journey began at
+              OpenClassrooms with the <strong>Web Integrator Program</strong>,
+              where I learned the fundamentals of HTML, CSS, and JavaScript.
+              That’s also when I discovered React and developed a real passion
+              for building dynamic digital experiences. At the same time, I
+              started exploring design, which soon became one of my favorite
+              creative outlets.
             </p>
+
             <p>
-              <span className={styles.number}>03/</span> Currently, I’m studying
-              for my BUT métiers du multimédia et de l’internet at IUT 1
-              Grenoble, where I’m deepening my skills in backend development
-              with PHP and Laravel. Additionally, I’m exploring Java and Android
-              Studio, and soon, I’ll be getting hands-on with Next.js and Docker
-              as part of my training. Every new tool I learn opens up exciting
-              possibilities, and I’m always eager to apply them to real-world
-              projects. <br />
+              <span className={styles.number}>03/</span> I then pursued a
+              <strong>
+                {" "}
+                BUT Métiers du Multimédia et de l’Internet at IUT1 Grenoble
+              </strong>
+              . During this program, I gained experience with backend
+              development using PHP and Laravel, explored Java and Android
+              Studio, and experimented with Next.js and Docker. By the end, I
+              had built a solid full-stack foundation and validated my
+              coursework.
             </p>
+
             <p>
-              <span className={styles.number}>04/</span> Although I’ve already
-              earned a BTEC higher national diploma (the French equivalent of
-              bac +2), I believe that learning is a never-ending journey
-              especially in the fast-moving world of web development. If you
-              think I’d be a good fit for your team, or just want to chat about
-              the latest tech trends, feel free to reach out!
+              <span className={styles.number}>04/</span> Today, I’m studying for
+              a
+              <strong>
+                {" "}
+                Master’s in Full Stack Development at MyDigitalSchool
+              </strong>
+              . I’m expanding my expertise in both frontend and backend, diving
+              deeper into modern frameworks, cloud solutions, and scalable
+              architectures. Outside of school, I spend a lot of time on{" "}
+              <strong>design</strong> and I’m actively building my{" "}
+              <strong>portfolio</strong> to showcase my projects. Learning, for
+              me, is a continuous journey especially in the fast-moving world of
+              web development.
             </p>
           </div>
         </div>
