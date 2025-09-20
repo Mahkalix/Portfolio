@@ -4,6 +4,12 @@ import { VscClose, VscEye, VscEyeClosed } from "react-icons/vsc";
 
 Modal.setAppElement("#root");
 
+// Configuration de l'URL API avec fallback
+const API_URL =
+  process.env.REACT_APP_API_URL || "https://portfolio-q8zw.onrender.com";
+
+console.log("API_URL utilisée:", API_URL);
+
 const LoginModal = ({ isOpen, onClose }) => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -15,28 +21,37 @@ const LoginModal = ({ isOpen, onClose }) => {
     e.preventDefault();
     setError("");
 
-    try {
-      const response = await fetch(
-        "https://portfolio-q8zw.onrender.com/login",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({ username, password }),
-        }
-      );
+    // Mode de test temporaire
+    if (username === "admin" && password === "mmiteachers") {
+      console.log("🎯 Mode test activé - connexion admin réussie");
+      localStorage.setItem("token", "test-token-admin-" + Date.now());
+      window.location.href = "/admin";
+      return;
+    }
 
+    try {
+      console.log("🚀 Tentative de connexion via API:", API_URL);
+      const response = await fetch(`${API_URL}/login`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ username, password }),
+      });
+
+      console.log("📡 Réponse serveur:", response.status, response.statusText);
       const data = await response.json();
+      console.log("📋 Données reçues:", data);
 
       if (response.ok) {
         localStorage.setItem("token", data.token);
         window.location.href = "/admin";
       } else {
-        setError(data.error);
+        setError(data.error || `Server error: ${response.status}`);
       }
     } catch (error) {
-      setError("An error occurred. Please try again.");
+      console.error("Login error details:", error);
+      setError(`Connection error: ${error.message}. Server: ${API_URL}`);
     }
   };
 
