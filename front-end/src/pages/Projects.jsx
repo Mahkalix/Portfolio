@@ -2,6 +2,10 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import ScrollText from "../components/ScrollText.jsx";
 
+// Configuration de l'URL API
+const API_URL =
+  process.env.REACT_APP_API_URL || "https://portfolio-q8zw.onrender.com";
+
 const ProjectDetails = () => {
   const { id } = useParams(); // L'ID est en fait le slug
   const [project, setProject] = useState(null);
@@ -10,9 +14,7 @@ const ProjectDetails = () => {
   useEffect(() => {
     const fetchProject = async () => {
       try {
-        const response = await fetch(
-          `https://portfolio-q8zw.onrender.com/api/projects/${id}`
-        );
+        const response = await fetch(`${API_URL}/api/projects/${id}`);
         if (!response.ok) throw new Error("Projet introuvable");
 
         const data = await response.json();
