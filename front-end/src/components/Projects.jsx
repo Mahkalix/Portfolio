@@ -16,7 +16,7 @@ const Projects = () => {
       try {
         const API_URL =
           process.env.REACT_APP_API_URL ||
-          "https://portfolio-q8zw.onrender.com";
+          "https://portfolio-l0hm.onrender.com";
         const response = await fetch(`${API_URL}/api/projects`);
         if (!response.ok) {
           throw new Error("Erreur lors du chargement des projets");

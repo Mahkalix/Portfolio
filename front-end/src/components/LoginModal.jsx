@@ -6,7 +6,7 @@ Modal.setAppElement("#root");
 
 // Configuration de l'URL API avec fallback
 const API_URL =
-  process.env.REACT_APP_API_URL || "https://portfolio-q8zw.onrender.com";
+  process.env.REACT_APP_API_URL || "https://portfolio-l0hm.onrender.com";
 
 console.log("API_URL utilisée:", API_URL);
 
