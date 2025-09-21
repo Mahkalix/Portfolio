@@ -18,11 +18,9 @@ app.use(express.json({ limit: '10mb' }));
 // Configuration CORS pour autoriser votre frontend
 const corsOptions = {
   origin: [
-    'http://localhost:3000',        // Pour le développement local
-    'https://your-frontend-url.netlify.app',  // Remplacez par votre URL frontend
-    'https://your-frontend-url.vercel.app',   // Ou autres services
-    'https://mahkalix.github.io',             // Si vous utilisez GitHub Pages
-    '*'  // Temporaire pour tester - À ENLEVER en production
+    'http://localhost:3000',                    // Pour le développement local
+    'https://maxencebadin-leger.vercel.app',    // Votre frontend Vercel
+    /https:\/\/.*\.vercel\.app$/               // Tous les domaines Vercel pour votre compte
   ],
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
