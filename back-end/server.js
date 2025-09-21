@@ -14,7 +14,22 @@ const port = process.env.PORT || 3001; // Utilise PORT depuis .env ou 3001 par d
 
 // Middleware pour gérer le corps des requêtes
 app.use(express.json({ limit: '10mb' })); 
-app.use(cors());  // Enable cross-origin resource sharing
+
+// Configuration CORS pour autoriser votre frontend
+const corsOptions = {
+  origin: [
+    'http://localhost:3000',        // Pour le développement local
+    'https://your-frontend-url.netlify.app',  // Remplacez par votre URL frontend
+    'https://your-frontend-url.vercel.app',   // Ou autres services
+    'https://mahkalix.github.io',             // Si vous utilisez GitHub Pages
+    '*'  // Temporaire pour tester - À ENLEVER en production
+  ],
+  credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization']
+};
+
+app.use(cors(corsOptions));  // Enable cross-origin resource sharing
 
 app.get("/", (req, res) => {
   res.send("✅ Le serveur fonctionne !");

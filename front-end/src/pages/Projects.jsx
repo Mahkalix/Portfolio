@@ -4,7 +4,7 @@ import ScrollText from "../components/ScrollText.jsx";
 
 // Configuration de l'URL API
 const API_URL =
-  process.env.REACT_APP_API_URL || "https://portfolio-q8zw.onrender.com";
+  process.env.REACT_APP_API_URL || "https://portfolio-l0hm.onrender.com";
 
 const ProjectDetails = () => {
   const { id } = useParams(); // L'ID est en fait le slug
