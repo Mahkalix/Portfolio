@@ -85,11 +85,11 @@ const Admin = () => {
         setIsEditModalOpen(true);
       } else {
         setError("Projet introuvable");
-        setTimeout(() => setError(null), 5000);
+        setTimeout(() => setError(null), 3000);
       }
     } catch (error) {
       setError(`Erreur lors de la sélection du projet : ${error.message}`);
-      setTimeout(() => setError(null), 5000);
+      setTimeout(() => setError(null), 3000);
     }
   };
 
@@ -107,7 +107,7 @@ const Admin = () => {
       setProjects((prev) => prev.filter((p) => p.id !== projectId));
     } catch (error) {
       setError(`Erreur lors de la suppression du projet : ${error.message}`);
-      setTimeout(() => setError(null), 5000);
+      setTimeout(() => setError(null), 3000);
     }
   };
 
@@ -129,7 +129,7 @@ const Admin = () => {
 
     if (!title || !year || isNaN(year)) {
       setError("Veuillez entrer un titre valide et une année valide.");
-      setTimeout(() => setError(null), 5000);
+      setTimeout(() => setError(null), 3000);
       return;
     }
 
@@ -168,7 +168,7 @@ const Admin = () => {
       setIsEditModalOpen(false);
     } catch (error) {
       setError(`Erreur lors de la mise à jour du projet : ${error.message}`);
-      setTimeout(() => setError(null), 5000);
+      setTimeout(() => setError(null), 3000);
     }
   };
 
@@ -188,7 +188,7 @@ const Admin = () => {
 
     if (!title || !year || isNaN(year)) {
       setError("Veuillez entrer un titre valide et une année valide.");
-      setTimeout(() => setError(null), 5000);
+      setTimeout(() => setError(null), 3000);
       return;
     }
 
@@ -232,7 +232,7 @@ const Admin = () => {
       setIsAddModalOpen(false);
     } catch (error) {
       setError(`Erreur lors de l'ajout du projet : ${error.message}`);
-      setTimeout(() => setError(null), 5000);
+      setTimeout(() => setError(null), 3000);
     }
   };
 
@@ -283,7 +283,9 @@ const Admin = () => {
         </div>
 
         {loading ? ( // Display loading message if loading is true
-          <p className="loading">Chargement des projets...</p>
+          <div className="loader-container">
+            <div className="loader2"></div>
+          </div>
         ) : (
           <table className="admin__table">
             <thead>

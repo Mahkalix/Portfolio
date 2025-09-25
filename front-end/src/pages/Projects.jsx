@@ -26,7 +26,7 @@ const ProjectDetails = () => {
         setProject(data);
       } catch (err) {
         setError(err.message);
-      }
+      } 
     };
 
     fetchProject();
@@ -39,7 +39,11 @@ const ProjectDetails = () => {
   console.log(error);
 
   if (!project) {
-    return <p className="loading2">Chargement...</p>;
+    return (
+      <div className="loader-container">
+        <div className="loader2"></div>
+      </div>
+    );
   }
 
   return (

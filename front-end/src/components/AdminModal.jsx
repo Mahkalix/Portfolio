@@ -11,6 +11,53 @@ const AdminModal = ({
   error,
   setError,
 }) => {
+  // Liste prédéfinie des outils disponibles
+  const availableTools = {
+    React:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+    JavaScript:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
+    TypeScript:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
+    "Node.js":
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
+    Express:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
+    HTML: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
+    CSS: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-plain.svg",
+    SASS: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg",
+    MongoDB:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
+    PostgreSQL:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
+    MySQL:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
+    Figma:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg",
+    Photoshop:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-original.svg",
+    "Vue.js":
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg",
+    Angular:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg",
+    "Next.js":
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
+    Vite: "https://vitejs.dev/logo.svg",
+    "Tailwind CSS":
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg",
+    Bootstrap:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg",
+    Docker:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg",
+    Prisma: "https://www.prisma.io/images/favicon-32x32.png",
+    Redux:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg",
+    Vercel:
+      "https://assets.vercel.com/image/upload/front/favicon/vercel/32x32.png",
+    Swagger:
+      "https://upload.wikimedia.org/wikipedia/commons/a/ab/Swagger-logo.png",
+  };
+
   const handleFileChange = (e) => {
     const file = e.target.files[0];
     if (file) {
@@ -20,6 +67,38 @@ const AdminModal = ({
       };
       reader.readAsDataURL(file);
     }
+  };
+
+  // Fonction pour normaliser les outils (convertir string JSON en objet si nécessaire)
+  const normalizeTools = (tools) => {
+    if (!tools) return {};
+    if (typeof tools === "string") {
+      try {
+        return JSON.parse(tools);
+      } catch {
+        return {};
+      }
+    }
+    return tools;
+  };
+
+  // Fonction pour gérer la sélection/désélection des outils
+  const handleToolToggle = (toolName) => {
+    const currentTools = normalizeTools(currentProject.tools);
+    const newTools = { ...currentTools };
+
+    if (newTools[toolName]) {
+      // Si l'outil est déjà sélectionné, le retirer
+      delete newTools[toolName];
+    } else {
+      // Sinon, l'ajouter
+      newTools[toolName] = availableTools[toolName];
+    }
+
+    setCurrentProject({
+      ...currentProject,
+      tools: newTools,
+    });
   };
 
   return (
@@ -119,9 +198,6 @@ const AdminModal = ({
                 className="admin__input"
               />
             </div>
-          </div>
-
-          <div className="admin__form-column">
             <div className="modal__form-group">
               <label className="modal__label" htmlFor="visit">
                 Lien de visite:
@@ -160,29 +236,57 @@ const AdminModal = ({
                 />
               </div>
             )}
+          </div>
 
+          <div className="admin__form-column">
             <div className="modal__form-group">
-              <label className="modal__label" htmlFor="tools">
-                Outils (format JSON):
+              <label className="modal__label">
+                Sélectionner les outils utilisés :
               </label>
-              <textarea
-                id="tools"
-                value={JSON.stringify(currentProject.tools, null, 2)}
-                onChange={(e) => {
-                  try {
-                    const parsedTools = JSON.parse(e.target.value);
-                    setError(""); // Réinitialiser l'erreur en cas de succès
-                    setCurrentProject({
-                      ...currentProject,
-                      tools: parsedTools,
-                    });
-                  } catch {
-                    setError("Le format JSON des outils est invalide");
-                  }
-                }}
-                placeholder="Outils (format JSON)"
-                className="admin__textarea"
-              />
+              <div className="tools-selection">
+                {Object.keys(availableTools).map((toolName) => {
+                  const normalizedTools = normalizeTools(currentProject.tools);
+                  const isSelected =
+                    normalizedTools && normalizedTools[toolName];
+                  return (
+                    <div
+                      key={toolName}
+                      className={`tool-item ${isSelected ? "selected" : ""}`}
+                      onClick={() => handleToolToggle(toolName)}
+                    >
+                      <img
+                        src={availableTools[toolName]}
+                        alt={toolName}
+                        className="tool-icon"
+                      />
+                      <span className="tool-name">{toolName}</span>
+                      {isSelected && <span className="checkmark">✓</span>}
+                    </div>
+                  );
+                })}
+              </div>
+
+              {/* Affichage des outils sélectionnés */}
+              {(() => {
+                const normalizedTools = normalizeTools(currentProject.tools);
+                return (
+                  normalizedTools &&
+                  Object.keys(normalizedTools).length > 0 && (
+                    <div className="selected-tools-preview selected-tools-list">
+                      {Object.keys(normalizedTools).map((toolName) => (
+                        <span key={toolName} className="selected-tool-tag">
+                          <img
+                            src={availableTools[toolName]}
+                            alt={toolName}
+                            className="tool-icon-small"
+                          />
+                          {toolName}
+                        </span>
+                      ))}
+                    </div>
+                  )
+                );
+              })()}
             </div>
 
             {/* Sélection d'image */}

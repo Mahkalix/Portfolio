@@ -116,6 +116,113 @@
   }
 }
 
+// Styles pour la sélection d'outils
+.tools-selection {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: $spacing-sm;
+  margin-top: $spacing-sm;
+  max-height: 300px;
+  overflow-y: auto;
+  border: 1px solid $secondary-color;
+  padding: $spacing-sm;
+  border-radius: 4px;
+}
+
+.tool-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: $spacing-sm;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+  gap: 8px; // Espace entre l'icône et le texte
+
+  &:hover {
+    border-color: $secondary-color;
+    background-color: rgba(255, 255, 255, 0.05);
+  }
+
+  &.selected {
+    border-color: $accent-color;
+    background-color: rgba(255, 165, 0, 0.1);
+  }
+}
+
+.tool-icon {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  flex-shrink: 0; // Empêche l'icône de rétrécir
+}
+
+.tool-name {
+  font-size: $font-size-sm;
+  text-align: left;
+  font-family: $font-primary;
+  flex-grow: 1; // Prend l'espace restant
+}
+
+.checkmark {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background-color: $accent-color;
+  color: $primary-color;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.selected-tools-preview {
+  margin-top: $spacing-md;
+  padding: $spacing-sm;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 4px;
+
+  p {
+    font-size: $font-size-sm; // Même taille que les autres ou plus petit
+    margin: 0 0 $spacing-xs 0;
+    font-family: $font-primary;
+    font-weight: normal; // Enlever le bold si nécessaire
+  }
+}
+
+.selected-tools-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $spacing-xs;
+  margin-top: $spacing-xs;
+  justify-content: flex-start; // Aligner les icônes de gauche à droite
+}
+
+.selected-tool-tag {
+  background-color: $accent-color;
+  color: $primary-color;
+  padding: 4px 8px;
+  border-radius: 16px;
+  font-size: $font-size-sm;
+  font-family: $font-primary;
+  display: flex;
+  align-items: center;
+  gap: 4px; // Espace entre l'icône et le texte
+  white-space: nowrap; // Éviter les retours à la ligne dans les tags
+}
+
+.tool-icon-small {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+}
+
 .modal__content--admin {
   width: 90%;
   max-width: 600px;

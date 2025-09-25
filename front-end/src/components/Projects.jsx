@@ -57,7 +57,11 @@ const Projects = () => {
   });
 
   if (loading) {
-    return <p className="loading">Chargement...</p>;
+    return (
+      <div className="loader-container-home">
+        <div className="loader-home"></div>
+      </div>
+    );
   }
 
   if (error) {
