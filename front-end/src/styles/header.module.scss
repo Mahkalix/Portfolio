@@ -1,0 +1,50 @@
+header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 70px;
+  width: 100%;
+  border-bottom: 1px solid;
+  z-index: 200;
+}
+
+.logo {
+  padding: 5px 10px 20px 20px;
+  height: 100%;
+  border-right: 1px solid;
+}
+.logo img {
+  cursor: pointer;
+  width: 80px;
+  height: 60px;
+}
+
+.selectArea{
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+
+@media (max-width: 425px) {
+  header {
+    height: 50px;
+    width: 100%;
+    border-bottom: 1px solid;
+ 
+  .logo {
+    padding: 5px 10px 20px 10px;
+
+    }
+  
+  .logo img {
+    cursor: pointer;
+    width: 60px;
+    height: 40px;
+  }
+}
+  
+}
