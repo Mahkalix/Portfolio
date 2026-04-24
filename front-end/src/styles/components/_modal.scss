@@ -1,0 +1,96 @@
+@import "../utils/_variables";
+
+.modal__overlay {
+  touch-action: none;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1000;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.75) !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(5px);
+}
+
+.modal__content {
+  padding: $spacing-lg 0px;
+  outline: none;
+  background: $primary-color !important;
+  border-radius: $border-radius-md;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: $box-shadow-md;
+  opacity: 1;
+  z-index: 1000;
+  transition: opacity 0.3s ease-in-out;
+  position: relative;
+}
+
+.modal__close-button {
+  margin-top: 0;
+  padding: 0;
+  width: 25px;
+  position: absolute;
+  top: 0;
+  right: $spacing-sm;
+  background: none;
+  border: none;
+  color: $accent-color;
+  cursor: pointer;
+}
+
+.modal__title {
+  margin-top: 0;
+  text-align: center;
+  font-family: $font-secondary;
+  font-size: $font-size-xl;
+}
+
+.modal__label {
+  display: block;
+  margin-bottom: $spacing-xs;
+  font-weight: bold;
+  font-size: $font-size-md;
+  font-family: $font-primary;
+}
+
+.modal__error-message {
+  color: $error;
+  margin-top: $spacing-sm;
+  text-align: center;
+  font-size: $font-size-sm;
+}
+
+.modal__password-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.modal__password-toggle {
+  position: absolute;
+  right: $spacing-xs;
+  top: 50%;
+  width: 40px;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: $secondary-color;
+}
+
+.modal__error-message {
+  color: $error;
+  margin-top: $spacing-sm;
+  text-align: center;
+  font-size: $font-size-sm;
+  margin-bottom: $spacing-sm;
+}

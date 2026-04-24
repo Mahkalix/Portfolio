@@ -1,0 +1,226 @@
+@import "./utils/variables";
+
+.menu-hamburger {
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+.hamburger-react {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  cursor: pointer;
+  z-index: 101;
+}
+
+#menu-body {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0s 0.3s;
+  z-index: 99;
+}
+
+#menu-body.open {
+  animation: slidein 1s ease;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.5s ease, visibility 0s ease;
+  display: block;
+}
+
+#menu-body.close {
+  animation: slideout 1s ease;
+  visibility: hidden;
+  transition: opacity 1s ease, visibility 1s ease, display 0s 1s;
+}
+
+.center {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#menu-body li {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 100px;
+  padding: 20px;
+  margin-right: -20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+a {
+  font-weight: 400;
+}
+#menu-body li:hover {
+  cursor: pointer;
+  font-weight: 400;
+  padding-left: 25px;
+}
+
+@keyframes none {
+  from {
+    display: none;
+    transition-delay: 10s;
+  }
+  to {
+    display: none;
+    transition-delay: 10s;
+  }
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+  }
+
+  to {
+    margin-left: 0%;
+  }
+}
+
+@keyframes slideout {
+  from {
+    margin-left: 0%;
+  }
+
+  to {
+    margin-left: 100%;
+  }
+}
+
+// ANIMATION MENU
+
+// === Variables =====
+$perspective: 60rem;
+$font-size: 4.25rem;
+$split-position: 50%;
+$split-thickness: 3px;
+$split-color: rgb(0, 0, 0);
+
+#menu-body {
+  text-transform: uppercase;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.invisible {
+  color: transparent;
+}
+.menu-item {
+  position: relative;
+  cursor: pointer;
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: $split-position;
+    left: 25%;
+    right: 25%;
+    height: $split-thickness;
+    border-radius: $split-thickness;
+    margin-top: calc($split-thickness / 12);
+    background: $accent-color;
+    transform: scale(0);
+    transition: transform 0.8s cubic-bezier(0.16, 1.08, 0.38, 0.98);
+    z-index: 1;
+  }
+}
+
+.Mask {
+  display: block;
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  height: $split-position;
+  transition: all 0.8s cubic-bezier(0.16, 1.08, 0.38, 0.98);
+  span {
+    display: block;
+  }
+}
+.Top {
+  top: $split-position - 50;
+  height: 100 - $split-position + 0.1;
+  span {
+    transform: translateY(20%);
+  }
+}
+
+.Mask + .Mask {
+  top: $split-position - 0;
+  height: 100 - $split-position + 0.1;
+  span {
+    transform: translateY(-$split-position);
+  }
+}
+
+// === Where the fun stuff happens =====
+.menu-item:hover,
+.menu-item:active {
+  .Mask {
+    transform: skewX(6deg) translateX(0px);
+  }
+  .Mask + .Mask {
+    transform: skewX(6deg) translateX(0px);
+  }
+  &::before {
+    transform: scale(1);
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .menu-hamburger {
+    display: none;
+  }
+
+  #menu-body li {
+    width: 30%;
+  }
+  #menu-body li {
+    width: 100%;
+  }
+
+  #menu-body {
+    padding-top: 120px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .menu-item {
+    &::before {
+      position: absolute;
+      left: 10%;
+      right: 10%;
+    }
+  }
+  .hamburger-react {
+    position: absolute;
+    right: 20px;
+    top: 1px;
+    cursor: pointer;
+    z-index: 101;
+  }
+}
