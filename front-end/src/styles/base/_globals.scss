@@ -1,16 +1,15 @@
 @use "../utils/variables" as *;
 @use "./reset";
+@use "./accessibility";
 @use "../themes/dark";
 @use "../themes/light";
 @use "./typography";
 
-//components
 @use "../components/modal";
 @use "../components/button";
 @use "../components/input";
 @use "../components/projects";
 
-//module
 @use "../about.module.scss";
 @use "../contact.module.scss";
 @use "../error.module.scss";
@@ -19,23 +18,20 @@
 @use "../hero.module.scss";
 @use "../home.module.scss";
 @use "../horizontalscroll.module.scss";
-@use "../loader.module.scss";
 @use "../menu.module.scss";
 @use "../nav.module.scss";
 @use "../project.module.scss";
 @use "../scrolltext.module.scss";
 @use "../switch.module.scss";
 
-//layouts
 @use "../layouts/_loginModal.scss";
 @use "../layouts/_admin.scss";
 
 body {
-  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none; /* Internet Explorer et Edge */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
-/* Pour les navigateurs WebKit (Chrome et Safari) */
 body::-webkit-scrollbar {
   width: 0;
   display: none;

@@ -53,12 +53,20 @@ const LoginModal = ({ isOpen, onClose }) => {
       contentLabel="Login Modal"
       className="modal__content"
       overlayClassName="modal__overlay"
+      role="dialog"
+      aria-labelledby="login-modal-title"
+      aria-modal="true"
     >
-      <button className="modal__close-button" onClick={onClose}>
+      <button 
+        className="modal__close-button" 
+        onClick={onClose}
+        aria-label="Close login modal"
+        type="button"
+      >
         <VscClose size={25} />
       </button>
       <div className="modal__container">
-        <h2 className="modal__title">Admin</h2>
+        <h2 className="modal__title" id="login-modal-title">Admin</h2>
         <form className="modal__form" onSubmit={handleSubmit}>
           <div className="modal__form-group">
             <label className="modal__label" htmlFor="username">
@@ -89,16 +97,17 @@ const LoginModal = ({ isOpen, onClose }) => {
                 className="modal__password-toggle"
                 onClick={() => setShowPassword(!showPassword)}
                 style={{ position: "absolute", right: "10px" }}
+                aria-label={showPassword ? "Hide password" : "Show password"}
               >
                 {showPassword ? (
-                  <VscEye size={20} />
+                  <VscEye size={20} aria-hidden="false" />
                 ) : (
-                  <VscEyeClosed size={20} />
+                  <VscEyeClosed size={20} aria-hidden="false" />
                 )}
               </button>
             </div>
           </div>
-          {error && <div className="modal__error-message">{error}</div>}
+          {error && <div className="modal__error-message" role="alert">{error}</div>}
           <button className="modal__submit" type="submit">
             Login
           </button>

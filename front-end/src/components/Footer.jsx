@@ -14,16 +14,37 @@ const Footer = () => {
   const { theme } = useTheme();
 
   return (
-    <footer>
+    <footer role="contentinfo">
       <div className="social-media">
-        <a href={githubUrl} target="_blank" rel="noopener noreferrer">
-          <img src={theme === "light" ? githubd : githubl} alt="Logo" />
+        <a
+          href={githubUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Visit Maxence's GitHub profile"
+        >
+          <img src={theme === "light" ? githubd : githubl} alt="GitHub logo" />
         </a>
-        <a href={behanceUrl} target="_blank" rel="noopener noreferrer">
-          <img src={theme === "light" ? behanced : behancel} alt="Logo" />
+        <a
+          href={behanceUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Visit Maxence's Behance portfolio"
+        >
+          <img
+            src={theme === "light" ? behanced : behancel}
+            alt="Behance logo"
+          />
         </a>
-        <a href={linkedinUrl} target="_blank" rel="noopener noreferrer">
-          <img src={theme === "light" ? linkedind : linkedinl} alt="Logo" />
+        <a
+          href={linkedinUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Visit Maxence's LinkedIn profile"
+        >
+          <img
+            src={theme === "light" ? linkedind : linkedinl}
+            alt="LinkedIn logo"
+          />
         </a>
       </div>
       <p>Developed by me©2023 - All Rights Reserved</p>

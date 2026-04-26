@@ -10,7 +10,13 @@ const HorizontalScroll = () => {
             GOOD TO SEE YOU ! <br /> LET ME TELL YOU A BIT MORE ABOUT ME
           </h1>
           <div className="scroll">
-            Scroll to explore <img src={arrow} alt="arrow" />
+            Scroll to explore 
+            <img 
+              src={arrow} 
+              alt="Scroll right arrow icon" 
+              aria-label="Scroll direction indicator"
+              role="img"
+            />
           </div>
         </section>
         <section className="about">
@@ -18,7 +24,13 @@ const HorizontalScroll = () => {
             GOOD TO SEE YOU ! <br /> LET ME TELL YOU A BIT MORE ABOUT ME
           </h1>
           <div className="scroll">
-            Scroll to explore <img src={arrow} alt="arrow" />
+            Scroll to explore 
+            <img 
+              src={arrow} 
+              alt="Scroll right arrow icon" 
+              aria-label="Scroll direction indicator"
+              role="img"
+            />
           </div>
         </section>
         <section className="about">
@@ -26,7 +38,13 @@ const HorizontalScroll = () => {
             GOOD TO SEE YOU ! <br /> LET ME TELL YOU A BIT MORE ABOUT ME
           </h1>
           <div className="scroll">
-            Scroll to explore <img src={arrow} alt="arrow" />
+            Scroll to explore 
+            <img 
+              src={arrow} 
+              alt="Scroll right arrow icon" 
+              aria-label="Scroll direction indicator"
+              role="img"
+            />
           </div>
         </section>
         <section className="about">
@@ -34,7 +52,13 @@ const HorizontalScroll = () => {
             GOOD TO SEE YOU ! <br /> LET ME TELL YOU A BIT MORE ABOUT ME
           </h1>
           <div className="scroll">
-            Scroll to explore <img src={arrow} alt="arrow" />
+            Scroll to explore 
+            <img 
+              src={arrow} 
+              alt="Scroll right arrow icon" 
+              aria-label="Scroll direction indicator"
+              role="img"
+            />
           </div>
         </section>
       </div>

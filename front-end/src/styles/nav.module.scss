@@ -24,7 +24,12 @@ nav {
 .nav-link {
   display: inline-block;
   text-decoration: none;
+  &__admin {
+    width: fit-content;
+    border: none;
+  }
 }
+
 .nav-link:after {
   content: "";
   display: block;
@@ -34,8 +39,12 @@ nav {
   transition: width 0.3s;
 }
 .nav-link:hover::after {
-  width: 100%;
+  width: 100%;    
   transition: width 0.5s;
+}
+
+.nav-link__admin:after {
+  display: none;
 }
 
 @media (max-width: 769px) {

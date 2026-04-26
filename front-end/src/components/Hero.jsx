@@ -36,7 +36,12 @@ const Hero = () => {
             based in Grenoble, France.
           </div>
         </div>
-        <img src={Spiderman} alt="img-spiderman" className="spiderman" />
+        <img
+          src={Spiderman}
+          alt="Miles Morales Spider-Man character illustration"
+          className="spiderman"
+          aria-label="Spiderman animation - interactive on hover"
+        />
       </section>
     </>
   );

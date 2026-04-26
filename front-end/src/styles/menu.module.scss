@@ -30,7 +30,9 @@
   height: 100vh;
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.3s, visibility 0s 0.3s;
+  transition:
+    opacity 0.3s,
+    visibility 0s 0.3s;
   z-index: 99;
 }
 
@@ -38,14 +40,19 @@
   animation: slidein 1s ease;
   opacity: 1;
   visibility: visible;
-  transition: opacity 0.5s ease, visibility 0s ease;
+  transition:
+    opacity 0.5s ease,
+    visibility 0s ease;
   display: block;
 }
 
 #menu-body.close {
   animation: slideout 1s ease;
   visibility: hidden;
-  transition: opacity 1s ease, visibility 1s ease, display 0s 1s;
+  transition:
+    opacity 1s ease,
+    visibility 1s ease,
+    display 0s 1s;
 }
 
 .center {
@@ -110,9 +117,6 @@ a {
   }
 }
 
-// ANIMATION MENU
-
-// === Variables =====
 $perspective: 60rem;
 $font-size: 4.25rem;
 $split-position: 50%;
@@ -177,7 +181,6 @@ $split-color: rgb(0, 0, 0);
   }
 }
 
-// === Where the fun stuff happens =====
 .menu-item:hover,
 .menu-item:active {
   .Mask {

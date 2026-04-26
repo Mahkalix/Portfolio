@@ -116,7 +116,6 @@
   }
 }
 
-// Styles pour la sélection d'outils
 .tools-selection {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
@@ -139,7 +138,7 @@
   cursor: pointer;
   transition: all 0.2s ease;
   position: relative;
-  gap: 8px; // Espace entre l'icône et le texte
+  gap: 8px;
 
   &:hover {
     border-color: $secondary-color;
@@ -156,14 +155,14 @@
   width: 24px;
   height: 24px;
   object-fit: contain;
-  flex-shrink: 0; // Empêche l'icône de rétrécir
+  flex-shrink: 0;
 }
 
 .tool-name {
   font-size: $font-size-sm;
   text-align: left;
   font-family: $font-primary;
-  flex-grow: 1; // Prend l'espace restant
+  flex-grow: 1;
 }
 
 .checkmark {
@@ -189,10 +188,10 @@
   border-radius: 4px;
 
   p {
-    font-size: $font-size-sm; // Même taille que les autres ou plus petit
+    font-size: $font-size-sm;
     margin: 0 0 $spacing-xs 0;
     font-family: $font-primary;
-    font-weight: normal; // Enlever le bold si nécessaire
+    font-weight: normal;
   }
 }
 
@@ -201,7 +200,7 @@
   flex-wrap: wrap;
   gap: $spacing-xs;
   margin-top: $spacing-xs;
-  justify-content: flex-start; // Aligner les icônes de gauche à droite
+  justify-content: flex-start;
 }
 
 .selected-tool-tag {
@@ -213,8 +212,8 @@
   font-family: $font-primary;
   display: flex;
   align-items: center;
-  gap: 4px; // Espace entre l'icône et le texte
-  white-space: nowrap; // Éviter les retours à la ligne dans les tags
+  gap: 4px;
+  white-space: nowrap;
 }
 
 .tool-icon-small {

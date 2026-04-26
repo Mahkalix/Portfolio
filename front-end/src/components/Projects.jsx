@@ -113,10 +113,13 @@ const Projects = () => {
           <div className="container-card" key={groupIndex}>
             {group.map((project, index) => (
               <article key={index}>
-                <Link to={`/projects/${project.id}`}>
+                <Link
+                  to={`/projects/${project.id}`}
+                  aria-label={`View ${project.title} project details`}
+                >
                   <img
                     src={project.cover}
-                    alt={project.title}
+                    alt={`${project.title} project preview screenshot`}
                     onMouseEnter={() => handleMouseEnter(project)}
                     onMouseLeave={handleMouseLeave}
                   />

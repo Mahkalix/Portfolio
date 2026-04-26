@@ -17,7 +17,11 @@ const About = () => {
         </div>
         <div className={styles.text}>
           <div className={styles.floating}>
-            <img className={styles.normal} src={me} alt="" />
+            <img
+              className={styles.normal}
+              src={me}
+              alt="Maxence Badin-Léger, front-end developer"
+            />
           </div>
 
           <div className={styles.introduction}>

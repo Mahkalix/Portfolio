@@ -5,14 +5,17 @@ const Switch = () => {
   const { toggleTheme } = useTheme();
 
   return (
-    <div className="switch">
+    <div className="switch" role="group" aria-label="Theme switcher">
       <input
         className="input"
         onChange={toggleTheme}
         type="checkbox"
         id="switch"
+        aria-label="Toggle between light and dark theme"
       />
-      <label className="label" htmlFor="switch"></label>
+      <label className="label" htmlFor="switch" aria-hidden="true">
+        Theme switcher
+      </label>
     </div>
   );
 };

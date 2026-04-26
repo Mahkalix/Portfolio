@@ -12,10 +12,17 @@ const Header = () => {
   const location = useLocation();
   return (
     <>
-      <header>
+      <header role="banner">
         <div className="logo">
-          <Link to="/" className={location.pathname === "/" ? "" : ""}>
-            <img src={theme === "light" ? Logod : Logol} alt="Logo" />
+          <Link
+            to="/"
+            className={location.pathname === "/" ? "" : ""}
+            aria-label="Portfolio home"
+          >
+            <img
+              src={theme === "light" ? Logod : Logol}
+              alt={`Portfolio logo - ${theme} mode`}
+            />
           </Link>
         </div>
 

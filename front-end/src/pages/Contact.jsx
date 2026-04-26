@@ -103,7 +103,7 @@ const Contact = () => {
             />
           </div>
           {formData.object === "" && ShowModalError && (
-            <span className={styles.fieldEmpty}>Champ non rempli</span>
+            <span className={styles.fieldEmpty} role="alert">Champ non rempli</span>
           )}
 
           <div>
@@ -120,14 +120,16 @@ const Contact = () => {
                 theme === "light" ? "light" : "dark"
               }`}
               type="text"
+              id="name"
               name="name"
               value={formData.name}
               onChange={handleChange}
               required
+              aria-required="true"
             />
           </div>
           {formData.name === "" && ShowModalError && (
-            <span className={styles.fieldEmpty}>Champ non rempli</span>
+            <span className={styles.fieldEmpty} role="alert">Champ non rempli</span>
           )}
 
           <div>
@@ -144,14 +146,16 @@ const Contact = () => {
                 theme === "light" ? "light" : "dark"
               }`}
               type="email"
+              id="email"
               name="email"
               value={formData.email}
               onChange={handleChange}
               required
+              aria-required="true"
             />
           </div>
           {formData.email === "" && ShowModalError && (
-            <span className={styles.fieldEmpty}>Champ non rempli</span>
+            <span className={styles.fieldEmpty} role="alert">Champ non rempli</span>
           )}
           <div>
             <label
@@ -166,16 +170,18 @@ const Contact = () => {
               className={`${styles.textarea} ${
                 theme === "light" ? "textareablack" : "textarealight"
               }`}
+              id="comments"
               name="comments"
               rows="8"
               cols="35"
               value={formData.comments}
               onChange={handleChange}
               required
+              aria-required="true"
             ></textarea>
           </div>
           {formData.comments === "" && ShowModalError && (
-            <span className={styles.fieldEmpty}>Champ non rempli</span>
+            <span className={styles.fieldEmpty} role="alert">Champ non rempli</span>
           )}
 
           <input

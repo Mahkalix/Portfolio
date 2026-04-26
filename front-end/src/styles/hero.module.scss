@@ -9,7 +9,6 @@
 
   h1 {
     width: 100%;
-    // height: 100%;
     font-size: 19.9vw;
     font-family: "Anton";
     font-weight: 400;
@@ -47,10 +46,10 @@
 
     .description {
       width: 50vw;
-      font-size: 3vw; /* 20px en vw */
+      font-size: 3vw;
       font-family: "Roboto", sans-serif;
       font-weight: 400;
-      line-height: 3.5833vw; /* 30px en vw */
+      line-height: 3.5833vw;
       word-wrap: break-word;
       text-align: justify;
     }
